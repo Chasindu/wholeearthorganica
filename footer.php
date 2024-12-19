@@ -127,7 +127,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="elementor-element elementor-element-4bd9b06 elementor-widget elementor-widget-ct_icon"
+                                                        <!-- <div class="elementor-element elementor-element-4bd9b06 elementor-widget elementor-widget-ct_icon"
                                                             data-id="4bd9b06" data-element_type="widget"
                                                             data-widget_type="ct_icon.default">
                                                             <div class="elementor-widget-container">
@@ -146,7 +146,7 @@
                                                                             class="fab fa-behance"></i> </a>
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                        </div> -->
                                                     </div>
                                                 </div>
                                                 <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-6e71bc5"
