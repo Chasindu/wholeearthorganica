@@ -1519,13 +1519,12 @@
                                                                                 class="attachment-full" alt=""></div>
                                                                         <div class="item--holder">
                                                                             <h4 class="item--title wow fadeInUp"
-                                                                                data-wow-delay="50ms"> Get 10% off on
-                                                                                Vegetables</h4>
+                                                                                data-wow-delay="50ms"> Your Path to Wellness
+                                                                                </h4>
                                                                             <div class="item--description wow fadeInUp"
-                                                                                data-wow-delay="ms">Shop our selection
-                                                                                of organic fresh
-                                                                                vegetables in a discounted price. 10%
-                                                                                off on all vegetables.</div> <a
+                                                                                data-wow-delay="ms">Healthy living starts with your choices.
+                                                                                Pick from our organic selection and take charge of
+                                                                                your health</div> <a
                                                                                 class="btn item--button-outline wow fadeInUp"
                                                                                 data-wow-delay="150ms"
                                                                                 href="shop/index.htm"> Shop now <i
@@ -1557,13 +1556,10 @@
                                                                                 class="attachment-full" alt=""></div>
                                                                         <div class="item--holder">
                                                                             <h4 class="item--title wow fadeInUp"
-                                                                                data-wow-delay="50ms"> Get garden fresh
-                                                                                fruits</h4>
+                                                                                data-wow-delay="50ms">Freshness Delivered</h4>
                                                                             <div class="item--description wow fadeInUp"
-                                                                                data-wow-delay="ms">Shop our selection
-                                                                                of organic fresh
-                                                                                vegetables in a discounted price. 10%
-                                                                                off on all vegetables.</div> <a
+                                                                                data-wow-delay="ms">Get farm-fresh produce that’s good for you and the planet.
+                                                                                Start your journey to health now.</div> <a
                                                                                 class="btn item--button-default wow fadeInUp"
                                                                                 data-wow-delay="150ms"
                                                                                 href="shop/index.htm"> Shop now <i
@@ -1615,19 +1611,16 @@
                                                                             <h3 class="item--title case-animate-time st-default "
                                                                                 data-wow-delay="ms"> <span
                                                                                     class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">We</span></span>
+                                                                                        class="d-inline-block wow case-fade-in-up">Driven</span></span>
                                                                                 <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">believe</span></span>
+                                                                                        class="d-inline-block wow case-fade-in-up">by</span></span>
                                                                                 <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">in</span></span>
+                                                                                        class="d-inline-block wow case-fade-in-up">Innovation</span></span>
                                                                                 <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">working</span></span>
+                                                                                        class="d-inline-block wow case-fade-in-up">and</span></span>
                                                                                 <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">with</span></span>
-                                                                                <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">accredited</span></span>
-                                                                                <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">farmers</span></span>
+                                                                                        class="d-inline-block wow case-fade-in-up">Passion</span></span>
+                                                                                
                                                                             </h3>
                                                                         </div>
                                                                     </div>
@@ -1644,9 +1637,9 @@
  "></div>
                                                                             <div
                                                                                 class="ct-text-editor elementor-clearfix">
-                                                                                Organic Foods and Café is a family run
-                                                                                company founded in
-                                                                                2004 that runs organic supermarkets
+                                                                                We are two Computer Science students
+                                                                                with a shared vision to promote healthier living
+                                                                                through technology and organic food.
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -1663,11 +1656,10 @@
  "></div>
                                                                             <div
                                                                                 class="ct-text-editor elementor-clearfix">
-                                                                                Organic means growing our food, which is
-                                                                                to nourish us, without chemical aids
-                                                                                during the growing process such as
-                                                                                fertilisers, pesticides, fungcides,
-                                                                                herbacides, larbicides etc</div>
+                                                                                Organic means more than just food;
+                                                                                it's a lifestyle of sustainibility, health, and
+                                                                                community. We're here to make that accessible to everyone,
+                                                                                powered by our passion and commitment to a better future.</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1703,9 +1695,8 @@
                                                                                                     Why Organic?</h5>
                                                                                                 <div
                                                                                                     class="item--description">
-                                                                                                    We're making room
-                                                                                                    for self care today
-                                                                                                    with plan.</div>
+                                                                                                    Healthier planet starts with healthier choices.
+                                                                                                    We aim to make organic living a part of everyone's lifestyle.</div>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -1738,13 +1729,12 @@
                                                                                             </div>
                                                                                             <div class="item--holder">
                                                                                                 <h5 class="item--title">
-                                                                                                    Speciality Produce
+                                                                                                    Our mission
                                                                                                 </h5>
                                                                                                 <div
                                                                                                     class="item--description">
-                                                                                                    We're making room
-                                                                                                    for self care today
-                                                                                                    with plan.</div>
+                                                                                                    To empower individuals to make healthier choices by
+                                                                                                    merging the best of organic farming and modern innovation</div>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -1798,25 +1788,17 @@
                                                                                                 data-wow-delay="ms">
                                                                                                 <span
                                                                                                     class="slide-in-container"><span
-                                                                                                        class="d-inline-block wow case-fade-in-up">We</span></span>
+                                                                                                        class="d-inline-block wow case-fade-in-up">Explore</span></span>
                                                                                                 <span
                                                                                                     class="slide-in-container"><span
-                                                                                                        class="d-inline-block wow case-fade-in-up">believe</span></span>
+                                                                                                        class="d-inline-block wow case-fade-in-up">our</span></span>
                                                                                                 <span
                                                                                                     class="slide-in-container"><span
-                                                                                                        class="d-inline-block wow case-fade-in-up">in</span></span>
+                                                                                                        class="d-inline-block wow case-fade-in-up">organic</span></span>
                                                                                                 <span
                                                                                                     class="slide-in-container"><span
-                                                                                                        class="d-inline-block wow case-fade-in-up">working</span></span>
-                                                                                                <span
-                                                                                                    class="slide-in-container"><span
-                                                                                                        class="d-inline-block wow case-fade-in-up">with</span></span>
-                                                                                                <span
-                                                                                                    class="slide-in-container"><span
-                                                                                                        class="d-inline-block wow case-fade-in-up">accredited</span></span>
-                                                                                                <span
-                                                                                                    class="slide-in-container"><span
-                                                                                                        class="d-inline-block wow case-fade-in-up">farmers</span></span>
+                                                                                                        class="d-inline-block wow case-fade-in-up">selection</span></span>
+                                                                                                
                                                                                             </h3>
                                                                                         </div>
                                                                                     </div>
@@ -1866,9 +1848,7 @@
                                                                                                 Vegetables</h4>
                                                                                             <div class="item--description "
                                                                                                 data-wow-delay="ms">
-                                                                                                Purchasing from select
-                                                                                                family farmers who farm
-                                                                                                organically.</div>
+                                                                                                Our organic vegetables bring unmatched freshness to your meals.</div>
                                                                                             <div class="item--readmore">
                                                                                                 <a class="btn-icon-animate"
                                                                                                     href="product-category/organic/index.htm">
@@ -1910,9 +1890,9 @@
                                                                                                 Fresh Fruits</h4>
                                                                                             <div class="item--description "
                                                                                                 data-wow-delay="ms">
-                                                                                                Purchasing from select
-                                                                                                family farmers who farm
-                                                                                                organically.</div>
+                                                                                                Bursting with flavor and nutrients,
+                                                                                                our organic fruits are a treat for your
+                                                                                                taste buds.</div>
                                                                                             <div class="item--readmore">
                                                                                                 <a class="btn-icon-animate"
                                                                                                     href="product-category/organic/index.htm">
@@ -1955,9 +1935,9 @@
                                                                                             </h4>
                                                                                             <div class="item--description "
                                                                                                 data-wow-delay="ms">
-                                                                                                Purchasing from select
-                                                                                                family farmers who farm
-                                                                                                organically.</div>
+                                                                                                Fuel your day with our nutrient-packed
+                                                                                                nuts and dried foods, sourced from trusted farms.
+                                                                                                </div>
                                                                                             <div class="item--readmore">
                                                                                                 <a class="btn-icon-animate"
                                                                                                     href="product-category/organic/index.htm">
@@ -1999,9 +1979,9 @@
                                                                                                 Spices</h4>
                                                                                             <div class="item--description "
                                                                                                 data-wow-delay="ms">
-                                                                                                Purchasing from select
-                                                                                                family farmers who farm
-                                                                                                organically.</div>
+                                                                                                From mild to bold,
+                                                                                                our organic spices bring life to every dish.
+                                                                                                </div>
                                                                                             <div class="item--readmore">
                                                                                                 <a class="btn-icon-animate"
                                                                                                     href="product-category/organic/index.htm">
@@ -2014,174 +1994,8 @@
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="slick-slide">
-                                                                                    <div id="ct_info_box_carousel-4f50d4f-4"
-                                                                                        class="item--inner ">
-                                                                                        <div class="item--image">
-                                                                                            <div
-                                                                                                class="item--firstletter">
-                                                                                                V</div> <img
-                                                                                                loading="lazy"
-                                                                                                decoding="async"
-                                                                                                width="130" height="99"
-                                                                                                src="wp-content/uploads/2021/03/product-category1.png"
-                                                                                                class="attachment-full"
-                                                                                                alt="">
-                                                                                        </div>
-                                                                                        <div class="item--meta">
-                                                                                            <h4 class="item--title "
-                                                                                                data-wow-delay="ms">
-                                                                                                Vegetables</h4>
-                                                                                            <div class="item--description "
-                                                                                                data-wow-delay="ms">
-                                                                                                Purchasing from select
-                                                                                                family farmers who farm
-                                                                                                organically.</div>
-                                                                                            <div class="item--readmore">
-                                                                                                <a class="btn-icon-animate"
-                                                                                                    href="product-category/organic/index.htm">
-                                                                                                    <i
-                                                                                                        class="ct-icon-frist flaticon-next"></i>
-                                                                                                    Shop now <i
-                                                                                                        class="ct-icon-last flaticon-next"></i>
-                                                                                                </a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="slick-slide">
-                                                                                    <div id="ct_info_box_carousel-4f50d4f-5"
-                                                                                        class="item--inner "
-                                                                                        style="border-color: #BD0496;">
-                                                                                        <div class="ct-inline-css"
-                                                                                            data-css="
- .ct-infobox-carousel1 #ct_info_box_carousel-4f50d4f-5.item--inner:hover .item--firstletter {
- color: #BD0496;
- }
- .ct-infobox-carousel1 #ct_info_box_carousel-4f50d4f-5.item--inner .btn-icon-animate::before {
- background-color: #BD0496;
- }"></div>
-                                                                                        <div class="item--image">
-                                                                                            <div
-                                                                                                class="item--firstletter">
-                                                                                                F</div> <img
-                                                                                                loading="lazy"
-                                                                                                decoding="async"
-                                                                                                width="119" height="99"
-                                                                                                src="wp-content/uploads/2021/03/product-category2.png"
-                                                                                                class="attachment-full"
-                                                                                                alt="">
-                                                                                        </div>
-                                                                                        <div class="item--meta">
-                                                                                            <h4 class="item--title "
-                                                                                                data-wow-delay="ms">
-                                                                                                Fresh Fruits</h4>
-                                                                                            <div class="item--description "
-                                                                                                data-wow-delay="ms">
-                                                                                                Purchasing from select
-                                                                                                family farmers who farm
-                                                                                                organically.</div>
-                                                                                            <div class="item--readmore">
-                                                                                                <a class="btn-icon-animate"
-                                                                                                    href="product-category/organic/index.htm">
-                                                                                                    <i
-                                                                                                        class="ct-icon-frist flaticon-next"></i>
-                                                                                                    Shop now <i
-                                                                                                        class="ct-icon-last flaticon-next"></i>
-                                                                                                </a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="slick-slide">
-                                                                                    <div id="ct_info_box_carousel-4f50d4f-6"
-                                                                                        class="item--inner "
-                                                                                        style="border-color: #C88149;">
-                                                                                        <div class="ct-inline-css"
-                                                                                            data-css="
- .ct-infobox-carousel1 #ct_info_box_carousel-4f50d4f-6.item--inner:hover .item--firstletter {
- color: #C88149;
- }
- .ct-infobox-carousel1 #ct_info_box_carousel-4f50d4f-6.item--inner .btn-icon-animate::before {
- background-color: #C88149;
- }"></div>
-                                                                                        <div class="item--image">
-                                                                                            <div
-                                                                                                class="item--firstletter">
-                                                                                                N</div> <img
-                                                                                                loading="lazy"
-                                                                                                decoding="async"
-                                                                                                width="139" height="99"
-                                                                                                src="wp-content/uploads/2021/03/product-category3.png"
-                                                                                                class="attachment-full"
-                                                                                                alt="">
-                                                                                        </div>
-                                                                                        <div class="item--meta">
-                                                                                            <h4 class="item--title "
-                                                                                                data-wow-delay="ms">
-                                                                                                Nuts &amp; dried food
-                                                                                            </h4>
-                                                                                            <div class="item--description "
-                                                                                                data-wow-delay="ms">
-                                                                                                Purchasing from select
-                                                                                                family farmers who farm
-                                                                                                organically.</div>
-                                                                                            <div class="item--readmore">
-                                                                                                <a class="btn-icon-animate"
-                                                                                                    href="product-category/organic/index.htm">
-                                                                                                    <i
-                                                                                                        class="ct-icon-frist flaticon-next"></i>
-                                                                                                    Shop now <i
-                                                                                                        class="ct-icon-last flaticon-next"></i>
-                                                                                                </a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="slick-slide">
-                                                                                    <div id="ct_info_box_carousel-4f50d4f-7"
-                                                                                        class="item--inner "
-                                                                                        style="border-color: #C4A45F;">
-                                                                                        <div class="ct-inline-css"
-                                                                                            data-css="
- .ct-infobox-carousel1 #ct_info_box_carousel-4f50d4f-7.item--inner:hover .item--firstletter {
- color: #C4A45F;
- }
- .ct-infobox-carousel1 #ct_info_box_carousel-4f50d4f-7.item--inner .btn-icon-animate::before {
- background-color: #C4A45F;
- }"></div>
-                                                                                        <div class="item--image">
-                                                                                            <div
-                                                                                                class="item--firstletter">
-                                                                                                S</div> <img
-                                                                                                loading="lazy"
-                                                                                                decoding="async"
-                                                                                                width="124" height="99"
-                                                                                                src="wp-content/uploads/2021/03/product-category4.png"
-                                                                                                class="attachment-full"
-                                                                                                alt="">
-                                                                                        </div>
-                                                                                        <div class="item--meta">
-                                                                                            <h4 class="item--title "
-                                                                                                data-wow-delay="ms">
-                                                                                                Spices</h4>
-                                                                                            <div class="item--description "
-                                                                                                data-wow-delay="ms">
-                                                                                                Purchasing from select
-                                                                                                family farmers who farm
-                                                                                                organically.</div>
-                                                                                            <div class="item--readmore">
-                                                                                                <a class="btn-icon-animate"
-                                                                                                    href="product-category/organic/index.htm">
-                                                                                                    <i
-                                                                                                        class="ct-icon-frist flaticon-next"></i>
-                                                                                                    Shop now <i
-                                                                                                        class="ct-icon-last flaticon-next"></i>
-                                                                                                </a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
+                                                                                
+
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -2227,9 +2041,7 @@
                                                                                                 Return Policy</h5>
                                                                                             <div
                                                                                                 class="item--description">
-                                                                                                Purchasing from select
-                                                                                                family farmers who farm
-                                                                                                organically.</div>
+                                                                                                Shop worry-free with our flexible return policy. Your satisfaction is always our priority.</div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -2252,9 +2064,7 @@
                                                                                                 Support 24/7</h5>
                                                                                             <div
                                                                                                 class="item--description">
-                                                                                                Purchasing from select
-                                                                                                family farmers who farm
-                                                                                                organically.</div>
+                                                                                                Our team is here to assist you whenever you need. Customer happiness, guaranteed.</div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -2283,9 +2093,7 @@
                                                                                                 100% Fresh</h5>
                                                                                             <div
                                                                                                 class="item--description">
-                                                                                                Purchasing from select
-                                                                                                family farmers who farm
-                                                                                                organically.</div>
+                                                                                                From farm to table, we deliver freshness that you can see, smell, and taste</div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -2308,9 +2116,7 @@
                                                                                                 Secured Payment</h5>
                                                                                             <div
                                                                                                 class="item--description">
-                                                                                                Purchasing from select
-                                                                                                family farmers who farm
-                                                                                                organically.</div>
+                                                                                                Shop with confidence. We ensure secure and easy payment options for your convenience.</div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -2337,25 +2143,20 @@
                                                                             <h3 class="item--title case-animate-time st-default "
                                                                                 data-wow-delay="ms"> <span
                                                                                     class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">We</span></span>
-                                                                                <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">do</span></span>
-                                                                                <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">not</span></span>
-                                                                                <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">buy</span></span>
-                                                                                <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">from</span></span>
+                                                                                        class="d-inline-block wow case-fade-in-up">Experience</span></span>
                                                                                 <span class="slide-in-container"><span
                                                                                         class="d-inline-block wow case-fade-in-up">the</span></span>
                                                                                 <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">open</span></span>
+                                                                                        class="d-inline-block wow case-fade-in-up">Difference</span></span>
                                                                                 <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">market</span></span>
+                                                                                        class="d-inline-block wow case-fade-in-up">of</span></span>
                                                                                 <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">&</span></span>
+                                                                                        class="d-inline-block wow case-fade-in-up">True</span></span>
                                                                                 <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">traders.</span></span>
+                                                                                        class="d-inline-block wow case-fade-in-up">Organic</span></span>
+                                                                                <span class="slide-in-container"><span
+                                                                                        class="d-inline-block wow case-fade-in-up">Living</span></span>
+                                                                             
                                                                             </h3>
                                                                         </div>
                                                                     </div>
@@ -2372,12 +2173,7 @@
  "></div>
                                                                             <div
                                                                                 class="ct-text-editor elementor-clearfix">
-                                                                                Purchasing from select family farmers
-                                                                                who farm organically because they
-                                                                                believe in it and so we do. We are
-                                                                                conscious of air miles and our carbon
-                                                                                footprint so a lot of our produce comes
-                                                                                from Egypt.</div>
+                                                                                We work directly with farmers who share our passion for organic and sustainable practices.</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -2393,13 +2189,8 @@
  "></div>
                                                                             <div
                                                                                 class="ct-text-editor elementor-clearfix">
-                                                                                Organic Foods and Café is a family run
-                                                                                company that runs organic super
-                                                                                markets and cafés selling fresh organic
-                                                                                and biodynamic food, supplers, skincare,
-                                                                                cosmetics, baby items and household
-                                                                                cleaning products. We have 5 shops in
-                                                                                Dubai – on Sheikh Zayed Road.</div>
+                                                                                By partnering with those who value quality and care, we bring you fresh, ethical, and environmentally conscious products.
+                                                                                Every purchase supports not just your health, but also a greener planet for future generations.</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -3393,82 +3184,7 @@
                                                     </div>
                                                 </div>
                                             </section>
-                                            <section
-                                                class="elementor-section elementor-top-section elementor-element elementor-element-5e69e22 elementor-section-stretched ct-section-hidden elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-                                                data-id="5e69e22" data-element_type="section"
-                                                data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
-                                                <div class="elementor-container elementor-column-gap-extended ">
-                                                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-603e4e7"
-                                                        data-id="603e4e7" data-element_type="column">
-                                                        <div class="elementor-widget-wrap elementor-element-populated">
-                                                            <div class="elementor-element elementor-element-ae84869 title-rv elementor-widget elementor-widget-ct_heading"
-                                                                data-id="ae84869" data-element_type="widget"
-                                                                data-widget_type="ct_heading.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <div class="ct-heading h-align- item-st-default">
-                                                                        <div class="ct-heading--inner">
-                                                                            <div class="item--sub-title style-default">
-                                                                                <span> <span>~</span> Best Deals of the
-                                                                                    week! <span>~</span> </span>
-                                                                            </div>
-                                                                            <h3 class="item--title case-animate-time st-default "
-                                                                                data-wow-delay="ms"> <span
-                                                                                    class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">Grab</span></span>
-                                                                                <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">the</span></span>
-                                                                                <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">best</span></span>
-                                                                                <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">offer</span></span>
-                                                                                <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">of</span></span>
-                                                                                <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">this</span></span>
-                                                                                <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">week!</span></span>
-                                                                            </h3>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="elementor-element elementor-element-afd645e elementor-widget elementor-widget-ct_countdown"
-                                                                data-id="afd645e" data-element_type="widget"
-                                                                data-widget_type="ct_countdown.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <div class="ct-countdown ct-countdown-layout1  style1 hide show-hour show-minute show-second"
-                                                                        data-month="Month" data-months="Months"
-                                                                        data-day="Day" data-days="Days" data-hour="Hour"
-                                                                        data-hours="Hours" data-minute="Minute"
-                                                                        data-minutes="Minutes" data-second="Second"
-                                                                        data-seconds="Seconds" data-wow-delay="ms">
-                                                                        <div class="ct-countdown-inner"
-                                                                            data-count-down="2030/06/26"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-cd564c5"
-                                                        data-id="cd564c5" data-element_type="column">
-                                                        <div class="elementor-widget-wrap elementor-element-populated">
-                                                            <div class="elementor-element elementor-element-20ae3ee elementor-widget elementor-widget-ct_image"
-                                                                data-id="20ae3ee" data-element_type="widget"
-                                                                data-widget_type="ct_image.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <div class="ct-image-single  ct-block-parallax  effect-none "
-                                                                        data-width="1920" data-height="0"> <img
-                                                                            loading="lazy" decoding="async" width="733"
-                                                                            height="630"
-                                                                            src="wp-content/uploads/2021/04/counter-banner1.png"
-                                                                            class="no-lazyload attachment-full" alt="">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </section>
+                                          
                                             <section
                                                 class="elementor-section elementor-top-section elementor-element elementor-element-74f4215 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                                 data-id="74f4215" data-element_type="section"
@@ -3573,11 +3289,9 @@
                                                                                         <div class="item--holder">
                                                                                             <div class="item--meta">
                                                                                                 <h3 class="item--title">
-                                                                                                    Alisa Lisa</h3>
-                                                                                                <div
-                                                                                                    class="item--position">
-                                                                                                    Customer Care
-                                                                                                    Officer</div>
+                                                                                                    Chasindu
+                                                                                                    </h3>
+                                                                                                
                                                                                                 <div
                                                                                                     class="item--image-fixed">
                                                                                                     <img loading="lazy"
@@ -3598,77 +3312,14 @@
                                                                                             </div>
                                                                                             <div
                                                                                                 class="item--description">
-                                                                                                Lisa focuses on
-                                                                                                providing customers with
-                                                                                                Organic and Fair Trade
-                                                                                                Food.</div>
-                                                                                            <div class="item--social">
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-facebook-f"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-twitter"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-dribbble"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-behance"></i></a>
-                                                                                            </div>
+                                                                                                Chasindu coordinated the project by assigning tasks, managing the technical framework,
+                                                                                                and ensuring seamless collaboration within the team.
+                                                                                                Chasindu also focused on backend functionalities and network integration.</div>
+                                                                                          
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="slick-slide">
-                                                                                    <div class="item--inner ">
-                                                                                        <div class="item--image"> <img
-                                                                                                loading="lazy"
-                                                                                                decoding="async"
-                                                                                                class="no-lazyload "
-                                                                                                src="wp-content/uploads/2021/03/author2-176x176.jpg"
-                                                                                                width="176" height="176"
-                                                                                                alt="author2"
-                                                                                                title="author2"></div>
-                                                                                        <div class="item--holder">
-                                                                                            <div class="item--meta">
-                                                                                                <h3 class="item--title">
-                                                                                                    Robert Leo</h3>
-                                                                                                <div
-                                                                                                    class="item--position">
-                                                                                                    Farmer</div>
-                                                                                                <div
-                                                                                                    class="item--image-fixed">
-                                                                                                    <img loading="lazy"
-                                                                                                        decoding="async"
-                                                                                                        width="95"
-                                                                                                        height="90"
-                                                                                                        src="wp-content/uploads/2021/03/team-leaf.png"
-                                                                                                        class="attachment-full"
-                                                                                                        alt=""><img
-                                                                                                        loading="lazy"
-                                                                                                        decoding="async"
-                                                                                                        width="95"
-                                                                                                        height="90"
-                                                                                                        src="wp-content/uploads/2021/03/team-leaf.png"
-                                                                                                        class="attachment-full"
-                                                                                                        alt="">
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="item--description">
-                                                                                                Lisa focuses on
-                                                                                                providing customers with
-                                                                                                Organic and Fair Trade
-                                                                                                Food.</div>
-                                                                                            <div class="item--social">
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-facebook-f"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-twitter"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-dribbble"></i></a>
-                                                                                                <a href=""><i
-                                                                                                        class="fab fa-behance"></i></a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
+                                                                                
                                                                                 <div class="slick-slide">
                                                                                     <div class="item--inner ">
                                                                                         <div class="item--image"> <img
@@ -3682,11 +3333,8 @@
                                                                                         <div class="item--holder">
                                                                                             <div class="item--meta">
                                                                                                 <h3 class="item--title">
-                                                                                                    Nora Bell</h3>
-                                                                                                <div
-                                                                                                    class="item--position">
-                                                                                                    Sales Executive
-                                                                                                </div>
+                                                                                                    Elif</h3>
+                                                                                                
                                                                                                 <div
                                                                                                     class="item--image-fixed">
                                                                                                     <img loading="lazy"
@@ -3707,131 +3355,14 @@
                                                                                             </div>
                                                                                             <div
                                                                                                 class="item--description">
-                                                                                                Lisa focuses on
-                                                                                                providing customers with
-                                                                                                Organic and Fair Trade
-                                                                                                Food.</div>
-                                                                                            <div class="item--social">
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-facebook-f"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-twitter"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-dribbble"></i></a>
-                                                                                                <a href=""><i
-                                                                                                        class="fab fa-behance"></i></a>
-                                                                                            </div>
+                                                                                                Elif contributed by researching organic farm data and taking the lead on UI/UX improvements,
+                                                                                                ensuring a user-friendly and visually appealing design.
+                                                                                                She also collaborated closely with the team on implementing key frontend features.</div>
+                                                                                           
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="slick-slide">
-                                                                                    <div class="item--inner ">
-                                                                                        <div class="item--image"> <img
-                                                                                                loading="lazy"
-                                                                                                decoding="async"
-                                                                                                class="no-lazyload "
-                                                                                                src="wp-content/uploads/2021/03/author6-176x176.jpg"
-                                                                                                width="176" height="176"
-                                                                                                alt="author6"
-                                                                                                title="author6"></div>
-                                                                                        <div class="item--holder">
-                                                                                            <div class="item--meta">
-                                                                                                <h3 class="item--title">
-                                                                                                    Sherri Horton</h3>
-                                                                                                <div
-                                                                                                    class="item--position">
-                                                                                                    Farmer</div>
-                                                                                                <div
-                                                                                                    class="item--image-fixed">
-                                                                                                    <img loading="lazy"
-                                                                                                        decoding="async"
-                                                                                                        width="95"
-                                                                                                        height="90"
-                                                                                                        src="wp-content/uploads/2021/03/team-leaf.png"
-                                                                                                        class="attachment-full"
-                                                                                                        alt=""><img
-                                                                                                        loading="lazy"
-                                                                                                        decoding="async"
-                                                                                                        width="95"
-                                                                                                        height="90"
-                                                                                                        src="wp-content/uploads/2021/03/team-leaf.png"
-                                                                                                        class="attachment-full"
-                                                                                                        alt="">
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="item--description">
-                                                                                                Lisa focuses on
-                                                                                                providing customers with
-                                                                                                Organic and Fair Trade
-                                                                                                Food.</div>
-                                                                                            <div class="item--social">
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-facebook-f"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-twitter"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-dribbble"></i></a>
-                                                                                                <a href=""><i
-                                                                                                        class="fab fa-behance"></i></a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="slick-slide">
-                                                                                    <div class="item--inner ">
-                                                                                        <div class="item--image"> <img
-                                                                                                loading="lazy"
-                                                                                                decoding="async"
-                                                                                                class="no-lazyload "
-                                                                                                src="wp-content/uploads/2021/03/author5-176x176.jpg"
-                                                                                                width="176" height="176"
-                                                                                                alt="author5"
-                                                                                                title="author5"></div>
-                                                                                        <div class="item--holder">
-                                                                                            <div class="item--meta">
-                                                                                                <h3 class="item--title">
-                                                                                                    Sinira Fro</h3>
-                                                                                                <div
-                                                                                                    class="item--position">
-                                                                                                    Farmer</div>
-                                                                                                <div
-                                                                                                    class="item--image-fixed">
-                                                                                                    <img loading="lazy"
-                                                                                                        decoding="async"
-                                                                                                        width="95"
-                                                                                                        height="90"
-                                                                                                        src="wp-content/uploads/2021/03/team-leaf.png"
-                                                                                                        class="attachment-full"
-                                                                                                        alt=""><img
-                                                                                                        loading="lazy"
-                                                                                                        decoding="async"
-                                                                                                        width="95"
-                                                                                                        height="90"
-                                                                                                        src="wp-content/uploads/2021/03/team-leaf.png"
-                                                                                                        class="attachment-full"
-                                                                                                        alt="">
-                                                                                                </div>
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="item--description">
-                                                                                                Lisa focuses on
-                                                                                                providing customers with
-                                                                                                Organic and Fair Trade
-                                                                                                Food.</div>
-                                                                                            <div class="item--social">
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-facebook-f"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-twitter"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-dribbble"></i></a>
-                                                                                                <a href=""><i
-                                                                                                        class="fab fa-behance"></i></a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
+                                                                                
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -4282,5 +3813,25 @@
         if (window.RS_MODULES.checkMinimal !== undefined) { window.RS_MODULES.checkMinimal(); };
     </script>
 </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </html>
