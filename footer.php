@@ -482,11 +482,11 @@
                                                                         <div class="ct-inline-css" data-css="
  "></div>
                                                                         <div class="ct-text-editor elementor-clearfix">
-                                                                            © <span class="ct-year">2021</span>
-                                                                            Organio &#8211; <a
-                                                                                href="https://themeforest.net/user/case-themes/portfolio"
+                                                                            © <span class="ct-year"><?php date("Y") ?></span>
+                                                                            York University &#8211; <a
+                                                                                href="yorku.ca"
                                                                                 target="_blank"
-                                                                                rel="nofollow noopener">CaseThemes</a>.
+                                                                                rel="nofollow noopener">Chasindu Kumarasiri / Elif Onem</a>.
                                                                             All rights reserved.</div>
                                                                     </div>
                                                                 </div>
