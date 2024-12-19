@@ -27,12 +27,12 @@
 
                                     <li id="menu-item-22"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22">
-                                        <a href="about/index.htm"><span>Home</span></a>
+                                        <a href="index.php"><span>Home</span></a>
                                     </li>
 
                                     <li id="menu-item-22"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22">
-                                        <a href="about/index.htm"><span>About</span></a>
+                                        <a href="about-us.php"><span>About</span></a>
                                     </li>
 
 
@@ -226,16 +226,16 @@
                                 <ul id="ct-main-menu-left-mobile" class="ct-main-menu children-arrow clearfix">
 
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22">
-                                        <a href="about/index.htm"><span>Home</span></a>
+                                        <a href="index.php"><span>Home</span></a>
                                     </li>
 
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22">
-                                        <a href="about/index.htm"><span>About</span></a>
+                                        <a href="about-us.php"><span>About</span></a>
                                     </li>
 
                                     <li
                                         class="menu-item menu-item-type-post_type menu-item-object-page megamenu megamenu-style-alt menu-item-has-children menu-item-25">
-                                        <a href="shop/index.htm"><span>Shop</span></a>
+                                        <a href="shop.php"><span>Shop</span></a>
                                         <ul class="sub-menu">
                                             <li>
                                                 <div class="container">

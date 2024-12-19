@@ -120,7 +120,9 @@
                                                                         <div class="ct-inline-css" data-css="
  "></div>
                                                                         <div class="ct-text-editor elementor-clearfix">
-                                                                        Embracing nature's goodness with fresh, organic, and sustainable products. Your health, our promise.</div>
+                                                                            Embracing nature's goodness with fresh,
+                                                                            organic, and sustainable products. Your
+                                                                            health, our promise.</div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -183,29 +185,24 @@
                                                                         <ul id="menu-menu-footer" class="menu">
                                                                             <li id="menu-item-60"
                                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-14 current_page_item menu-item-60">
-                                                                                <a href="index.htm"
+                                                                                <a href="index.php"
                                                                                     aria-current="page"><span>Home</span></a>
-                                                                            </li>
-                                                                            <li id="menu-item-980"
-                                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-980">
-                                                                                <a
-                                                                                    href="services/index.htm"><span>Services</span></a>
                                                                             </li>
                                                                             <li id="menu-item-62"
                                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62">
-                                                                                <a href="about/index.htm"><span>About
+                                                                                <a href="about-us.php"><span>About
                                                                                         us</span></a>
                                                                             </li>
-                                                                            <li id="menu-item-979"
+                                                                            <!-- <li id="menu-item-979"
                                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-979">
                                                                                 <a
                                                                                     href="testimonials/index.htm"><span>Testimonials</span></a>
-                                                                            </li>
-                                                                            <li id="menu-item-64"
+                                                                            </li> -->
+                                                                            <!-- <li id="menu-item-64"
                                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64">
                                                                                 <a
                                                                                     href="blog/index.htm"><span>News</span></a>
-                                                                            </li>
+                                                                            </li> -->
                                                                         </ul>
                                                                     </div>
                                                                 </div>
@@ -250,14 +247,14 @@
                                                                     <li> <span class="ct-contact-icon"> <i
                                                                                 aria-hidden="true"
                                                                                 class="fas fa-map-marker-alt"></i>
-                                                                        </span> <span class="ct-contact-content"> 30
-                                                                            Commercial Road<br> Fratton,
-                                                                            Australia </span></li>
+                                                                        </span> <span class="ct-contact-content">
+                                                                            York University<br> Toronto,
+                                                                            Canada </span></li>
                                                                     <li> <span class="ct-contact-icon"> <i
                                                                                 aria-hidden="true"
                                                                                 class="fas fa-phone-alt"></i>
                                                                         </span> <span class="ct-contact-content">
-                                                                            1-888-452-1505 </span></li>
+                                                                            1-416-427-1731 </span></li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -281,18 +278,16 @@
                                                                 <div id="ct_text_editor-f4c33bb" class="ct-text-editor "
                                                                     data-wow-delay="ms">
                                                                     <div class="ct-item--inner">
-                                                                        <div class="ct-inline-css" data-css="
- "></div>
+                                                                        <div class="ct-inline-css" data-css=""></div>
                                                                         <div class="ct-text-editor elementor-clearfix">
-                                                                            Mon &#8211; Sat: 8 am &#8211; 5
-                                                                            pm,<br>Sunday: CLOSED</div>
+                                                                            24/7</div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-b0653ed"
+                                                <!-- <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-b0653ed"
                                                     data-id="b0653ed" data-element_type="column">
                                                     <div class="elementor-widget-wrap elementor-element-populated">
                                                         <div class="elementor-element elementor-element-2ebeb56 elementor-widget elementor-widget-ct_heading"
@@ -325,8 +320,7 @@
                                                                 <div id="ct_text_editor-2dba2eb" class="ct-text-editor "
                                                                     data-wow-delay="ms">
                                                                     <div class="ct-item--inner">
-                                                                        <div class="ct-inline-css" data-css="
- "></div>
+                                                                        <div class="ct-inline-css" data-css=""></div>
                                                                         <div class="ct-text-editor elementor-clearfix">
                                                                             <div id="sb_instagram"
                                                                                 class="sbi sbi_mob_col_1 sbi_tab_col_2 sbi_col_3 sbi_width_resp"
@@ -467,7 +461,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </section>
                                         <section
@@ -511,4 +505,4 @@
             </div>
         </div>
     </div> <span class="ct-footer-year">2024</span>
-</footer> 
+</footer>
