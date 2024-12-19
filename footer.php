@@ -103,9 +103,9 @@
                                                             data-widget_type="ct_image.default">
                                                             <div class="elementor-widget-container">
                                                                 <div class="ct-image-single    effect-none "
-                                                                    data-width="" data-height=""> <a href="index.htm">
-                                                                        <img width="377" height="171"
-                                                                            src="wp-content/uploads/2021/03/logo-light.png"
+                                                                    data-width="" data-height=""> <a href="index.php">
+                                                                        <img width="700" height="500"
+                                                                            src="img/logo_basket.png"
                                                                             class="no-lazyload attachment-full" alt="">
                                                                     </a></div>
                                                             </div>
@@ -120,9 +120,7 @@
                                                                         <div class="ct-inline-css" data-css="
  "></div>
                                                                         <div class="ct-text-editor elementor-clearfix">
-                                                                            We work with a passion of taking
-                                                                            challenges and creating new ones in
-                                                                            advertising sector.</div>
+                                                                        Embracing nature's goodness with fresh, organic, and sustainable products. Your health, our promise.</div>
                                                                     </div>
                                                                 </div>
                                                             </div>
