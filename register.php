@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="//gmpg.org/xfn/11">
-    <title>Sign In &#8211; Organio</title>
+    <title>Sign Up &#8211; Organio</title>
     <meta name='robots' content='max-image-preview:large'>
     <style>
         img:is([sizes="auto" i], [sizes^="auto," i]) {
@@ -13,16 +13,16 @@
         }
     </style>
     <link rel='dns-prefetch' href='//fonts.googleapis.com'>
-    <link rel="alternate" type="application/rss+xml" title="Organio &raquo; Feed" href="../feed/index.htm">
+    <link rel="alternate" type="application/rss+xml" title="Organio &raquo; Feed" href="feed/index.htm">
     <link rel="alternate" type="application/rss+xml" title="Organio &raquo; Comments Feed"
-        href="../comments/feed/index.htm">
+        href="comments/feed/index.htm">
     <script type="text/javascript"> /* <![CDATA[ */
         window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/demo.casethemes.net\/organio\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.1" } };
         /*! This file is auto-generated */
         !function (i, n) { var o, s, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === r[t] }) } function u(e, t, n) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !n(e, "\ud83d\udc26\u200d\u2b1b", "\ud83d\udc26\u200b\u2b1b") }return !1 } function f(e, t, n) { var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"), a = r.getContext("2d", { willReadFrequently: !0 }), o = (a.textBaseline = "top", a.font = "600 32px Arial", {}); return e.forEach(function (e) { o[e] = t(a, e, n) }), o } function t(e) { var t = i.createElement("script"); t.src = e, t.defer = !0, i.head.appendChild(t) } "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { i.addEventListener("DOMContentLoaded", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));", r = new Blob([e], { type: "text/javascript" }), a = new Worker(URL.createObjectURL(r), { name: "wpTestEmojiSupports" }); return void (a.onmessage = function (e) { c(n = e.data), a.terminate(), t(n) }) } catch (e) { } c(n = f(s, u, p)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);
         /* ]]> */ </script>
     <link rel='stylesheet' id='sbi_styles-css'
-        href='../wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=6.6.0' type='text/css' media='all'>
+        href='wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=6.6.0' type='text/css' media='all'>
     <style id='wp-emoji-styles-inline-css' type='text/css'>
         img.wp-smiley,
         img.emoji {
@@ -383,39 +383,39 @@
         }
     </style>
     <link rel='stylesheet' id='ct-main-css-css'
-        href='../wp-content/plugins/case-theme-core/assets/css/ct-main-css.min.css?ver=1.0.0' type='text/css'
+        href='wp-content/plugins/case-theme-core/assets/css/ct-main-css.min.css?ver=1.0.0' type='text/css'
         media='all'>
     <link rel='stylesheet' id='progressbar-lib-css-css'
-        href='../wp-content/plugins/case-theme-core/assets/css/lib/progressbar.min.css?ver=0.7.1' type='text/css'
+        href='wp-content/plugins/case-theme-core/assets/css/lib/progressbar.min.css?ver=0.7.1' type='text/css'
         media='all'>
     <link rel='stylesheet' id='oc-css-css'
-        href='../wp-content/plugins/case-theme-core/assets/css/lib/owl.carousel.min.css?ver=2.2.1' type='text/css'
+        href='wp-content/plugins/case-theme-core/assets/css/lib/owl.carousel.min.css?ver=2.2.1' type='text/css'
         media='all'>
     <link rel='stylesheet' id='ct-slick-css-css'
-        href='../wp-content/plugins/case-theme-core/assets/css/lib/ct-slick-css.min.css?ver=1.0.0' type='text/css'
+        href='wp-content/plugins/case-theme-core/assets/css/lib/ct-slick-css.min.css?ver=1.0.0' type='text/css'
         media='all'>
     <link rel='stylesheet' id='ct-font-awesome-css'
-        href='../wp-content/plugins/case-theme-core/assets/plugin/font-awesome/css/font-awesome.min.css?ver=4.7.0'
+        href='wp-content/plugins/case-theme-core/assets/plugin/font-awesome/css/font-awesome.min.css?ver=4.7.0'
         type='text/css' media='all'>
     <link rel='stylesheet' id='remodal-css'
-        href='../wp-content/plugins/case-theme-user/acess/css/remodal.min.css?ver=6.7.1' type='text/css' media='all'>
+        href='wp-content/plugins/case-theme-user/acess/css/remodal.min.css?ver=6.7.1' type='text/css' media='all'>
     <link rel='stylesheet' id='remodal-default-theme-css'
-        href='../wp-content/plugins/case-theme-user/acess/css/remodal-default-theme.min.css?ver=6.7.1' type='text/css'
+        href='wp-content/plugins/case-theme-user/acess/css/remodal-default-theme.min.css?ver=6.7.1' type='text/css'
         media='all'>
     <link rel='stylesheet' id='contact-form-7-css'
-        href='../wp-content/plugins/contact-form-7/includes/css/contact-form-7.min.css?ver=6.0' type='text/css'
+        href='wp-content/plugins/contact-form-7/includes/css/contact-form-7.min.css?ver=6.0' type='text/css'
         media='all'>
     <link rel='stylesheet' id='purchase-link-css-css'
-        href='../wp-content/plugins/envato-purchase-link/css/purchase-link-css.min.css?ver=1.0.0' type='text/css'
+        href='wp-content/plugins/envato-purchase-link/css/purchase-link-css.min.css?ver=1.0.0' type='text/css'
         media='all'>
     <link rel='stylesheet' id='woocommerce-layout-css'
-        href='../wp-content/plugins/woocommerce/assets/css/woocommerce-layout.min.css?ver=9.3.3' type='text/css'
+        href='wp-content/plugins/woocommerce/assets/css/woocommerce-layout.min.css?ver=9.3.3' type='text/css'
         media='all'>
     <link rel='stylesheet' id='woocommerce-smallscreen-css'
-        href='../wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.min.css?ver=9.3.3' type='text/css'
+        href='wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.min.css?ver=9.3.3' type='text/css'
         media='only screen and (max-width: 768px)'>
     <link rel='stylesheet' id='woocommerce-general-css'
-        href='../wp-content/plugins/woocommerce/assets/css/woocommerce-general.min.css?ver=9.3.3' type='text/css'
+        href='wp-content/plugins/woocommerce/assets/css/woocommerce-general.min.css?ver=9.3.3' type='text/css'
         media='all'>
     <style id='woocommerce-inline-inline-css' type='text/css'>
         .woocommerce form .form-row .required {
@@ -423,7 +423,7 @@
         }
     </style>
     <link rel='stylesheet' id='woo-variation-swatches-css'
-        href='../wp-content/plugins/woo-variation-swatches/assets/css/frontend.min.css?ver=1729744251' type='text/css'
+        href='wp-content/plugins/woo-variation-swatches/assets/css/frontend.min.css?ver=1729744251' type='text/css'
         media='all'>
     <style id='woo-variation-swatches-inline-css' type='text/css'>
         :root {
@@ -435,34 +435,34 @@
         }
     </style>
     <link rel='stylesheet' id='hint-css'
-        href='../wp-content/plugins/woo-smart-compare/assets/libs/hint/hint.min.css?ver=6.7.1' type='text/css'
+        href='wp-content/plugins/woo-smart-compare/assets/libs/hint/hint.min.css?ver=6.7.1' type='text/css'
         media='all'>
     <link rel='stylesheet' id='perfect-scrollbar-css'
-        href='../wp-content/plugins/woo-smart-compare/assets/libs/perfect-scrollbar/css/perfect-scrollbar.min.css?ver=6.7.1'
+        href='wp-content/plugins/woo-smart-compare/assets/libs/perfect-scrollbar/css/perfect-scrollbar.min.css?ver=6.7.1'
         type='text/css' media='all'>
     <link rel='stylesheet' id='perfect-scrollbar-wpc-css'
-        href='../wp-content/plugins/woo-smart-compare/assets/libs/perfect-scrollbar/css/perfect-scrollbar-wpc.min.css?ver=6.7.1'
+        href='wp-content/plugins/woo-smart-compare/assets/libs/perfect-scrollbar/css/perfect-scrollbar-wpc.min.css?ver=6.7.1'
         type='text/css' media='all'>
     <link rel='stylesheet' id='woosc-frontend-css'
-        href='../wp-content/plugins/woo-smart-compare/assets/css/woosc-frontend.min.css?ver=6.3.0' type='text/css'
+        href='wp-content/plugins/woo-smart-compare/assets/css/woosc-frontend.min.css?ver=6.3.0' type='text/css'
         media='all'>
     <link rel='stylesheet' id='slick-css'
-        href='../wp-content/plugins/woo-smart-quick-view/assets/libs/slick/slick.min.css?ver=6.7.1' type='text/css'
+        href='wp-content/plugins/woo-smart-quick-view/assets/libs/slick/slick.min.css?ver=6.7.1' type='text/css'
         media='all'>
     <link rel='stylesheet' id='magnific-popup-css'
-        href='../wp-content/plugins/woo-smart-quick-view/assets/libs/magnific-popup/magnific-popup.min.css?ver=6.7.1'
+        href='wp-content/plugins/woo-smart-quick-view/assets/libs/magnific-popup/magnific-popup.min.css?ver=6.7.1'
         type='text/css' media='all'>
     <link rel='stylesheet' id='woosq-feather-css'
-        href='../wp-content/plugins/woo-smart-quick-view/assets/libs/feather/woosq-feather.min.css?ver=6.7.1'
+        href='wp-content/plugins/woo-smart-quick-view/assets/libs/feather/woosq-feather.min.css?ver=6.7.1'
         type='text/css' media='all'>
     <link rel='stylesheet' id='woosq-frontend-css'
-        href='../wp-content/plugins/woo-smart-quick-view/assets/css/woosq-frontend.min.css?ver=4.1.3' type='text/css'
+        href='wp-content/plugins/woo-smart-quick-view/assets/css/woosq-frontend.min.css?ver=4.1.3' type='text/css'
         media='all'>
     <link rel='stylesheet' id='woosw-icons-css'
-        href='../wp-content/plugins/woo-smart-wishlist/assets/css/woosw-icons.min.css?ver=4.9.4' type='text/css'
+        href='wp-content/plugins/woo-smart-wishlist/assets/css/woosw-icons.min.css?ver=4.9.4' type='text/css'
         media='all'>
     <link rel='stylesheet' id='woosw-frontend-css'
-        href='../wp-content/plugins/woo-smart-wishlist/assets/css/woosw-frontend.min.css?ver=4.9.4' type='text/css'
+        href='wp-content/plugins/woo-smart-wishlist/assets/css/woosw-frontend.min.css?ver=4.9.4' type='text/css'
         media='all'>
     <style id='woosw-frontend-inline-css' type='text/css'>
         .woosw-popup .woosw-popup-inner .woosw-popup-content .woosw-popup-content-bot .woosw-notice {
@@ -474,16 +474,16 @@
             border-color: #76a713;
         }
     </style>
-    <link rel='stylesheet' id='bootstrap-css' href='../wp-content/themes/orgio/assets/css/bootstrap.min.css?ver=4.0.0'
+    <link rel='stylesheet' id='bootstrap-css' href='wp-content/themes/orgio/assets/css/bootstrap.min.css?ver=4.0.0'
         type='text/css' media='all'>
-    <link rel='stylesheet' id='caseicon-css' href='../wp-content/themes/orgio/assets/css/caseicon.min.css?ver=1.5.7'
+    <link rel='stylesheet' id='caseicon-css' href='wp-content/themes/orgio/assets/css/caseicon.min.css?ver=1.5.7'
         type='text/css' media='all'>
-    <link rel='stylesheet' id='flaticon-css' href='../wp-content/themes/orgio/assets/css/flaticon.min.css?ver=1.5.7'
+    <link rel='stylesheet' id='flaticon-css' href='wp-content/themes/orgio/assets/css/flaticon.min.css?ver=1.5.7'
         type='text/css' media='all'>
-    <link rel='stylesheet' id='animate-css' href='../wp-content/themes/orgio/assets/css/animate.min.css?ver=1.0.0'
+    <link rel='stylesheet' id='animate-css' href='wp-content/themes/orgio/assets/css/animate.min.css?ver=1.0.0'
         type='text/css' media='all'>
     <link rel='stylesheet' id='organio-theme-css'
-        href='../wp-content/themes/orgio/assets/css/organio-theme.min.css?ver=1.5.7' type='text/css' media='all'>
+        href='wp-content/themes/orgio/assets/css/organio-theme.min.css?ver=1.5.7' type='text/css' media='all'>
     <style id='organio-theme-inline-css' type='text/css'>
         :root {
             --primary-color: #76a713;
@@ -507,92 +507,92 @@
 
         @media screen and (min-width: 1200px) {}
     </style>
-    <link rel='stylesheet' id='organio-style-css' href='../wp-content/themes/orgio/organio-style.min.css?ver=6.7.1'
+    <link rel='stylesheet' id='organio-style-css' href='wp-content/themes/orgio/organio-style.min.css?ver=6.7.1'
         type='text/css' media='all'>
     <link rel='stylesheet' id='organio-google-fonts-css'
-        href='../../css?family=Poppins%3A400%2C500%2C600%2C700%7CLora%3A400%2C500%2C600%2C700%7CBarlow%3A300%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%7CArchitects+Daughter%3A400%7CFira+Sans%3A400%2C500%2C700%7CRoboto%3A400%2C500%2C600%2C700%7CLexend%3A400%2C500%2C600%2C700%7CPlayfair+Display%3A400%2C400i%2C700%2C700i%2C800%2C900%7CAbril+Fatface%3A400%2C400i%2C700%2C700i%2C800%2C900%7CPT+Sans%3A400%2C400i%2C700%2C700i%7CNunito%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=6.7.1'
+        href='css?family=Poppins%3A400%2C500%2C600%2C700%7CLora%3A400%2C500%2C600%2C700%7CBarlow%3A300%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%7CArchitects+Daughter%3A400%7CFira+Sans%3A400%2C500%2C700%7CRoboto%3A400%2C500%2C600%2C700%7CLexend%3A400%2C500%2C600%2C700%7CPlayfair+Display%3A400%2C400i%2C700%2C700i%2C800%2C900%7CAbril+Fatface%3A400%2C400i%2C700%2C700i%2C800%2C900%7CPT+Sans%3A400%2C400i%2C700%2C700i%7CNunito%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=6.7.1'
         type='text/css' media='all'>
     <link rel='stylesheet' id='elementor-icons-css'
-        href='../wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.31.0' type='text/css'
+        href='wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.31.0' type='text/css'
         media='all'>
     <link rel='stylesheet' id='elementor-frontend-css'
-        href='../wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.25.4' type='text/css' media='all'>
+        href='wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.25.4' type='text/css' media='all'>
     <link rel='stylesheet' id='swiper-css'
-        href='../wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5' type='text/css'
+        href='wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5' type='text/css'
         media='all'>
     <link rel='stylesheet' id='e-swiper-css'
-        href='../wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.25.4' type='text/css'
+        href='wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.25.4' type='text/css'
         media='all'>
     <link rel='stylesheet' id='elementor-post-12-css'
-        href='../wp-content/uploads/elementor/css/post-12.css?ver=1731036539' type='text/css' media='all'>
+        href='wp-content/uploads/elementor/css/post-12.css?ver=1731036539' type='text/css' media='all'>
     <link rel='stylesheet' id='sbistyles-css'
-        href='../wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=6.6.0' type='text/css' media='all'>
-    <link rel='stylesheet' id='elementor-post-1864-css'
-        href='../wp-content/uploads/elementor/css/post-1864.css?ver=1731037321' type='text/css' media='all'>
+        href='wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=6.6.0' type='text/css' media='all'>
+    <link rel='stylesheet' id='elementor-post-1867-css'
+        href='wp-content/uploads/elementor/css/post-1867.css?ver=1731037337' type='text/css' media='all'>
     <link rel='stylesheet' id='elementor-post-30-css'
-        href='../wp-content/uploads/elementor/css/post-30.css?ver=1731037321' type='text/css' media='all'>
+        href='wp-content/uploads/elementor/css/post-30.css?ver=1731037321' type='text/css' media='all'>
     <link rel='stylesheet' id='google-fonts-1-css'
-        href='../../css-1?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.7.1'
+        href='css-1?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.7.1'
         type='text/css' media='all'>
     <link rel='stylesheet' id='elementor-icons-shared-0-css'
-        href='../wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3'
+        href='wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3'
         type='text/css' media='all'>
     <link rel='stylesheet' id='elementor-icons-fa-brands-css'
-        href='../wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3' type='text/css'
+        href='wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3' type='text/css'
         media='all'>
     <link rel='stylesheet' id='elementor-icons-fa-solid-css'
-        href='../wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' type='text/css'
+        href='wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' type='text/css'
         media='all'>
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
     <script type="text/template"
         id="tmpl-variation-template"><div class="woocommerce-variation-description">{{{ data.variation.variation_description }}}</div><div class="woocommerce-variation-price">{{{ data.variation.price_html }}}</div><div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div> </script>
     <script type="text/template"
         id="tmpl-unavailable-variation-template"><p role="alert">Sorry, this product is unavailable. Please choose a different combination.</p> </script>
-    <script type="text/javascript" src="../wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
-    <script type="text/javascript" src="../wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
+    <script type="text/javascript" src="wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+    <script type="text/javascript" src="wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
         id="jquery-migrate-js"></script>
-    <script type="text/javascript" src="../wp-content/plugins/case-theme-core/assets/js/lib/waypoints.min.js?ver=2.0.5"
+    <script type="text/javascript" src="wp-content/plugins/case-theme-core/assets/js/lib/waypoints.min.js?ver=2.0.5"
         id="waypoints-js"></script>
     <script type="text/javascript"
-        src="../wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.9.3.3"
+        src="wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.9.3.3"
         id="jquery-blockui-js" data-wp-strategy="defer"></script>
     <script type="text/javascript" id="wc-add-to-cart-js-extra"> /* <![CDATA[ */
         var wc_add_to_cart_params = { "ajax_url": "\/organio\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/organio\/?wc-ajax=%%endpoint%%", "i18n_view_cart": "View cart", "cart_url": "https:\/\/demo.casethemes.net\/organio\/cart\/", "is_cart": "", "cart_redirect_after_add": "no" };
         /* ]]> */ </script>
     <script type="text/javascript"
-        src="../wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=9.3.3" id="wc-add-to-cart-js"
+        src="wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=9.3.3" id="wc-add-to-cart-js"
         defer="defer" data-wp-strategy="defer"></script>
     <script type="text/javascript"
-        src="../wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.9.3.3"
+        src="wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.9.3.3"
         id="js-cookie-js" data-wp-strategy="defer"></script>
     <script type="text/javascript" id="woocommerce-js-extra"> /* <![CDATA[ */
         var woocommerce_params = { "ajax_url": "\/organio\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/organio\/?wc-ajax=%%endpoint%%" };
         /* ]]> */ </script>
     <script type="text/javascript"
-        src="../wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=9.3.3" id="woocommerce-js"
+        src="wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=9.3.3" id="woocommerce-js"
         defer="defer" data-wp-strategy="defer"></script>
-    <script type="text/javascript" src="../wp-includes/js/underscore.min.js?ver=1.13.7" id="underscore-js"></script>
+    <script type="text/javascript" src="wp-includes/js/underscore.min.js?ver=1.13.7" id="underscore-js"></script>
     <script type="text/javascript" id="wp-util-js-extra"> /* <![CDATA[ */
         var _wpUtilSettings = { "ajax": { "url": "\/organio\/wp-admin\/admin-ajax.php" } };
         /* ]]> */ </script>
-    <script type="text/javascript" src="../wp-includes/js/wp-util.min.js?ver=6.7.1" id="wp-util-js"></script>
+    <script type="text/javascript" src="wp-includes/js/wp-util.min.js?ver=6.7.1" id="wp-util-js"></script>
     <script type="text/javascript"
-        src="../wp-content/uploads/siteground-optimizer-assets/ct-inline-css-js.min.js?ver=1.5.7"
+        src="wp-content/uploads/siteground-optimizer-assets/ct-inline-css-js.min.js?ver=1.5.7"
         id="ct-inline-css-js-js"></script>
-    <link rel="https://api.w.org/" href="../wp-json/index.htm">
-    <link rel="alternate" title="JSON" type="application/json" href="../wp-json/wp/v2/pages/1864">
+    <link rel="https://api.w.org/" href="wp-json/index.htm">
+    <link rel="alternate" title="JSON" type="application/json" href="wp-json/wp/v2/pages/1867">
     <link rel="EditURI" type="application/rsd+xml" title="RSD"
         href="https://demo.casethemes.net/organio/xmlrpc.php?rsd">
     <meta name="generator" content="WordPress 6.7.1">
     <meta name="generator" content="WooCommerce 9.3.3">
     <link rel="canonical" href="index.htm">
-    <link rel='shortlink' href='index.htm?p=1864'>
+    <link rel='shortlink' href='index.htm?p=1867'>
     <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
-        href="../wp-json/oembed/1.0/embed-34?url=https%3A%2F%2Fdemo.casethemes.net%2Forganio%2Fsign-in%2F">
+        href="wp-json/oembed/1.0/embed-36?url=https%3A%2F%2Fdemo.casethemes.net%2Forganio%2Fsign-up%2F">
     <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"
-        href="../wp-json/oembed/1.0/embed-35?url=https%3A%2F%2Fdemo.casethemes.net%2Forganio%2Fsign-in%2F&#038;format=xml">
+        href="wp-json/oembed/1.0/embed-37?url=https%3A%2F%2Fdemo.casethemes.net%2Forganio%2Fsign-up%2F&#038;format=xml">
     <meta name="generator" content="Redux 4.5.0">
-    <link rel="icon" type="image/png" href="../wp-content/uploads/2021/03/favicon.png"> <noscript>
+    <link rel="icon" type="image/png" href="wp-content/uploads/2021/03/favicon.png"> <noscript>
         <style>
             .woocommerce-product-gallery {
                 opacity: 1 !important;
@@ -631,7 +631,7 @@
             font-style: normal;
             font-weight: 300 900;
             font-display: fallback;
-            src: url('../wp-content/plugins/woocommerce/assets/fonts/Inter-VariableFont_slnt,wght.woff2') format('woff2');
+            src: url('wp-content/plugins/woocommerce/assets/fonts/Inter-VariableFont_slnt,wght.woff2') format('woff2');
             font-stretch: normal;
         }
 
@@ -640,7 +640,7 @@
             font-style: normal;
             font-weight: 400;
             font-display: fallback;
-            src: url('../wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400.woff2') format('woff2');
+            src: url('wp-content/plugins/woocommerce/assets/fonts/cardo_normal_400.woff2') format('woff2');
         }
     </style>
     <script>function setREVStartSize(e) {
@@ -693,7 +693,7 @@
         };</script>
     <style id="ct_theme_options-dynamic-css" title="dynamic-css" class="redux-options-output">
         body #pagetitle {
-            background-image: url('../wp-content/uploads/2021/03/bg-page-title.jpg');
+            background-image: url('wp-content/uploads/2021/03/bg-page-title.jpg');
         }
 
         a {
@@ -721,7 +721,7 @@
 </head>
 
 <body
-    class="page-template-default page page-id-1864 theme-orgio woocommerce-no-js woo-variation-swatches wvs-behavior-blur wvs-theme-orgio wvs-show-label wvs-tooltip redux-page  site-h2 body-default-font heading-default-font header-sticky  site-404-default elementor-default elementor-kit-12 elementor-page elementor-page-1864">
+    class="page-template-default page page-id-1867 theme-orgio woocommerce-no-js woo-variation-swatches wvs-behavior-blur wvs-theme-orgio wvs-show-label wvs-tooltip redux-page  site-h2 body-default-font heading-default-font header-sticky  site-404-default elementor-default elementor-kit-12 elementor-page elementor-page-1867">
     <div id="page" class="site">
         <div id="ct-loadding" class="ct-loader style5">
             <div class="ct-spinner5">
@@ -746,20 +746,20 @@
                                                 class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-current-language wpml-ls-first-item wpml-ls-item-legacy-dropdown">
                                                 <a href="#" class="js-wpml-ls-item-toggle wpml-ls-item-toggle"><img
                                                         class="wpml-ls-flag"
-                                                        src="../wp-content/themes/orgio/assets/images/flag/en.png"
+                                                        src="wp-content/themes/orgio/assets/images/flag/en.png"
                                                         alt="en" title="English"><span
                                                         class="wpml-ls-native">English</span></a>
                                                 <ul class="wpml-ls-sub-menu">
                                                     <li
                                                         class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-fr">
                                                         <a href="#" class="wpml-ls-link"><img class="wpml-ls-flag"
-                                                                src="../wp-content/themes/orgio/assets/images/flag/fr.png"
+                                                                src="wp-content/themes/orgio/assets/images/flag/fr.png"
                                                                 alt="fr" title="France"><span
                                                                 class="wpml-ls-native">France</span></a></li>
                                                     <li
                                                         class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-de wpml-ls-last-item">
                                                         <a href="#" class="wpml-ls-link"><img class="wpml-ls-flag"
-                                                                src="../wp-content/themes/orgio/assets/images/flag/ru.png"
+                                                                src="wp-content/themes/orgio/assets/images/flag/ru.png"
                                                                 alt="ue" title="Russia"><span
                                                                 class="wpml-ls-native">Russia</span></a></li>
                                                 </ul>
@@ -770,14 +770,14 @@
                                 <ul id="ct-menu-topbar" class="ct-main-menu children-arrow ct-menu-topbar clearfix">
                                     <li id="menu-item-2239"
                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2239">
-                                        <a href="../wishlist/index.htm"><span class="link-icon left-icon"><i
+                                        <a href="wishlist/index.htm"><span class="link-icon left-icon"><i
                                                     class="fa fa-heart-o"></i></span><span>My Wishlist</span></a></li>
                                     <li id="menu-item-2241"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1864 current_page_item menu-item-2241">
-                                        <a href="index.htm" aria-current="page"><span>Sign In</span></a></li>
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2241">
+                                        <a href="sign-in/index.htm"><span>Sign In</span></a></li>
                                     <li id="menu-item-2240"
-                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2240">
-                                        <a href="../sign-up/index.htm">Sign Up</a></li>
+                                        class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1867 current_page_item menu-item-2240">
+                                        <a href="index.htm" aria-current="page">Sign Up</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -787,13 +787,13 @@
                     <div class="container">
                         <div class="row">
                             <div class="ct-header-branding">
-                                <div class="ct-header-branding-inner"> <a class="logo-dark" href="../index.htm"
+                                <div class="ct-header-branding-inner"> <a class="logo-dark" href="index.htm"
                                         title="Organio" rel="home"><img
-                                            src="../wp-content/themes/orgio/assets/images/logo-dark.png"
-                                            alt="Organio"></a><a class="logo-light" href="../index.htm" title="Organio"
-                                        rel="home"><img src="../wp-content/themes/orgio/assets/images/logo-light.png"
-                                            alt="Organio"></a><a class="logo-mobile" href="../index.htm" title="Organio"
-                                        rel="home"><img src="../wp-content/themes/orgio/assets/images/logo-mobile.png"
+                                            src="wp-content/themes/orgio/assets/images/logo-dark.png"
+                                            alt="Organio"></a><a class="logo-light" href="index.htm" title="Organio"
+                                        rel="home"><img src="wp-content/themes/orgio/assets/images/logo-light.png"
+                                            alt="Organio"></a><a class="logo-mobile" href="index.htm" title="Organio"
+                                        rel="home"><img src="wp-content/themes/orgio/assets/images/logo-mobile.png"
                                             alt="Organio"></a></div>
                             </div>
                             <div class="ct-header-product-search">
@@ -853,13 +853,13 @@
                     <div class="container">
                         <div class="row">
                             <div class="ct-header-branding">
-                                <div class="ct-header-branding-inner"> <a class="logo-dark" href="../index.htm"
+                                <div class="ct-header-branding-inner"> <a class="logo-dark" href="index.htm"
                                         title="Organio" rel="home"><img
-                                            src="../wp-content/themes/orgio/assets/images/logo-dark.png"
-                                            alt="Organio"></a><a class="logo-light" href="../index.htm" title="Organio"
-                                        rel="home"><img src="../wp-content/themes/orgio/assets/images/logo-light.png"
-                                            alt="Organio"></a><a class="logo-mobile" href="../index.htm" title="Organio"
-                                        rel="home"><img src="../wp-content/themes/orgio/assets/images/logo-mobile.png"
+                                            src="wp-content/themes/orgio/assets/images/logo-dark.png"
+                                            alt="Organio"></a><a class="logo-light" href="index.htm" title="Organio"
+                                        rel="home"><img src="wp-content/themes/orgio/assets/images/logo-light.png"
+                                            alt="Organio"></a><a class="logo-mobile" href="index.htm" title="Organio"
+                                        rel="home"><img src="wp-content/themes/orgio/assets/images/logo-mobile.png"
                                             alt="Organio"></a></div>
                             </div>
                             <div class="ct-header-navigation">
@@ -872,14 +872,14 @@
                                             <ul class="sub-menu">
                                                 <li id="menu-item-2278"
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2278">
-                                                    <a href="../product-category/grocery-frozen/index.htm"><span
+                                                    <a href="product-category/grocery-frozen/index.htm"><span
                                                             class="link-icon left-icon"><i
                                                                 class="flaticon-cardboard"></i></span><span
                                                             class="ct-icon-menu"><i></i></span><span>Grocery &amp;
                                                             Frozen</span></a></li>
                                                 <li id="menu-item-2277"
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-2277">
-                                                    <a href="../product-category/fresh-fruits/index.htm"><span
+                                                    <a href="product-category/fresh-fruits/index.htm"><span
                                                             class="link-icon left-icon"><i
                                                                 class="flaticon-cherry"></i></span><span
                                                             class="ct-icon-menu"><i></i></span><span>Fresh
@@ -900,34 +900,34 @@
                                                 </li>
                                                 <li id="menu-item-2974"
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2974">
-                                                    <a href="../product-category/fresh-fish/index.htm"><span
+                                                    <a href="product-category/fresh-fish/index.htm"><span
                                                             class="link-icon left-icon"><i
                                                                 class="flaticon-fish"></i></span>Fresh Fish</a></li>
                                                 <li id="menu-item-2975"
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2975">
-                                                    <a href="../product-category/fresh-nuts/index.htm"><span
+                                                    <a href="product-category/fresh-nuts/index.htm"><span
                                                             class="link-icon left-icon"><i
                                                                 class="flaticon-coconut"></i></span>Fresh Nuts</a></li>
                                                 <li id="menu-item-2279"
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2279">
-                                                    <a href="../product-category/fresh-meat/index.htm"><span
+                                                    <a href="product-category/fresh-meat/index.htm"><span
                                                             class="link-icon left-icon"><i
                                                                 class="flaticon-chicken-leg"></i></span>Fresh Meat</a>
                                                 </li>
                                                 <li id="menu-item-2970"
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2970">
-                                                    <a href="../product-category/bread-bakery/index.htm"><span
+                                                    <a href="product-category/bread-bakery/index.htm"><span
                                                             class="link-icon left-icon"><i
                                                                 class="flaticon-fruits"></i></span>Bread &amp;
                                                         Bakery</a></li>
                                                 <li id="menu-item-2971"
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2971">
-                                                    <a href="../product-category/vegetable/index.htm"><span
+                                                    <a href="product-category/vegetable/index.htm"><span
                                                             class="link-icon left-icon"><i
                                                                 class="flaticon-grocery"></i></span>Vegetable</a></li>
                                                 <li id="menu-item-2234"
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-2234">
-                                                    <a href="../product-category/organic/index.htm"><span
+                                                    <a href="product-category/organic/index.htm"><span
                                                             class="link-icon left-icon"><i
                                                                 class="flaticon-leaf"></i></span>Organic</a>
                                                     <ul class="sub-menu">
@@ -944,17 +944,17 @@
                                                 </li>
                                                 <li id="menu-item-2235"
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2235">
-                                                    <a href="../product-category/food/index.htm"><span
+                                                    <a href="product-category/food/index.htm"><span
                                                             class="link-icon left-icon"><i
                                                                 class="flaticon-carrot"></i></span>Food</a></li>
                                                 <li id="menu-item-2236"
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2236">
-                                                    <a href="../product-category/nature/index.htm"><span
+                                                    <a href="product-category/nature/index.htm"><span
                                                             class="link-icon left-icon"><i
                                                                 class="flaticon-orange-juice"></i></span>Nature</a></li>
                                                 <li id="menu-item-2237"
                                                     class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-2237">
-                                                    <a href="../product-category/recipies/index.htm"><span
+                                                    <a href="product-category/recipies/index.htm"><span
                                                             class="link-icon left-icon"><i
                                                                 class="flaticon-broccoli"></i></span>Recipies</a></li>
                                             </ul>
@@ -964,7 +964,7 @@
                                 <nav class="ct-main-navigation">
                                     <div class="ct-main-navigation-inner">
                                         <div class="ct-logo-mobile"> <a href="" title="" rel="home"><img
-                                                    src="../wp-content/themes/orgio/assets/images/logo-mobile.png"
+                                                    src="wp-content/themes/orgio/assets/images/logo-mobile.png"
                                                     alt=""></a></div>
                                         <div class="header-mobile-search">
                                             <form role="search" method="get"
@@ -976,7 +976,7 @@
                                         <ul id="ct-main-menu" class="ct-main-menu children-arrow clearfix">
                                             <li id="menu-item-2163"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home megamenu megamenu-style-alt menu-item-has-children menu-item-2163">
-                                                <a href="../index.htm"><span>Home</span><span
+                                                <a href="index.htm"><span>Home</span><span
                                                         class="menu-line"></span><span
                                                         class="menu-icon-plus"></span></a>
                                                 <ul class="sub-menu">
@@ -1004,11 +1004,11 @@
                                                                                             data-wow-delay="ms">
                                                                                             <div
                                                                                                 class="ct-showcase-image">
-                                                                                                <a href="../index.htm">
+                                                                                                <a href="index.htm">
                                                                                                     <img fetchpriority="high"
                                                                                                         width="400"
                                                                                                         height="500"
-                                                                                                        src="../wp-content/uploads/2021/04/demo1.jpg"
+                                                                                                        src="wp-content/uploads/2021/04/demo1.jpg"
                                                                                                         class="attachment-full"
                                                                                                         alt=""> </a>
                                                                                             </div>
@@ -1030,10 +1030,10 @@
                                                                                             <div
                                                                                                 class="ct-showcase-image">
                                                                                                 <a
-                                                                                                    href="../home-6/index.htm">
+                                                                                                    href="home-6/index.htm">
                                                                                                     <img width="400"
                                                                                                         height="500"
-                                                                                                        src="../wp-content/uploads/2021/07/demo6.jpg"
+                                                                                                        src="wp-content/uploads/2021/07/demo6.jpg"
                                                                                                         class="attachment-full"
                                                                                                         alt=""> </a>
                                                                                             </div>
@@ -1062,10 +1062,10 @@
                                                                                             <div
                                                                                                 class="ct-showcase-image">
                                                                                                 <a
-                                                                                                    href="../home-2/index.htm">
+                                                                                                    href="home-2/index.htm">
                                                                                                     <img width="400"
                                                                                                         height="500"
-                                                                                                        src="../wp-content/uploads/2021/04/demo3.jpg"
+                                                                                                        src="wp-content/uploads/2021/04/demo3.jpg"
                                                                                                         class="attachment-full"
                                                                                                         alt=""> </a>
                                                                                             </div>
@@ -1087,11 +1087,11 @@
                                                                                             <div
                                                                                                 class="ct-showcase-image">
                                                                                                 <a
-                                                                                                    href="../home-7/index.htm">
+                                                                                                    href="home-7/index.htm">
                                                                                                     <img loading="lazy"
                                                                                                         width="400"
                                                                                                         height="500"
-                                                                                                        src="../wp-content/uploads/2021/04/demo-07.jpg"
+                                                                                                        src="wp-content/uploads/2021/04/demo-07.jpg"
                                                                                                         class="attachment-full"
                                                                                                         alt=""> </a>
                                                                                             </div>
@@ -1120,11 +1120,11 @@
                                                                                             <div
                                                                                                 class="ct-showcase-image">
                                                                                                 <a
-                                                                                                    href="../home-3/index.htm">
+                                                                                                    href="home-3/index.htm">
                                                                                                     <img loading="lazy"
                                                                                                         width="400"
                                                                                                         height="500"
-                                                                                                        src="../wp-content/uploads/2021/04/demo2.jpg"
+                                                                                                        src="wp-content/uploads/2021/04/demo2.jpg"
                                                                                                         class="attachment-full"
                                                                                                         alt=""> </a>
                                                                                             </div>
@@ -1146,11 +1146,11 @@
                                                                                             <div
                                                                                                 class="ct-showcase-image">
                                                                                                 <a
-                                                                                                    href="../home-8/index.htm">
+                                                                                                    href="home-8/index.htm">
                                                                                                     <img loading="lazy"
                                                                                                         width="400"
                                                                                                         height="500"
-                                                                                                        src="../wp-content/uploads/2021/04/demo-08.jpg"
+                                                                                                        src="wp-content/uploads/2021/04/demo-08.jpg"
                                                                                                         class="attachment-full"
                                                                                                         alt=""> </a>
                                                                                             </div>
@@ -1179,11 +1179,11 @@
                                                                                             <div
                                                                                                 class="ct-showcase-image">
                                                                                                 <a
-                                                                                                    href="../home-4/index.htm">
+                                                                                                    href="home-4/index.htm">
                                                                                                     <img loading="lazy"
                                                                                                         width="400"
                                                                                                         height="500"
-                                                                                                        src="../wp-content/uploads/2021/04/demo4.jpg"
+                                                                                                        src="wp-content/uploads/2021/04/demo4.jpg"
                                                                                                         class="attachment-full"
                                                                                                         alt=""> </a>
                                                                                             </div>
@@ -1205,11 +1205,11 @@
                                                                                             <div
                                                                                                 class="ct-showcase-image">
                                                                                                 <a
-                                                                                                    href="../home-9/index.htm">
+                                                                                                    href="home-9/index.htm">
                                                                                                     <img loading="lazy"
                                                                                                         width="400"
                                                                                                         height="500"
-                                                                                                        src="../wp-content/uploads/2021/09/demo-09.jpg"
+                                                                                                        src="wp-content/uploads/2021/09/demo-09.jpg"
                                                                                                         class="attachment-full"
                                                                                                         alt=""> </a>
                                                                                             </div>
@@ -1238,11 +1238,11 @@
                                                                                             <div
                                                                                                 class="ct-showcase-image">
                                                                                                 <a
-                                                                                                    href="../home-5/index.htm">
+                                                                                                    href="home-5/index.htm">
                                                                                                     <img loading="lazy"
                                                                                                         width="400"
                                                                                                         height="500"
-                                                                                                        src="../wp-content/uploads/2021/04/demo5.jpg"
+                                                                                                        src="wp-content/uploads/2021/04/demo5.jpg"
                                                                                                         class="attachment-full"
                                                                                                         alt=""> </a>
                                                                                             </div>
@@ -1264,11 +1264,11 @@
                                                                                             <div
                                                                                                 class="ct-showcase-image">
                                                                                                 <label>NEW</label> <a
-                                                                                                    href="../home-10/index.htm">
+                                                                                                    href="home-10/index.htm">
                                                                                                     <img loading="lazy"
                                                                                                         width="400"
                                                                                                         height="500"
-                                                                                                        src="../wp-content/uploads/2021/04/demo-10.jpg"
+                                                                                                        src="wp-content/uploads/2021/04/demo-10.jpg"
                                                                                                         class="attachment-full"
                                                                                                         alt=""> </a>
                                                                                             </div>
@@ -1295,37 +1295,37 @@
                                                 <ul class="sub-menu">
                                                     <li id="menu-item-2166"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2166">
-                                                        <a href="../about/index.htm"><span>About Us</span><span
+                                                        <a href="about/index.htm"><span>About Us</span><span
                                                                 class="menu-line"></span><span
                                                                 class="menu-icon-plus"></span></a></li>
                                                     <li id="menu-item-2197"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2197">
-                                                        <a href="../services/index.htm"><span>Our Services</span><span
+                                                        <a href="services/index.htm"><span>Our Services</span><span
                                                                 class="menu-line"></span><span
                                                                 class="menu-icon-plus"></span></a></li>
                                                     <li id="menu-item-2198"
                                                         class="menu-item menu-item-type-post_type menu-item-object-service menu-item-2198">
-                                                        <a href="../service/organic-store-services/index.htm"><span>Single
+                                                        <a href="service/organic-store-services/index.htm"><span>Single
                                                                 Service</span><span class="menu-line"></span><span
                                                                 class="menu-icon-plus"></span></a></li>
                                                     <li id="menu-item-2200"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2200">
-                                                        <a href="../team/index.htm"><span>Our Team</span><span
+                                                        <a href="team/index.htm"><span>Our Team</span><span
                                                                 class="menu-line"></span><span
                                                                 class="menu-icon-plus"></span></a></li>
                                                     <li id="menu-item-2170"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2170">
-                                                        <a href="../contact-us/index.htm"><span>Contact Us</span><span
+                                                        <a href="contact-us/index.htm"><span>Contact Us</span><span
                                                                 class="menu-line"></span><span
                                                                 class="menu-icon-plus"></span></a></li>
                                                     <li id="menu-item-2201"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2201">
-                                                        <a href="../testimonials/index.htm"><span>Testimonials</span><span
+                                                        <a href="testimonials/index.htm"><span>Testimonials</span><span
                                                                 class="menu-line"></span><span
                                                                 class="menu-icon-plus"></span></a></li>
                                                     <li id="menu-item-7941"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7941">
-                                                        <a href="../faqs/index.htm"><span>FAQs</span><span
+                                                        <a href="faqs/index.htm"><span>FAQs</span><span
                                                                 class="menu-line"></span><span
                                                                 class="menu-icon-plus"></span></a></li>
                                                     <li id="menu-item-2409"
@@ -1335,14 +1335,14 @@
                                                                 class="menu-icon-plus"></span></a>
                                                         <ul class="sub-menu">
                                                             <li id="menu-item-2411"
-                                                                class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1864 current_page_item menu-item-2411">
-                                                                <a href="index.htm" aria-current="page"><span>Sign
-                                                                        In</span><span class="menu-line"></span><span
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2411">
+                                                                <a href="sign-in/index.htm"><span>Sign In</span><span
+                                                                        class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
                                                             <li id="menu-item-2410"
-                                                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2410">
-                                                                <a href="../sign-up/index.htm"><span>Sign Up</span><span
-                                                                        class="menu-line"></span><span
+                                                                class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1867 current_page_item menu-item-2410">
+                                                                <a href="index.htm" aria-current="page"><span>Sign
+                                                                        Up</span><span class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
                                                         </ul>
                                                     </li>
@@ -1353,14 +1353,14 @@
                                                                 class="menu-icon-plus"></span></a></li>
                                                     <li id="menu-item-3394"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3394">
-                                                        <a href="../landing/index.htm"><span>Landing</span><span
+                                                        <a href="landing/index.htm"><span>Landing</span><span
                                                                 class="menu-line"></span><span
                                                                 class="menu-icon-plus"></span></a></li>
                                                 </ul>
                                             </li>
                                             <li id="menu-item-2167"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page megamenu megamenu-style-alt menu-item-has-children menu-item-2167">
-                                                <a href="../shop/index.htm"><span>Shop</span><span
+                                                <a href="shop/index.htm"><span>Shop</span><span
                                                         class="menu-line"></span><span
                                                         class="menu-icon-plus"></span></a>
                                                 <ul class="sub-menu">
@@ -1408,22 +1408,22 @@
                                                                                             class="ct-menu-item-wrap  style1">
                                                                                             <ul class="ct-menu-item ">
                                                                                                 <li> <a
-                                                                                                        href="../product-grid-2-columns/index.htm">
+                                                                                                        href="product-grid-2-columns/index.htm">
                                                                                                         <span>Grid 2
                                                                                                             Columns</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../product-grid-3-columns/index.htm">
+                                                                                                        href="product-grid-3-columns/index.htm">
                                                                                                         <span>Grid 3
                                                                                                             Columns</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../product-grid-4-columns/index.htm">
+                                                                                                        href="product-grid-4-columns/index.htm">
                                                                                                         <span>Grid 4
                                                                                                             Columns</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../product-grid-4-columns-full-width/index.htm">
+                                                                                                        href="product-grid-4-columns-full-width/index.htm">
                                                                                                         <span>Grid 4
                                                                                                             Columns
                                                                                                             Wide</span>
@@ -1468,22 +1468,22 @@
                                                                                             class="ct-menu-item-wrap  style1">
                                                                                             <ul class="ct-menu-item ">
                                                                                                 <li> <a
-                                                                                                        href="../shop/index-1.htm?sidebar-shop=left">
+                                                                                                        href="shop/index-1.htm?sidebar-shop=left">
                                                                                                         <span>Grid Left
                                                                                                             Sidebar</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../shop/index-2.htm?sidebar-shop=right">
+                                                                                                        href="shop/index-2.htm?sidebar-shop=right">
                                                                                                         <span>Grid Right
                                                                                                             Sidebar</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../shop/index-3.htm?shop-layout=list">
+                                                                                                        href="shop/index-3.htm?shop-layout=list">
                                                                                                         <span>Product
                                                                                                             List</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../product-masonry/index.htm">
+                                                                                                        href="product-masonry/index.htm">
                                                                                                         <span>Product
                                                                                                             Masonry</span>
                                                                                                     </a></li>
@@ -1527,19 +1527,19 @@
                                                                                             class="ct-menu-item-wrap  style1">
                                                                                             <ul class="ct-menu-item ">
                                                                                                 <li> <a
-                                                                                                        href="../product/indigi-teas/index.htm">
+                                                                                                        href="product/indigi-teas/index.htm">
                                                                                                         <span>Simple</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../product/organic-juice/index.htm">
+                                                                                                        href="product/organic-juice/index.htm">
                                                                                                         <span>Variable</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../product/raw-cashew-butter/index.htm">
+                                                                                                        href="product/raw-cashew-butter/index.htm">
                                                                                                         <span>External</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../product/blueberry-cookies/index.htm">
+                                                                                                        href="product/blueberry-cookies/index.htm">
                                                                                                         <span>Grouped</span>
                                                                                                     </a></li>
                                                                                             </ul>
@@ -1582,20 +1582,20 @@
                                                                                             class="ct-menu-item-wrap  style1">
                                                                                             <ul class="ct-menu-item ">
                                                                                                 <li> <a
-                                                                                                        href="index.htm">
+                                                                                                        href="sign-in/index.htm">
                                                                                                         <span>My
                                                                                                             Account</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../cart/index.htm">
+                                                                                                        href="cart/index.htm">
                                                                                                         <span>Cart</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../cart/index.htm">
+                                                                                                        href="cart/index.htm">
                                                                                                         <span>Checkout</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../wishlist/index.htm">
+                                                                                                        href="wishlist/index.htm">
                                                                                                         <span>Wishlist</span>
                                                                                                     </a></li>
                                                                                             </ul>
@@ -1618,44 +1618,44 @@
                                             </li>
                                             <li id="menu-item-2202"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2202">
-                                                <a href="../portfolio-grid/index.htm"><span>Portfolio</span><span
+                                                <a href="portfolio-grid/index.htm"><span>Portfolio</span><span
                                                         class="menu-line"></span><span
                                                         class="menu-icon-plus"></span></a>
                                                 <ul class="sub-menu">
                                                     <li id="menu-item-2203"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2203">
-                                                        <a href="../portfolio-grid/index.htm"><span>Portfolio
+                                                        <a href="portfolio-grid/index.htm"><span>Portfolio
                                                                 Grid</span><span class="menu-line"></span><span
                                                                 class="menu-icon-plus"></span></a>
                                                         <ul class="sub-menu">
                                                             <li id="menu-item-2210"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2210">
-                                                                <a href="../portfolio-grid-2-columns/index.htm"><span>2
+                                                                <a href="portfolio-grid-2-columns/index.htm"><span>2
                                                                         Columns</span><span
                                                                         class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
                                                             <li id="menu-item-2211"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2211">
-                                                                <a href="../portfolio-grid-3-columns/index.htm"><span>3
+                                                                <a href="portfolio-grid-3-columns/index.htm"><span>3
                                                                         Columns</span><span
                                                                         class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
                                                             <li id="menu-item-2204"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2204">
-                                                                <a href="../portfolio-grid/index.htm"><span>4
+                                                                <a href="portfolio-grid/index.htm"><span>4
                                                                         Columns</span><span
                                                                         class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
                                                             <li id="menu-item-2212"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2212">
-                                                                <a href="../portfolio-grid-4-columns-wide/index.htm"><span>4
+                                                                <a href="portfolio-grid-4-columns-wide/index.htm"><span>4
                                                                         Columns Wide</span><span
                                                                         class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
                                                             <li id="menu-item-2214"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2214">
                                                                 <a
-                                                                    href="../portfolio-grid-3-columns-full-width-no-space/index.htm"><span>Full
+                                                                    href="portfolio-grid-3-columns-full-width-no-space/index.htm"><span>Full
                                                                         Width No Space</span><span
                                                                         class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
@@ -1663,25 +1663,25 @@
                                                     </li>
                                                     <li id="menu-item-2205"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2205">
-                                                        <a href="../portfolio-masonry/index.htm"><span>Portfolio
+                                                        <a href="portfolio-masonry/index.htm"><span>Portfolio
                                                                 Masonry</span><span class="menu-line"></span><span
                                                                 class="menu-icon-plus"></span></a>
                                                         <ul class="sub-menu">
                                                             <li id="menu-item-2208"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2208">
-                                                                <a href="../portfolio-masonry/index.htm"><span>Portfolio
+                                                                <a href="portfolio-masonry/index.htm"><span>Portfolio
                                                                         Masonry 1</span><span
                                                                         class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
                                                             <li id="menu-item-2206"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2206">
-                                                                <a href="../portfolio-masonry-2/index.htm"><span>Portfolio
+                                                                <a href="portfolio-masonry-2/index.htm"><span>Portfolio
                                                                         Masonry 2</span><span
                                                                         class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
                                                             <li id="menu-item-2207"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2207">
-                                                                <a href="../portfolio-masonry-3/index.htm"><span>Portfolio
+                                                                <a href="portfolio-masonry-3/index.htm"><span>Portfolio
                                                                         Masonry 3</span><span
                                                                         class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
@@ -1689,47 +1689,47 @@
                                                     </li>
                                                     <li id="menu-item-3724"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3724">
-                                                        <a href="../portfolio-gallery/index.htm"><span>Portfolio
+                                                        <a href="portfolio-gallery/index.htm"><span>Portfolio
                                                                 Gallery</span><span class="menu-line"></span><span
                                                                 class="menu-icon-plus"></span></a></li>
                                                     <li id="menu-item-2209"
                                                         class="menu-item menu-item-type-post_type menu-item-object-portfolio menu-item-2209">
-                                                        <a href="../portfolio/holding-fresh-radishes/index.htm"><span>Portfolio
+                                                        <a href="portfolio/holding-fresh-radishes/index.htm"><span>Portfolio
                                                                 Details</span><span class="menu-line"></span><span
                                                                 class="menu-icon-plus"></span></a></li>
                                                 </ul>
                                             </li>
                                             <li id="menu-item-2169"
                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2169">
-                                                <a href="../blog/index.htm"><span>Blog</span><span
+                                                <a href="blog/index.htm"><span>Blog</span><span
                                                         class="menu-line"></span><span
                                                         class="menu-icon-plus"></span></a>
                                                 <ul class="sub-menu">
                                                     <li id="menu-item-2179"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2179">
-                                                        <a href="../blog-carousel/index.htm"><span>Blog
+                                                        <a href="blog-carousel/index.htm"><span>Blog
                                                                 Carousel</span><span class="menu-line"></span><span
                                                                 class="menu-icon-plus"></span></a></li>
                                                     <li id="menu-item-2180"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2180">
-                                                        <a href="../blog/index.htm"><span>Blog List</span><span
+                                                        <a href="blog/index.htm"><span>Blog List</span><span
                                                                 class="menu-line"></span><span
                                                                 class="menu-icon-plus"></span></a>
                                                         <ul class="sub-menu">
                                                             <li id="menu-item-2183"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2183">
-                                                                <a href="../blog-list-left-sidebar/index.htm"><span>Left
+                                                                <a href="blog-list-left-sidebar/index.htm"><span>Left
                                                                         Sidebar</span><span
                                                                         class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
                                                             <li id="menu-item-2182"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2182">
-                                                                <a href="../blog-list-full-width/index.htm"><span>Full
+                                                                <a href="blog-list-full-width/index.htm"><span>Full
                                                                         Width</span><span class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
                                                             <li id="menu-item-2181"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2181">
-                                                                <a href="../blog/index.htm"><span>Right
+                                                                <a href="blog/index.htm"><span>Right
                                                                         Sidebar</span><span
                                                                         class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
@@ -1737,38 +1737,38 @@
                                                     </li>
                                                     <li id="menu-item-5120"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-5120">
-                                                        <a href="../blog-grid-3-columns/index.htm"><span>Blog
+                                                        <a href="blog-grid-3-columns/index.htm"><span>Blog
                                                                 Grid</span><span class="menu-line"></span><span
                                                                 class="menu-icon-plus"></span></a>
                                                         <ul class="sub-menu">
                                                             <li id="menu-item-2189"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2189">
-                                                                <a href="../blog-grid-2-columns/index.htm"><span>2
+                                                                <a href="blog-grid-2-columns/index.htm"><span>2
                                                                         Columns</span><span
                                                                         class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
                                                             <li id="menu-item-2188"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2188">
-                                                                <a href="../blog-grid-2-columns-left-sidebar/index.htm"><span>2
+                                                                <a href="blog-grid-2-columns-left-sidebar/index.htm"><span>2
                                                                         Columns : Left Sidebar</span><span
                                                                         class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
                                                             <li id="menu-item-2187"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2187">
                                                                 <a
-                                                                    href="../blog-grid-2-columns-right-sidebar/index.htm"><span>2
+                                                                    href="blog-grid-2-columns-right-sidebar/index.htm"><span>2
                                                                         Columns : Right Sidebar</span><span
                                                                         class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
                                                             <li id="menu-item-5121"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5121">
-                                                                <a href="../blog-grid-3-columns/index.htm"><span>3
+                                                                <a href="blog-grid-3-columns/index.htm"><span>3
                                                                         Columns</span><span
                                                                         class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
                                                             <li id="menu-item-2185"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2185">
-                                                                <a href="../blog-grid-4-columns-full-width/index.htm"><span>4
+                                                                <a href="blog-grid-4-columns-full-width/index.htm"><span>4
                                                                         Columns : Full Width</span><span
                                                                         class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
@@ -1776,33 +1776,33 @@
                                                     </li>
                                                     <li id="menu-item-2192"
                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2192">
-                                                        <a href="../blog-masonry/index.htm"><span>Blog
+                                                        <a href="blog-masonry/index.htm"><span>Blog
                                                                 Masonry</span><span class="menu-line"></span><span
                                                                 class="menu-icon-plus"></span></a></li>
                                                     <li id="menu-item-2193"
                                                         class="menu-item menu-item-type-post_type menu-item-object-post menu-item-has-children menu-item-2193">
                                                         <a
-                                                            href="../we-advocate-swapping-screen-time-for-crafting/index.htm"><span>Blog
+                                                            href="we-advocate-swapping-screen-time-for-crafting/index.htm"><span>Blog
                                                                 Details</span><span class="menu-line"></span><span
                                                                 class="menu-icon-plus"></span></a>
                                                         <ul class="sub-menu">
                                                             <li id="menu-item-2195"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2195">
                                                                 <a
-                                                                    href="../zechsal-magnesium-flakes-especially-made/index.htm"><span>Left
+                                                                    href="zechsal-magnesium-flakes-especially-made/index.htm"><span>Left
                                                                         Sidebar</span><span
                                                                         class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
                                                             <li id="menu-item-2196"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2196">
                                                                 <a
-                                                                    href="../best-guide-to-shopping-for-organic-ingredients/index.htm"><span>Full
+                                                                    href="best-guide-to-shopping-for-organic-ingredients/index.htm"><span>Full
                                                                         Width</span><span class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
                                                             <li id="menu-item-2194"
                                                                 class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2194">
                                                                 <a
-                                                                    href="../we-advocate-swapping-screen-time-for-crafting/index.htm"><span>Right
+                                                                    href="we-advocate-swapping-screen-time-for-crafting/index.htm"><span>Right
                                                                         Sidebar</span><span
                                                                         class="menu-line"></span><span
                                                                         class="menu-icon-plus"></span></a></li>
@@ -1839,7 +1839,7 @@
                                                                                             class="ct-menu-item-wrap  style1">
                                                                                             <ul class="ct-menu-item ">
                                                                                                 <li> <a
-                                                                                                        href="../elements/accordions-toggles/index.htm">
+                                                                                                        href="elements/accordions-toggles/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fas fa-bars"></i>
                                                                                                         <span>Accordions
@@ -1847,34 +1847,34 @@
                                                                                                             Toggles</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../elements/blog-carousel/index.htm">
+                                                                                                        href="elements/blog-carousel/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fas fa-newspaper"></i>
                                                                                                         <span>Blog
                                                                                                             Carousel</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../elements/blog-grid/index.htm">
+                                                                                                        href="elements/blog-grid/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="far fa-newspaper"></i>
                                                                                                         <span>Blog
                                                                                                             Grid</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../elements/buttons/index.htm">
+                                                                                                        href="elements/buttons/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fas fa-cube"></i>
                                                                                                         <span>Buttons</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../elements/clients/index.htm">
+                                                                                                        href="elements/clients/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fas fa-user-astronaut"></i>
                                                                                                         <span>Clients
                                                                                                             Carousel</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../elements/contact-form-7/index.htm">
+                                                                                                        href="elements/contact-form-7/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fab fa-wpforms"></i>
                                                                                                         <span>Contact
@@ -1902,40 +1902,40 @@
                                                                                             class="ct-menu-item-wrap  style1">
                                                                                             <ul class="ct-menu-item ">
                                                                                                 <li> <a
-                                                                                                        href="../elements/countdown/index.htm">
+                                                                                                        href="elements/countdown/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fas fa-sort-numeric-down-alt"></i>
                                                                                                         <span>Countdown</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../elements/google-maps/index.htm">
+                                                                                                        href="elements/google-maps/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fas fa-map-marked-alt"></i>
                                                                                                         <span>Google
                                                                                                             Maps</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../elements/icon-with-text/index.htm">
+                                                                                                        href="elements/icon-with-text/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fas fa-layer-group"></i>
                                                                                                         <span>Icon With
                                                                                                             Text</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../elements/info-box/index.htm">
+                                                                                                        href="elements/info-box/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fas fa-toolbox"></i>
                                                                                                         <span>Info
                                                                                                             Box</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../elements/lists/index.htm">
+                                                                                                        href="elements/lists/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fas fa-list"></i>
                                                                                                         <span>Lists</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../elements/message-box/index.htm">
+                                                                                                        href="elements/message-box/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fas fa-info-circle"></i>
                                                                                                         <span>Message
@@ -1962,42 +1962,42 @@
                                                                                             class="ct-menu-item-wrap  style1">
                                                                                             <ul class="ct-menu-item ">
                                                                                                 <li> <a
-                                                                                                        href="../elements/portfolio-carousel/index.htm">
+                                                                                                        href="elements/portfolio-carousel/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fas fa-band-aid"></i>
                                                                                                         <span>Portfolio
                                                                                                             Carousel</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../elements/portfolio-grid/index.htm">
+                                                                                                        href="elements/portfolio-grid/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fas fa-wallet"></i>
                                                                                                         <span>Portfolio
                                                                                                             Grid</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../elements/product-carousel/index.htm">
+                                                                                                        href="elements/product-carousel/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="flaticon flaticon-dairy-products"></i>
                                                                                                         <span>Product
                                                                                                             Carousel</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../elements/product-grid/index.htm">
+                                                                                                        href="elements/product-grid/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fas fa-shopping-bag"></i>
                                                                                                         <span>Product
                                                                                                             Grid</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../elements/services-carousel/index.htm">
+                                                                                                        href="elements/services-carousel/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fas fa-cog"></i>
                                                                                                         <span>Services
                                                                                                             Carousel</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../elements/services-grid/index.htm">
+                                                                                                        href="elements/services-grid/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fas fa-cogs"></i>
                                                                                                         <span>Services
@@ -2024,42 +2024,42 @@
                                                                                             class="ct-menu-item-wrap  style1">
                                                                                             <ul class="ct-menu-item ">
                                                                                                 <li> <a
-                                                                                                        href="../elements/team-carousel/index.htm">
+                                                                                                        href="elements/team-carousel/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fas fa-user-circle"></i>
                                                                                                         <span>Team
                                                                                                             Carousel</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../elements/team-grid/index.htm">
+                                                                                                        href="elements/team-grid/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fas fa-users"></i>
                                                                                                         <span>Team
                                                                                                             Grid</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../elements/testimonial-carousel/index.htm">
+                                                                                                        href="elements/testimonial-carousel/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fas fa-quote-left"></i>
                                                                                                         <span>Testimonial
                                                                                                             Carousel</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../elements/testimonial-grid/index.htm">
+                                                                                                        href="elements/testimonial-grid/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fas fa-quote-right"></i>
                                                                                                         <span>Testimonial
                                                                                                             Grid</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../elements/video-buttons/index.htm">
+                                                                                                        href="elements/video-buttons/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="far fa-play-circle"></i>
                                                                                                         <span>Video
                                                                                                             Buttons</span>
                                                                                                     </a></li>
                                                                                                 <li> <a
-                                                                                                        href="../elements/counters/index.htm">
+                                                                                                        href="elements/counters/index.htm">
                                                                                                         <i aria-hidden="true"
                                                                                                             class="fas fa-sort-numeric-up"></i>
                                                                                                         <span>Counters</span>
@@ -2100,11 +2100,11 @@
             <div class="container">
                 <div class="page-title-inner">
                     <div class="page-title-holder">
-                        <h1 class="page-title">Sign In</h1>
+                        <h1 class="page-title">Sign Up</h1>
                     </div>
                     <ul class="ct-breadcrumb">
-                        <li><a class="breadcrumb-entry" href="../index.htm">Home</a></li>
-                        <li><span class="breadcrumb-entry">Sign In</span></li>
+                        <li><a class="breadcrumb-entry" href="index.htm">Home</a></li>
+                        <li><span class="breadcrumb-entry">Sign Up</span></li>
                     </ul>
                 </div>
             </div>
@@ -2115,74 +2115,102 @@
                     <div class="row content-row">
                         <div id="primary" class="content-area content-full-width col-12">
                             <main id="main" class="site-main">
-                                <article id="post-1864" class="post-1864 page type-page status-publish hentry">
+                                <article id="post-1867" class="post-1867 page type-page status-publish hentry">
                                     <div class="entry-content clearfix">
-                                        <div data-elementor-type="wp-page" data-elementor-id="1864"
-                                            class="elementor elementor-1864">
+                                        <div data-elementor-type="wp-page" data-elementor-id="1867"
+                                            class="elementor elementor-1867">
                                             <section
-                                                class="elementor-section elementor-top-section elementor-element elementor-element-ebfd291 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-                                                data-id="ebfd291" data-element_type="section"
+                                                class="elementor-section elementor-top-section elementor-element elementor-element-16eea041 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                                data-id="16eea041" data-element_type="section"
                                                 data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
                                                 <div class="elementor-container elementor-column-gap-extended ">
-                                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4ffdbae"
-                                                        data-id="4ffdbae" data-element_type="column">
+                                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-40f0af04"
+                                                        data-id="40f0af04" data-element_type="column">
                                                         <div class="elementor-widget-wrap elementor-element-populated">
-                                                            <div class="elementor-element elementor-element-f6ae03e elementor-widget elementor-widget-ct_user"
-                                                                data-id="f6ae03e" data-element_type="widget"
+                                                            <div class="elementor-element elementor-element-109a9832 elementor-widget elementor-widget-ct_user"
+                                                                data-id="109a9832" data-element_type="widget"
                                                                 data-widget_type="ct_user.default">
                                                                 <div class="elementor-widget-container">
                                                                     <div class="ct-user " data-wow-delay="ms">
                                                                         <div class="ct-user-inner">
                                                                             <div class="ct-user-holder">
                                                                                 <div class="ct-user-meta">
-                                                                                    <h4 class="ct-user-title">Log in to
-                                                                                        Your Account</h4>
+                                                                                    <h4 class="ct-user-title">Create
+                                                                                        your account</h4>
                                                                                     <div class="ct-user-form">
                                                                                         <div
-                                                                                            class="ct-user-form-body ct-user-form-login">
-                                                                                            <div class="login-form">
+                                                                                            class="ct-user-form-body ct-user-form-register">
+                                                                                            <div class="register-form">
                                                                                                 <div
                                                                                                     class="fields-content">
                                                                                                     <div
                                                                                                         class="field-group">
-                                                                                                        <input id="user"
+                                                                                                        <input
+                                                                                                            id="res_user"
                                                                                                             type="text"
-                                                                                                            class="input user_name"
+                                                                                                            class="input"
                                                                                                             placeholder="Username"
-                                                                                                            data-validate="Required Field">
+                                                                                                            data-validate="Required Field"
+                                                                                                            data-user-length="Username too short. At least 4 characters is required."
+                                                                                                            data-special-char="The value of text field can&#039;t contain any of the following characters: \ / : * ? &quot; &lt; &gt; space">
                                                                                                         <i
                                                                                                             class="zmdi zmdi-account"></i>
                                                                                                     </div>
                                                                                                     <div
                                                                                                         class="field-group">
-                                                                                                        <input id="pass"
+                                                                                                        <input
+                                                                                                            id="res_email"
+                                                                                                            type="text"
+                                                                                                            class="input"
+                                                                                                            placeholder="Email Address"
+                                                                                                            data-validate="Required Field"
+                                                                                                            data-email-format="The Email address is incorrect!">
+                                                                                                        <i
+                                                                                                            class="zmdi zmdi-email"></i>
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                        class="field-group">
+                                                                                                        <input
+                                                                                                            id="res_pass1"
                                                                                                             type="password"
-                                                                                                            class="input password"
+                                                                                                            class="input"
+                                                                                                            data-type="password"
                                                                                                             placeholder="Password"
-                                                                                                            data-validate="Required Field">
+                                                                                                            data-validate="Required Field"
+                                                                                                            data-pass-length="Password length must be greater than 5.">
                                                                                                         <i
                                                                                                             class="zmdi zmdi-lock"></i>
                                                                                                     </div>
                                                                                                     <div
-                                                                                                        class="field-group field-footer-group">
+                                                                                                        class="field-group">
+                                                                                                        <input
+                                                                                                            id="res_pass2"
+                                                                                                            type="password"
+                                                                                                            class="input"
+                                                                                                            data-type="password"
+                                                                                                            placeholder="Confirm Password"
+                                                                                                            data-validate="Required Field"
+                                                                                                            data-pass-confirm="Your password and confirmation password do not match.">
+                                                                                                        <i
+                                                                                                            class="zmdi zmdi-lock"></i>
+                                                                                                    </div>
+                                                                                                    <div
+                                                                                                        class="field-group">
                                                                                                         <button
                                                                                                             type="button"
-                                                                                                            class="button button-login">Log
-                                                                                                            In</button>
+                                                                                                            class="button btn-up-register">Create
+                                                                                                            Account</button>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="ct-user-bottom"> New to
-                                                                                    Organico? <a
-                                                                                        href="../sign-up/index.htm">Sign
-                                                                                        Up</a></div>
+                                                                                <div class="ct-user-bottom"> Already
+                                                                                    have an account? <a
+                                                                                        href="sign-in/index.htm">Log
+                                                                                        In</a></div>
                                                                             </div>
-                                                                            <div class="ct-user-footer"> <a
-                                                                                    href="../my-account/lost-password/index.htm">Forgot
-                                                                                    your password?</a></div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -2193,7 +2221,7 @@
                                             </section>
                                         </div>
                                     </div><!-- .entry-content -->
-                                </article><!-- #post-1864 -->
+                                </article><!-- #post-1867 -->
                             </main><!-- #main -->
                         </div><!-- #primary -->
                     </div>
@@ -2227,11 +2255,11 @@
                                                                     data-widget_type="ct_mailchimp_form.default">
                                                                     <div class="elementor-widget-container">
                                                                         <div class="ct-mailchimp ct-mailchimp1 bg-image style2"
-                                                                            style="background-image: url(../wp-content/uploads/2021/03/bg-mailchimp.jpg);">
+                                                                            style="background-image: url(wp-content/uploads/2021/03/bg-mailchimp.jpg);">
                                                                             <div class="ct-mailchimp-inner">
                                                                                 <div class="ct-mailchimp-image-left">
                                                                                     <img width="400" height="203"
-                                                                                        src="../wp-content/uploads/2021/03/mailchimp-image1.png"
+                                                                                        src="wp-content/uploads/2021/03/mailchimp-image1.png"
                                                                                         class="attachment-full" alt="">
                                                                                 </div>
                                                                                 <div class="ct-mailchimp-meta">
@@ -2278,7 +2306,7 @@
                                                                                             autocomplete="off"></label><input
                                                                                         type="hidden"
                                                                                         name="_mc4wp_timestamp"
-                                                                                        value="1732685795"><input
+                                                                                        value="1732685796"><input
                                                                                         type="hidden"
                                                                                         name="_mc4wp_form_id"
                                                                                         value="93"><input type="hidden"
@@ -2309,9 +2337,9 @@
                                                                     <div class="elementor-widget-container">
                                                                         <div class="ct-image-single    effect-none "
                                                                             data-width="" data-height=""> <a
-                                                                                href="../index.htm"> <img width="377"
+                                                                                href="index.htm"> <img width="377"
                                                                                     height="171"
-                                                                                    src="../wp-content/uploads/2021/03/logo-light.png"
+                                                                                    src="wp-content/uploads/2021/03/logo-light.png"
                                                                                     class="no-lazyload attachment-full"
                                                                                     alt=""> </a></div>
                                                                     </div>
@@ -2394,26 +2422,26 @@
                                                                                     <li id="menu-item-60"
                                                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-60">
                                                                                         <a
-                                                                                            href="../index.htm"><span>Home</span></a>
+                                                                                            href="index.htm"><span>Home</span></a>
                                                                                     </li>
                                                                                     <li id="menu-item-980"
                                                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-980">
                                                                                         <a
-                                                                                            href="../services/index.htm"><span>Services</span></a>
+                                                                                            href="services/index.htm"><span>Services</span></a>
                                                                                     </li>
                                                                                     <li id="menu-item-62"
                                                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-62">
-                                                                                        <a href="../about/index.htm"><span>About
+                                                                                        <a href="about/index.htm"><span>About
                                                                                                 us</span></a></li>
                                                                                     <li id="menu-item-979"
                                                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-979">
                                                                                         <a
-                                                                                            href="../testimonials/index.htm"><span>Testimonials</span></a>
+                                                                                            href="testimonials/index.htm"><span>Testimonials</span></a>
                                                                                     </li>
                                                                                     <li id="menu-item-64"
                                                                                         class="menu-item menu-item-type-post_type menu-item-object-page menu-item-64">
                                                                                         <a
-                                                                                            href="../blog/index.htm"><span>News</span></a>
+                                                                                            href="blog/index.htm"><span>News</span></a>
                                                                                     </li>
                                                                                 </ul>
                                                                             </div>
@@ -2575,7 +2603,7 @@
                                                                                                             class="sbi-screenreader">Instagram
                                                                                                             post
                                                                                                             17959653754394103</span>
-                                                                                                        <img src="../wp-content/plugins/instagram-feed/img/placeholder.png"
+                                                                                                        <img src="wp-content/plugins/instagram-feed/img/placeholder.png"
                                                                                                             alt="Instagram post 17959653754394103">
                                                                                                     </a></div>
                                                                                             </div>
@@ -2594,7 +2622,7 @@
                                                                                                             class="sbi-screenreader">Instagram
                                                                                                             post
                                                                                                             17914510495620947</span>
-                                                                                                        <img src="../wp-content/plugins/instagram-feed/img/placeholder.png"
+                                                                                                        <img src="wp-content/plugins/instagram-feed/img/placeholder.png"
                                                                                                             alt="Instagram post 17914510495620947">
                                                                                                     </a></div>
                                                                                             </div>
@@ -2613,7 +2641,7 @@
                                                                                                             class="sbi-screenreader">Instagram
                                                                                                             post
                                                                                                             17888466862984838</span>
-                                                                                                        <img src="../wp-content/plugins/instagram-feed/img/placeholder.png"
+                                                                                                        <img src="wp-content/plugins/instagram-feed/img/placeholder.png"
                                                                                                             alt="Instagram post 17888466862984838">
                                                                                                     </a></div>
                                                                                             </div>
@@ -2632,7 +2660,7 @@
                                                                                                             class="sbi-screenreader">Instagram
                                                                                                             post
                                                                                                             17881435106157658</span>
-                                                                                                        <img src="../wp-content/plugins/instagram-feed/img/placeholder.png"
+                                                                                                        <img src="wp-content/plugins/instagram-feed/img/placeholder.png"
                                                                                                             alt="Instagram post 17881435106157658">
                                                                                                     </a></div>
                                                                                             </div>
@@ -2651,7 +2679,7 @@
                                                                                                             class="sbi-screenreader">Instagram
                                                                                                             post
                                                                                                             17864434907368785</span>
-                                                                                                        <img src="../wp-content/plugins/instagram-feed/img/placeholder.png"
+                                                                                                        <img src="wp-content/plugins/instagram-feed/img/placeholder.png"
                                                                                                             alt="Instagram post 17864434907368785">
                                                                                                     </a></div>
                                                                                             </div>
@@ -2670,7 +2698,7 @@
                                                                                                             class="sbi-screenreader">Instagram
                                                                                                             post
                                                                                                             17875951253287200</span>
-                                                                                                        <img src="../wp-content/plugins/instagram-feed/img/placeholder.png"
+                                                                                                        <img src="wp-content/plugins/instagram-feed/img/placeholder.png"
                                                                                                             alt="Instagram post 17875951253287200">
                                                                                                     </a></div>
                                                                                             </div>
@@ -2758,7 +2786,7 @@
                 <div class="widget_shopping_cart_content">
                     <ul class="cart_list product_list_widget">
                         <li class="empty"> <i class="caseicon-shopping-cart-alt"></i> <span>Your cart is empty</span> <a
-                                class="btn btn-animate" href="../shop/index.htm">Browse Shop</a></li>
+                                class="btn btn-animate" href="shop/index.htm">Browse Shop</a></li>
                     </ul><!-- end product list -->
                 </div>
             </div>
@@ -2821,7 +2849,7 @@
                         </div>
                     </div>
                     <div class="ct-user-footer"> <a href="javascript:void(0)" class="btn-sign-up"> Sign Up</a></div>
-                    <div class="ct-user-forgot-pass"><a href="../my-account/lost-password/index.htm">Forgot your
+                    <div class="ct-user-forgot-pass"><a href="my-account/lost-password/index.htm">Forgot your
                             password?</a></div>
                 </div>
             </div>
@@ -2880,23 +2908,23 @@
                     </ul> Select the fields to be shown. Others will be hidden. Drag and drop to rearrange the order.<ul
                         class="woosc-settings-fields">
                         <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="gwt6" checked/=""><span class="move">Image</span></li>
+                                value="2fca" checked/=""><span class="move">Image</span></li>
                         <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="2a1a" checked/=""><span class="move">SKU</span></li>
+                                value="4y3q" checked/=""><span class="move">SKU</span></li>
                         <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="ouo3" checked/=""><span class="move">Rating</span></li>
+                                value="4esf" checked/=""><span class="move">Rating</span></li>
                         <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="vxov" checked/=""><span class="move">Price</span></li>
+                                value="tal4" checked/=""><span class="move">Price</span></li>
                         <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="pk9r" checked/=""><span class="move">Stock</span></li>
+                                value="ptn9" checked/=""><span class="move">Stock</span></li>
                         <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="f5is" checked/=""><span class="move">Availability</span></li>
+                                value="8zxq" checked/=""><span class="move">Availability</span></li>
                         <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="f8tx" checked/=""><span class="move">Add to cart</span></li>
+                                value="zpaq" checked/=""><span class="move">Add to cart</span></li>
                         <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="1m6l" checked/=""><span class="move">Description</span></li>
+                                value="uksp" checked/=""><span class="move">Description</span></li>
                         <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="pul2" checked/=""><span class="move">Weight</span></li>
+                                value="m7jy" checked/=""><span class="move">Weight</span></li>
                     </ul>
                 </div>
             </div>
@@ -2986,54 +3014,54 @@
             document.body.className = c;
         })(); </script>
     <link rel='stylesheet' id='wc-blocks-style-css'
-        href='../wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-9.3.3' type='text/css'
+        href='wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-9.3.3' type='text/css'
         media='all'>
-    <link rel='stylesheet' id='wpml-style-css' href='../wp-content/themes/orgio/assets/css/style-lang.css?ver=1.0.0'
+    <link rel='stylesheet' id='wpml-style-css' href='wp-content/themes/orgio/assets/css/style-lang.css?ver=1.0.0'
         type='text/css' media='all'>
     <link rel='stylesheet' id='elementor-post-2655-css'
-        href='../wp-content/uploads/elementor/css/post-2655.css?ver=1731037036' type='text/css' media='all'>
+        href='wp-content/uploads/elementor/css/post-2655.css?ver=1731037036' type='text/css' media='all'>
     <link rel='stylesheet' id='elementor-post-5090-css'
-        href='../wp-content/uploads/elementor/css/post-5090.css?ver=1731037036' type='text/css' media='all'>
+        href='wp-content/uploads/elementor/css/post-5090.css?ver=1731037036' type='text/css' media='all'>
     <link rel='stylesheet' id='elementor-post-4527-css'
-        href='../wp-content/uploads/elementor/css/post-4527.css?ver=1731037036' type='text/css' media='all'>
+        href='wp-content/uploads/elementor/css/post-4527.css?ver=1731037036' type='text/css' media='all'>
     <link rel='stylesheet' id='font-awesome-5-all-css'
-        href='../wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.25.4' type='text/css'
+        href='wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.25.4' type='text/css'
         media='all'>
     <link rel='stylesheet' id='font-awesome-4-shim-css'
-        href='../wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.25.4' type='text/css'
+        href='wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.25.4' type='text/css'
         media='all'>
     <link rel='stylesheet' id='widget-divider-css'
-        href='../wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.25.4' type='text/css' media='all'>
+        href='wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.25.4' type='text/css' media='all'>
     <link rel='stylesheet' id='google-fonts-2-css'
-        href='../../css-3?family=Fira+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.7.1'
+        href='css-3?family=Fira+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.7.1'
         type='text/css' media='all'>
     <link rel='stylesheet' id='elementor-icons-fa-regular-css'
-        href='../wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.15.3' type='text/css'
+        href='wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.15.3' type='text/css'
         media='all'>
     <link rel='stylesheet' id='rs-plugin-settings-css'
-        href='../wp-content/plugins/revslider/sr6/assets/css/rs6.css?ver=6.7.20' type='text/css' media='all'>
+        href='wp-content/plugins/revslider/sr6/assets/css/rs6.css?ver=6.7.20' type='text/css' media='all'>
     <style id='rs-plugin-settings-inline-css' type='text/css'>
         #rs-demo-id {}
     </style>
-    <script type="text/javascript" src="../wp-content/uploads/siteground-optimizer-assets/ct-core-main.min.js?ver=1.0.0"
+    <script type="text/javascript" src="wp-content/uploads/siteground-optimizer-assets/ct-core-main.min.js?ver=1.0.0"
         id="ct-core-main-js"></script>
-    <script type="text/javascript" src="../wp-content/plugins/case-theme-user/acess/js/notify.min.js?ver=1.0.0"
+    <script type="text/javascript" src="wp-content/plugins/case-theme-user/acess/js/notify.min.js?ver=1.0.0"
         id="notify-js"></script>
-    <script type="text/javascript" src="../wp-content/plugins/case-theme-user/acess/js/remodal.min.js?ver=1.0.0"
+    <script type="text/javascript" src="wp-content/plugins/case-theme-user/acess/js/remodal.min.js?ver=1.0.0"
         id="remodal-js"></script>
     <script type="text/javascript" id="ct-user-form-js-extra"> /* <![CDATA[ */
         var userpress = { "ajax": "https:\/\/demo.casethemes.net\/organio\/wp-admin\/admin-ajax.php", "nonce": "cd3b3a353b" };
         /* ]]> */ </script>
-    <script type="text/javascript" src="../wp-content/uploads/siteground-optimizer-assets/ct-user-form.min.js?ver=1.0.0"
+    <script type="text/javascript" src="wp-content/uploads/siteground-optimizer-assets/ct-user-form.min.js?ver=1.0.0"
         id="ct-user-form-js"></script>
-    <script type="text/javascript" src="../wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6"
+    <script type="text/javascript" src="wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6"
         id="wp-hooks-js"></script>
-    <script type="text/javascript" src="../wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6"
+    <script type="text/javascript" src="wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6"
         id="wp-i18n-js"></script>
     <script type="text/javascript" id="wp-i18n-js-after"> /* <![CDATA[ */
         wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
         /* ]]> */ </script>
-    <script type="text/javascript" src="../wp-content/uploads/siteground-optimizer-assets/swv.min.js?ver=6.0"
+    <script type="text/javascript" src="wp-content/uploads/siteground-optimizer-assets/swv.min.js?ver=6.0"
         id="swv-js"></script>
     <script type="text/javascript" id="contact-form-7-js-before"> /* <![CDATA[ */
         var wpcf7 = {
@@ -3043,21 +3071,21 @@
             }
         };
         /* ]]> */ </script>
-    <script type="text/javascript" src="../wp-content/uploads/siteground-optimizer-assets/contact-form-7.min.js?ver=6.0"
+    <script type="text/javascript" src="wp-content/uploads/siteground-optimizer-assets/contact-form-7.min.js?ver=6.0"
         id="contact-form-7-js"></script>
-    <script type="text/javascript" src="../wp-content/plugins/revslider/sr6/assets/js/rbtools.min.js?ver=6.7.20"
+    <script type="text/javascript" src="wp-content/plugins/revslider/sr6/assets/js/rbtools.min.js?ver=6.7.20"
         defer="" async="" id="tp-tools-js"></script>
-    <script type="text/javascript" src="../wp-content/plugins/revslider/sr6/assets/js/rs6.min.js?ver=6.7.20" defer=""
+    <script type="text/javascript" src="wp-content/plugins/revslider/sr6/assets/js/rs6.min.js?ver=6.7.20" defer=""
         async="" id="revmin-js"></script>
     <script type="text/javascript" id="wp-api-request-js-extra"> /* <![CDATA[ */
         var wpApiSettings = { "root": "https:\/\/demo.casethemes.net\/organio\/wp-json\/", "nonce": "7a7befeb17", "versionString": "wp\/v2\/" };
         /* ]]> */ </script>
-    <script type="text/javascript" src="../wp-includes/js/api-request.min.js?ver=6.7.1" id="wp-api-request-js"></script>
-    <script type="text/javascript" src="../wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0"
+    <script type="text/javascript" src="wp-includes/js/api-request.min.js?ver=6.7.1" id="wp-api-request-js"></script>
+    <script type="text/javascript" src="wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0"
         id="wp-polyfill-js"></script>
-    <script type="text/javascript" src="../wp-includes/js/dist/url.min.js?ver=e87eb76272a3a08402d2"
+    <script type="text/javascript" src="wp-includes/js/dist/url.min.js?ver=e87eb76272a3a08402d2"
         id="wp-url-js"></script>
-    <script type="text/javascript" src="../wp-includes/js/dist/api-fetch.min.js?ver=d387b816bc1ed2042e28"
+    <script type="text/javascript" src="wp-includes/js/dist/api-fetch.min.js?ver=d387b816bc1ed2042e28"
         id="wp-api-fetch-js"></script>
     <script type="text/javascript" id="wp-api-fetch-js-after"> /* <![CDATA[ */
         wp.apiFetch.use(wp.apiFetch.createRootURLMiddleware("https://demo.casethemes.net/organio/wp-json/"));
@@ -3070,100 +3098,100 @@
         var woo_variation_swatches_options = { "show_variation_label": "1", "clear_on_reselect": "", "variation_label_separator": ":", "is_mobile": "", "show_variation_stock": "", "stock_label_threshold": "5", "cart_redirect_after_add": "no", "enable_ajax_add_to_cart": "yes", "cart_url": "https:\/\/demo.casethemes.net\/organio\/cart\/", "is_cart": "" };
         /* ]]> */ </script>
     <script type="text/javascript"
-        src="../wp-content/plugins/woo-variation-swatches/assets/js/frontend.min.js?ver=1729744251"
+        src="wp-content/plugins/woo-variation-swatches/assets/js/frontend.min.js?ver=1729744251"
         id="woo-variation-swatches-js"></script>
-    <script type="text/javascript" src="../wp-content/uploads/siteground-optimizer-assets/print.min.js?ver=6.3.0"
+    <script type="text/javascript" src="wp-content/uploads/siteground-optimizer-assets/print.min.js?ver=6.3.0"
         id="print-js"></script>
     <script type="text/javascript"
-        src="../wp-content/uploads/siteground-optimizer-assets/table-head-fixer.min.js?ver=6.3.0"
+        src="wp-content/uploads/siteground-optimizer-assets/table-head-fixer.min.js?ver=6.3.0"
         id="table-head-fixer-js"></script>
     <script type="text/javascript"
-        src="../wp-content/plugins/woo-smart-compare/assets/libs/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js?ver=6.3.0"
+        src="wp-content/plugins/woo-smart-compare/assets/libs/perfect-scrollbar/js/perfect-scrollbar.jquery.min.js?ver=6.3.0"
         id="perfect-scrollbar-js"></script>
-    <script type="text/javascript" src="../wp-includes/js/jquery/ui/core.min.js?ver=1.13.3"
+    <script type="text/javascript" src="wp-includes/js/jquery/ui/core.min.js?ver=1.13.3"
         id="jquery-ui-core-js"></script>
-    <script type="text/javascript" src="../wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.3"
+    <script type="text/javascript" src="wp-includes/js/jquery/ui/mouse.min.js?ver=1.13.3"
         id="jquery-ui-mouse-js"></script>
-    <script type="text/javascript" src="../wp-includes/js/jquery/ui/sortable.min.js?ver=1.13.3"
+    <script type="text/javascript" src="wp-includes/js/jquery/ui/sortable.min.js?ver=1.13.3"
         id="jquery-ui-sortable-js"></script>
     <script type="text/javascript" id="woosc-frontend-js-extra"> /* <![CDATA[ */
         var woosc_vars = { "wc_ajax_url": "\/organio\/?wc-ajax=%%endpoint%%", "nonce": "c5cdb0e59d", "hash": "6", "user_id": "0cdb64fab32a05bd393b20c8c351de9f", "page_url": "#", "open_button": "", "hide_empty_row": "yes", "reload_count": "no", "variations": "yes", "open_button_action": "open_popup", "menu_action": "open_popup", "button_action": "show_table", "sidebar_position": "right", "message_position": "right-top", "message_added": "{name} has been added to Compare list.", "message_removed": "{name} has been removed from the Compare list.", "message_exists": "{name} is already in the Compare list.", "open_bar": "no", "bar_bubble": "no", "adding": "prepend", "click_again": "no", "hide_empty": "no", "click_outside": "yes", "freeze_column": "yes", "freeze_row": "yes", "scrollbar": "yes", "limit": "100", "remove_all": "Do you want to remove all products from the compare?", "limit_notice": "You can add a maximum of {limit} products to the comparison table.", "copied_text": "Share link %s was copied to clipboard!", "button_text": "Compare", "button_text_added": "Compare", "button_normal_icon": "woosc-icon-1", "button_added_icon": "woosc-icon-74" };
         /* ]]> */ </script>
     <script type="text/javascript"
-        src="../wp-content/uploads/siteground-optimizer-assets/woosc-frontend.min.js?ver=6.3.0"
+        src="wp-content/uploads/siteground-optimizer-assets/woosc-frontend.min.js?ver=6.3.0"
         id="woosc-frontend-js"></script>
     <script type="text/javascript" id="wc-add-to-cart-variation-js-extra"> /* <![CDATA[ */
         var wc_add_to_cart_variation_params = { "wc_ajax_url": "\/organio\/?wc-ajax=%%endpoint%%", "i18n_no_matching_variations_text": "Sorry, no products matched your selection. Please choose a different combination.", "i18n_make_a_selection_text": "Please select some product options before adding this product to your cart.", "i18n_unavailable_text": "Sorry, this product is unavailable. Please choose a different combination." };
         /* ]]> */ </script>
     <script type="text/javascript"
-        src="../wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.min.js?ver=9.3.3"
+        src="wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.min.js?ver=9.3.3"
         id="wc-add-to-cart-variation-js" data-wp-strategy="defer"></script>
     <script type="text/javascript"
-        src="../wp-content/plugins/woo-smart-quick-view/assets/libs/slick/slick.min.js?ver=4.1.3"
+        src="wp-content/plugins/woo-smart-quick-view/assets/libs/slick/slick.min.js?ver=4.1.3"
         id="slick-js"></script>
     <script type="text/javascript"
-        src="../wp-content/plugins/woo-smart-quick-view/assets/libs/magnific-popup/jquery.magnific-popup.min.js?ver=4.1.3"
+        src="wp-content/plugins/woo-smart-quick-view/assets/libs/magnific-popup/jquery.magnific-popup.min.js?ver=4.1.3"
         id="magnific-popup-js"></script>
     <script type="text/javascript" id="woosq-frontend-js-extra"> /* <![CDATA[ */
         var woosq_vars = { "wc_ajax_url": "\/organio\/?wc-ajax=%%endpoint%%", "nonce": "88339caaac", "view": "popup", "effect": "mfp-3d-unfold", "scrollbar": "yes", "auto_close": "yes", "hashchange": "no", "cart_redirect": "no", "cart_url": "https:\/\/demo.casethemes.net\/organio\/cart\/", "close": "Close (Esc)", "next_prev": "yes", "next": "Next (Right arrow key)", "prev": "Previous (Left arrow key)", "thumbnails_effect": "no", "related_slick_params": "{\"slidesToShow\":2,\"slidesToScroll\":2,\"dots\":true,\"arrows\":false,\"adaptiveHeight\":true,\"rtl\":false}", "thumbnails_slick_params": "{\"slidesToShow\":1,\"slidesToScroll\":1,\"dots\":true,\"arrows\":true,\"adaptiveHeight\":false,\"rtl\":false}", "thumbnails_zoom_params": "{\"duration\":120,\"magnify\":1}", "quick_view": "0" };
         /* ]]> */ </script>
     <script type="text/javascript"
-        src="../wp-content/uploads/siteground-optimizer-assets/woosq-frontend.min.js?ver=4.1.3"
+        src="wp-content/uploads/siteground-optimizer-assets/woosq-frontend.min.js?ver=4.1.3"
         id="woosq-frontend-js"></script>
     <script type="text/javascript" id="woosw-frontend-js-extra"> /* <![CDATA[ */
         var woosw_vars = { "wc_ajax_url": "\/organio\/?wc-ajax=%%endpoint%%", "nonce": "e18dae9370", "page_myaccount": "yes", "menu_action": "open_popup", "reload_count": "no", "perfect_scrollbar": "yes", "wishlist_url": "https:\/\/demo.casethemes.net\/organio\/wishlist\/", "button_action": "list", "message_position": "right-top", "button_action_added": "popup", "empty_confirm": "This action cannot be undone. Are you sure?", "delete_confirm": "This action cannot be undone. Are you sure?", "copied_text": "Copied the wishlist link:", "menu_text": "Wishlist", "button_text": "Add to wishlist", "button_text_added": "Browse wishlist", "button_normal_icon": "woosw-icon-5", "button_added_icon": "woosw-icon-8", "button_loading_icon": "woosw-icon-4" };
         /* ]]> */ </script>
     <script type="text/javascript"
-        src="../wp-content/uploads/siteground-optimizer-assets/woosw-frontend.min.js?ver=4.9.4"
+        src="wp-content/uploads/siteground-optimizer-assets/woosw-frontend.min.js?ver=4.9.4"
         id="woosw-frontend-js"></script>
-    <script type="text/javascript" src="../wp-content/themes/orgio/assets/js/bootstrap.min.js?ver=4.0.0"
+    <script type="text/javascript" src="wp-content/themes/orgio/assets/js/bootstrap.min.js?ver=4.0.0"
         id="bootstrap-js"></script>
-    <script type="text/javascript" src="../wp-content/themes/orgio/assets/js/nice-select.min.js?ver=all"
+    <script type="text/javascript" src="wp-content/themes/orgio/assets/js/nice-select.min.js?ver=all"
         id="nice-select-js"></script>
-    <script type="text/javascript" src="../wp-content/uploads/siteground-optimizer-assets/match-height.min.js?ver=1.0.0"
+    <script type="text/javascript" src="wp-content/uploads/siteground-optimizer-assets/match-height.min.js?ver=1.0.0"
         id="match-height-js"></script>
-    <script type="text/javascript" src="../wp-content/themes/orgio/assets/js/progressbar.min.js?ver=1.0.0"
+    <script type="text/javascript" src="wp-content/themes/orgio/assets/js/progressbar.min.js?ver=1.0.0"
         id="progressbar-js"></script>
-    <script type="text/javascript" src="../wp-content/themes/orgio/assets/js/wow.min.js?ver=1.0.0" id="wow-js"></script>
-    <script type="text/javascript" src="../wp-content/uploads/siteground-optimizer-assets/organio-main.min.js?ver=1.5.7"
+    <script type="text/javascript" src="wp-content/themes/orgio/assets/js/wow.min.js?ver=1.0.0" id="wow-js"></script>
+    <script type="text/javascript" src="wp-content/uploads/siteground-optimizer-assets/organio-main.min.js?ver=1.5.7"
         id="organio-main-js"></script>
     <script type="text/javascript"
-        src="../wp-content/uploads/siteground-optimizer-assets/organio-woocommerce.min.js?ver=1.5.7"
+        src="wp-content/uploads/siteground-optimizer-assets/organio-woocommerce.min.js?ver=1.5.7"
         id="organio-woocommerce-js"></script>
     <script type="text/javascript"
-        src="../wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=9.3.3"
+        src="wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=9.3.3"
         id="sourcebuster-js-js"></script>
     <script type="text/javascript" id="wc-order-attribution-js-extra"> /* <![CDATA[ */
         var wc_order_attribution = { "params": { "lifetime": 1.0000000000000000818030539140313095458623138256371021270751953125e-5, "session": 30, "base64": false, "ajaxurl": "https:\/\/demo.casethemes.net\/organio\/wp-admin\/admin-ajax.php", "prefix": "wc_order_attribution_", "allowTracking": true }, "fields": { "source_type": "current.typ", "referrer": "current_add.rf", "utm_campaign": "current.cmp", "utm_source": "current.src", "utm_medium": "current.mdm", "utm_content": "current.cnt", "utm_id": "current.id", "utm_term": "current.trm", "utm_source_platform": "current.plt", "utm_creative_format": "current.fmt", "utm_marketing_tactic": "current.tct", "session_entry": "current_add.ep", "session_start_time": "current_add.fd", "session_pages": "session.pgs", "session_count": "udata.vst", "user_agent": "udata.uag" } };
         /* ]]> */ </script>
     <script type="text/javascript"
-        src="../wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=9.3.3"
+        src="wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=9.3.3"
         id="wc-order-attribution-js"></script>
     <script type="text/javascript"
-        src="../wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.25.4"
+        src="wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.25.4"
         id="font-awesome-4-shim-js"></script>
     <script type="text/javascript" id="sbi_scripts-js-extra"> /* <![CDATA[ */
         var sb_instagram_js_options = { "font_method": "svg", "resized_url": "https:\/\/demo.casethemes.net\/organio\/wp-content\/uploads\/sb-instagram-feed-images\/", "placeholder": "https:\/\/demo.casethemes.net\/organio\/wp-content\/plugins\/instagram-feed\/img\/placeholder.png", "ajax_url": "https:\/\/demo.casethemes.net\/organio\/wp-admin\/admin-ajax.php" };
         /* ]]> */ </script>
-    <script type="text/javascript" src="../wp-content/plugins/instagram-feed/js/sbi-scripts.min.js?ver=6.6.0"
+    <script type="text/javascript" src="wp-content/plugins/instagram-feed/js/sbi-scripts.min.js?ver=6.6.0"
         id="sbi_scripts-js"></script>
-    <script type="text/javascript" src="../wp-content/themes/orgio/assets/js/cursor.js?ver=1.0.0"
+    <script type="text/javascript" src="wp-content/themes/orgio/assets/js/cursor.js?ver=1.0.0"
         id="organio-cursor-js"></script>
-    <script type="text/javascript" defer="" src="../wp-content/plugins/mailchimp-for-wp/assets/js/forms.js?ver=4.9.18"
+    <script type="text/javascript" defer="" src="wp-content/plugins/mailchimp-for-wp/assets/js/forms.js?ver=4.9.18"
         id="mc4wp-forms-api-js"></script>
-    <script type="text/javascript" src="../wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.25.4"
+    <script type="text/javascript" src="wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.25.4"
         id="elementor-webpack-runtime-js"></script>
-    <script type="text/javascript" src="../wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.25.4"
+    <script type="text/javascript" src="wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.25.4"
         id="elementor-frontend-modules-js"></script>
     <script type="text/javascript" id="elementor-frontend-js-before"> /* <![CDATA[ */
         var elementorFrontendConfig = {
             "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": {
                 "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } },
                 "hasCustomBreakpoints": false
-            }, "version": "3.25.4", "is_static": false, "experimentalFeatures": { "additional_custom_breakpoints": true, "e_swiper_latest": true, "e_nested_atomic_repeaters": true, "e_onboarding": true, "e_css_smooth_scroll": true, "home_screen": true, "landing-pages": true, "nested-elements": true, "editor_v2": true, "link-in-bio": true, "floating-buttons": true }, "urls": { "assets": "https:\/\/demo.casethemes.net\/organio\/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "https:\/\/demo.casethemes.net\/organio\/wp-admin\/admin-ajax.php", "uploadUrl": "https:\/\/demo.casethemes.net\/organio\/wp-content\/uploads" }, "nonces": { "floatingButtonsClickTracking": "90a1169fa1" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 30, "title": "Sign%20In%20%E2%80%93%20Organio", "excerpt": "", "featuredImage": false }
+            }, "version": "3.25.4", "is_static": false, "experimentalFeatures": { "additional_custom_breakpoints": true, "e_swiper_latest": true, "e_nested_atomic_repeaters": true, "e_onboarding": true, "e_css_smooth_scroll": true, "home_screen": true, "landing-pages": true, "nested-elements": true, "editor_v2": true, "link-in-bio": true, "floating-buttons": true }, "urls": { "assets": "https:\/\/demo.casethemes.net\/organio\/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "https:\/\/demo.casethemes.net\/organio\/wp-admin\/admin-ajax.php", "uploadUrl": "https:\/\/demo.casethemes.net\/organio\/wp-content\/uploads" }, "nonces": { "floatingButtonsClickTracking": "90a1169fa1" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 30, "title": "Sign%20Up%20%E2%80%93%20Organio", "excerpt": "", "featuredImage": false }
         };
         /* ]]> */ </script>
-    <script type="text/javascript" src="../wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.25.4"
+    <script type="text/javascript" src="wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.25.4"
         id="elementor-frontend-js"></script>
 </body>
 
