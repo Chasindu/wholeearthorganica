@@ -42,8 +42,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['user_name'] = $user['name'];
                 $_SESSION['auth'] = $user['auth'];
-                header("Location:../my-account.php");
-                // echo $_SESSION['user_name'];
+                if ($_SESSION['auth']=='u'){
+                header("Location:../my-account.php");}
+                
+                else if ($_SESSION['auth']=='s'){
+                    header("Location:../my-account-seller.php");}
+                
                 
             } else {
                 // Invalid credentials
@@ -66,6 +70,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //     die("Invalid email format.");
     // }
 
+
+    
+    if (isset($_POST['register'])) {
+
+        $name = sanitizeInput($_POST['username']);
+        $email = sanitizeInput($_POST['email']);
+        $password = sanitizeInput($_POST['psw']);
+        $address = sanitizeInput($_POST['address']);
+        $user_type = sanitizeInput($_POST['user_type']);
+        try {
+            // Insert data into the `users` table
+            $stmt = $pdo->prepare("INSERT INTO users (name, email, psw, address, auth) VALUES (:name, :email, :psw, :addr, :auth)");
+            $stmt->bindParam(':name', $name);
+            $stmt->bindParam(':email', $email);
+            $stmt->bindParam(':psw', $password);
+            $stmt->bindParam(':addr', $address);
+            $stmt->bindParam(':auth', $user_type);
+    
+            if ($stmt->execute()) {
+                {
+                    header("Location:../login.php");}
+            } else {
+                echo "Failed to insert data.";
+            }
+        } catch (PDOException $e) {
+            error_log("Insert error: " . $e->getMessage());
+            die("An error occurred. Please try again.");
+        }
+
+
+
+
+    }
    
 }
 
