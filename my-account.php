@@ -2,12 +2,14 @@
 <html lang="en-US">
 <?php 
 if(session_status() !== PHP_SESSION_ACTIVE) session_start();
+$username = $_SESSION['user_name'];
 ?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="//gmpg.org/xfn/11">
-    <title>Sign In &#8211; Organio</title>
+    <title>My Account &#8211; <?php echo $_SESSION['user_name']?></title>
     <meta name='robots' content='max-image-preview:large'>
     <style>
         img:is([sizes="auto" i], [sizes^="auto," i]) {
@@ -402,8 +404,8 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
     <link rel='stylesheet' id='remodal-css'
         href='wp-content/plugins/case-theme-user/acess/css/remodal.min.css?ver=6.7.1' type='text/css' media='all'>
     <link rel='stylesheet' id='remodal-default-theme-css'
-        href='wp-content/plugins/case-theme-user/acess/css/remodal-default-theme.min.css?ver=6.7.1' type='text/css'
-        media='all'>
+        href='wp-content/plugins/case-theme-user/acess/css/remodal-default-theme.min.css?ver=6.7.1'
+        type='text/css' media='all'>
     <link rel='stylesheet' id='contact-form-7-css'
         href='wp-content/plugins/contact-form-7/includes/css/contact-form-7.min.css?ver=6.0' type='text/css'
         media='all'>
@@ -425,8 +427,8 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
         }
     </style>
     <link rel='stylesheet' id='woo-variation-swatches-css'
-        href='wp-content/plugins/woo-variation-swatches/assets/css/frontend.min.css?ver=1729744251' type='text/css'
-        media='all'>
+        href='wp-content/plugins/woo-variation-swatches/assets/css/frontend.min.css?ver=1729744251'
+        type='text/css' media='all'>
     <style id='woo-variation-swatches-inline-css' type='text/css'>
         :root {
             --wvs-tick: url("data:image/svg+xml;utf8,%3Csvg filter='drop-shadow(0px 0px 2px rgb(0 0 0 / .8))' xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 30 30'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M4 16L11 23 27 7'/%3E%3C/svg%3E");
@@ -476,8 +478,8 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
             border-color: #76a713;
         }
     </style>
-    <link rel='stylesheet' id='bootstrap-css' href='wp-content/themes/orgio/assets/css/bootstrap.min.css?ver=4.0.0'
-        type='text/css' media='all'>
+    <link rel='stylesheet' id='bootstrap-css'
+        href='wp-content/themes/orgio/assets/css/bootstrap.min.css?ver=4.0.0' type='text/css' media='all'>
     <link rel='stylesheet' id='caseicon-css' href='wp-content/themes/orgio/assets/css/caseicon.min.css?ver=1.5.7'
         type='text/css' media='all'>
     <link rel='stylesheet' id='flaticon-css' href='wp-content/themes/orgio/assets/css/flaticon.min.css?ver=1.5.7'
@@ -512,11 +514,11 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
     <link rel='stylesheet' id='organio-style-css' href='wp-content/themes/orgio/organio-style.min.css?ver=6.7.1'
         type='text/css' media='all'>
     <link rel='stylesheet' id='organio-google-fonts-css'
-        href='css?family=Poppins%3A400%2C500%2C600%2C700%7CLora%3A400%2C500%2C600%2C700%7CBarlow%3A300%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%7CArchitects+Daughter%3A400%7CFira+Sans%3A400%2C500%2C700%7CRoboto%3A400%2C500%2C600%2C700%7CLexend%3A400%2C500%2C600%2C700%7CPlayfair+Display%3A400%2C400i%2C700%2C700i%2C800%2C900%7CAbril+Fatface%3A400%2C400i%2C700%2C700i%2C800%2C900%7CPT+Sans%3A400%2C400i%2C700%2C700i%7CNunito%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=6.7.1'
+        href='../css?family=Poppins%3A400%2C500%2C600%2C700%7CLora%3A400%2C500%2C600%2C700%7CBarlow%3A300%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%7CArchitects+Daughter%3A400%7CFira+Sans%3A400%2C500%2C700%7CRoboto%3A400%2C500%2C600%2C700%7CLexend%3A400%2C500%2C600%2C700%7CPlayfair+Display%3A400%2C400i%2C700%2C700i%2C800%2C900%7CAbril+Fatface%3A400%2C400i%2C700%2C700i%2C800%2C900%7CPT+Sans%3A400%2C400i%2C700%2C700i%7CNunito%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=6.7.1'
         type='text/css' media='all'>
     <link rel='stylesheet' id='elementor-icons-css'
-        href='wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.31.0' type='text/css'
-        media='all'>
+        href='wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.31.0'
+        type='text/css' media='all'>
     <link rel='stylesheet' id='elementor-frontend-css'
         href='wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.25.4' type='text/css' media='all'>
     <link rel='stylesheet' id='swiper-css'
@@ -529,12 +531,10 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
         href='wp-content/uploads/elementor/css/post-12.css?ver=1731036539' type='text/css' media='all'>
     <link rel='stylesheet' id='sbistyles-css'
         href='wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=6.6.0' type='text/css' media='all'>
-    <link rel='stylesheet' id='elementor-post-1864-css'
-        href='wp-content/uploads/elementor/css/post-1864.css?ver=1731037321' type='text/css' media='all'>
     <link rel='stylesheet' id='elementor-post-30-css'
         href='wp-content/uploads/elementor/css/post-30.css?ver=1731037321' type='text/css' media='all'>
     <link rel='stylesheet' id='google-fonts-1-css'
-        href='css-1?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.7.1'
+        href='../css-1?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.7.1'
         type='text/css' media='all'>
     <link rel='stylesheet' id='elementor-icons-shared-0-css'
         href='wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3'
@@ -550,10 +550,12 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
         id="tmpl-variation-template"><div class="woocommerce-variation-description">{{{ data.variation.variation_description }}}</div><div class="woocommerce-variation-price">{{{ data.variation.price_html }}}</div><div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div> </script>
     <script type="text/template"
         id="tmpl-unavailable-variation-template"><p role="alert">Sorry, this product is unavailable. Please choose a different combination.</p> </script>
-    <script type="text/javascript" src="wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+    <script type="text/javascript" src="wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
+        id="jquery-core-js"></script>
     <script type="text/javascript" src="wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
         id="jquery-migrate-js"></script>
-    <script type="text/javascript" src="wp-content/plugins/case-theme-core/assets/js/lib/waypoints.min.js?ver=2.0.5"
+    <script type="text/javascript"
+        src="wp-content/plugins/case-theme-core/assets/js/lib/waypoints.min.js?ver=2.0.5"
         id="waypoints-js"></script>
     <script type="text/javascript"
         src="wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.9.3.3"
@@ -562,8 +564,8 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
         var wc_add_to_cart_params = { "ajax_url": "\/organio\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/organio\/?wc-ajax=%%endpoint%%", "i18n_view_cart": "View cart", "cart_url": "https:\/\/demo.casethemes.net\/organio\/cart\/", "is_cart": "", "cart_redirect_after_add": "no" };
         /* ]]> */ </script>
     <script type="text/javascript"
-        src="wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=9.3.3" id="wc-add-to-cart-js"
-        defer="defer" data-wp-strategy="defer"></script>
+        src="wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=9.3.3"
+        id="wc-add-to-cart-js" defer="defer" data-wp-strategy="defer"></script>
     <script type="text/javascript"
         src="wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.9.3.3"
         id="js-cookie-js" data-wp-strategy="defer"></script>
@@ -581,18 +583,21 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
     <script type="text/javascript"
         src="wp-content/uploads/siteground-optimizer-assets/ct-inline-css-js.min.js?ver=1.5.7"
         id="ct-inline-css-js-js"></script>
+    <script type="text/javascript"
+        src="wp-content/plugins/case-theme-core/assets/js/lib/isotope.pkgd.min.js?ver=3.0.5"
+        id="isotope-js"></script>
     <link rel="https://api.w.org/" href="wp-json/index.htm">
-    <link rel="alternate" title="JSON" type="application/json" href="wp-json/wp/v2/pages/1864">
+    <link rel="alternate" title="JSON" type="application/json" href="wp-json/wp/v2/pages/4656">
     <link rel="EditURI" type="application/rsd+xml" title="RSD"
         href="https://demo.casethemes.net/organio/xmlrpc.php?rsd">
     <meta name="generator" content="WordPress 6.7.1">
     <meta name="generator" content="WooCommerce 9.3.3">
     <link rel="canonical" href="index.htm">
-    <link rel='shortlink' href='index.htm?p=1864'>
+    <link rel='shortlink' href='index.htm?p=4656'>
     <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
-        href="wp-json/oembed/1.0/embed-34?url=https%3A%2F%2Fdemo.casethemes.net%2Forganio%2Fsign-in%2F">
+        href="wp-json/oembed/1.0/embed-140?url=https%3A%2F%2Fdemo.casethemes.net%2Forganio%2Felements%2Fservices-grid%2F">
     <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"
-        href="wp-json/oembed/1.0/embed-35?url=https%3A%2F%2Fdemo.casethemes.net%2Forganio%2Fsign-in%2F&#038;format=xml">
+        href="wp-json/oembed/1.0/embed-141?url=https%3A%2F%2Fdemo.casethemes.net%2Forganio%2Felements%2Fservices-grid%2F&#038;format=xml">
     <meta name="generator" content="Redux 4.5.0">
     <link rel="icon" type="image/png" href="wp-content/uploads/2021/03/favicon.png"> <noscript>
         <style>
@@ -710,20 +715,10 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
             color: #ff7800;
         }
     </style>
-    <style id="ct-page-dynamic-css" data-type="redux-output-css">
-        #content {
-            padding-top: 0px;
-            padding-bottom: 0px;
-        }
-
-        .site-footer-custom {
-            background-color: #f9f9f9;
-        }
-    </style>
 </head>
 
 <body
-    class="page-template-default page page-id-1864 theme-orgio woocommerce-no-js woo-variation-swatches wvs-behavior-blur wvs-theme-orgio wvs-show-label wvs-tooltip redux-page  site-h2 body-default-font heading-default-font header-sticky  site-404-default elementor-default elementor-kit-12 elementor-page elementor-page-1864">
+    class="page-template-default page page-id-4656 page-child parent-pageid-4623 theme-orgio woocommerce-no-js woo-variation-swatches wvs-behavior-blur wvs-theme-orgio wvs-show-label wvs-tooltip redux-page  site-h2 body-default-font heading-default-font header-sticky  site-404-default elementor-default elementor-kit-12 elementor-page elementor-page-4656">
     <div id="page" class="site">
         <div id="ct-loadding" class="ct-loader style5">
             <div class="ct-spinner5">
@@ -732,16 +727,17 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                 <div class="bounce3"></div>
             </div>
         </div>
-        <?php include 'header.php'?>
+        <?php include 'header.php' ?>
         <div id="pagetitle" class="page-title bg-image ">
             <div class="container">
                 <div class="page-title-inner">
                     <div class="page-title-holder">
-                        <h1 class="page-title">Sign In</h1>
+                        <h1 class="page-title">My Account</h1>
                     </div>
                     <ul class="ct-breadcrumb">
-                        <li><a class="breadcrumb-entry" href="index.htm">Home</a></li>
-                        <li><span class="breadcrumb-entry">Sign In</span></li>
+                        <li><a class="breadcrumb-entry" href="index.php">Home</a></li>
+                        <li><a class="breadcrumb-entry" href="my-account.php">My Account - Shoppers</a></li>
+                        <!-- <li><span class="breadcrumb-entry">Services Grid</span></li> -->
                     </ul>
                 </div>
             </div>
@@ -752,71 +748,87 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                     <div class="row content-row">
                         <div id="primary" class="content-area content-full-width col-12">
                             <main id="main" class="site-main">
-                                <article id="post-1864" class="post-1864 page type-page status-publish hentry">
+                                <article id="post-4656" class="post-4656 page type-page status-publish hentry">
                                     <div class="entry-content clearfix">
-                                        <div data-elementor-type="wp-page" data-elementor-id="1864"
-                                            class="elementor elementor-1864">
+                                        <div data-elementor-type="wp-page" data-elementor-id="4656"
+                                            class="elementor elementor-4656">
                                             <section
-                                                class="elementor-section elementor-top-section elementor-element elementor-element-ebfd291 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default"
-                                                data-id="ebfd291" data-element_type="section"
-                                                data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+                                                class="elementor-section elementor-top-section elementor-element elementor-element-b4785dd elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                                                data-id="b4785dd" data-element_type="section">
                                                 <div class="elementor-container elementor-column-gap-extended ">
-                                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4ffdbae"
-                                                        data-id="4ffdbae" data-element_type="column">
+                                                    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c6a6465"
+                                                        data-id="c6a6465" data-element_type="column">
                                                         <div class="elementor-widget-wrap elementor-element-populated">
-                                                            <div class="elementor-element elementor-element-f6ae03e elementor-widget elementor-widget-ct_user"
-                                                                data-id="f6ae03e" data-element_type="widget"
-                                                                data-widget_type="ct_user.default">
+                                                            <div class="elementor-element elementor-element-1f3c75f elementor-widget elementor-widget-ct_service_grid"
+                                                                data-id="1f3c75f" data-element_type="widget"
+                                                                data-widget_type="ct_service_grid.default">
                                                                 <div class="elementor-widget-container">
-                                                                    <div class="ct-user " data-wow-delay="ms">
-                                                                        <div class="ct-user-inner">
-                                                                            <div class="ct-user-holder">
-                                                                                <div class="ct-user-meta">
-                                                                                    <form method="post" action="Classes/DB_RUN.php">
-                                                                                    <h4 class="ct-user-title">Log in to
-                                                                                        Your Account</h4>
-                                                                                    <div class="ct-user-form">
-                                                                                        <div
-                                                                                            class="ct-user-form-body ct-user-form-login">
-                                                                                            <div class="login-form">
-                                                                                                <div
-                                                                                                    class="fields-content">
-                                                                                                    <div
-                                                                                                        class="field-group">
-                                                                                                        <input id="user" name="email"
-                                                                                                            type="text"
-                                                                                                            class="input user_name"
-                                                                                                            placeholder="Email"
-                                                                                                            data-validate="Required Field">
-                                                                                                        <i
-                                                                                                            class="zmdi zmdi-account"></i>
-                                                                                                    </div>
-                                                                                                    <div
-                                                                                                        class="field-group">
-                                                                                                        <input id="pass" name="psw"
-                                                                                                            type="password"
-                                                                                                            class="input password"
-                                                                                                            placeholder="Password"
-                                                                                                            data-validate="Required Field">
-                                                                                                        <i
-                                                                                                            class="zmdi zmdi-lock"></i>
-                                                                                                    </div>
-                                                                                                    <div
-                                                                                                        class="field-group field-footer-group">
-                                                                                                        
-                                                                                                        <button type="submit" class="button" name="login">Login</button>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
+                                                                    <div id="ct_service_grid-1f3c75f"
+                                                                        class="ct-grid ct-service-grid1"
+                                                                        data-layout="masonry" data-start-page="1"
+                                                                        data-max-pages="1" data-total="6"
+                                                                        data-perpage="6" data-next-link="">
+                                                                        <div class="ct-grid-inner ct-grid-masonry row animate-time"
+                                                                            data-gutter="15">
+                                                                            <div
+                                                                                class="grid-item col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 ">
+                                                                                <div class="grid-item-inner active "
+                                                                                    data-wow-duration="1.2s">
+                                                                                    <div class="item--featured"> <a
+                                                                                            href="cart.php"><img
+                                                                                                loading="lazy"
+                                                                                                decoding="async"
+                                                                                                class="no-lazyload "
+                                                                                                src="wp-content/uploads/2021/03/organic13-370x370.jpg"
+                                                                                                width="370" height="370"
+                                                                                                alt="organic13"
+                                                                                                title="organic13"></a>
+                                                                                    </div>                                                                                    
+                                                                                    <div class="item--holder">
+                                                                                        <h3 class="item--title">
+                                                                                            View My Cart</h3>
+                                                                                    </div>
+                                                                                    <div class="item--holder-hover">
+                                                                                        <div class="item--holder-inner">
+                                                                                            <h3 class="item--title"><a
+                                                                                                    href="service/agricultural-services/index.htm">View My Cart</a></h3>
+                                                                                            
                                                                                         </div>
                                                                                     </div>
-                                                                                    </form>
                                                                                 </div>
-                                                                                <div class="ct-user-bottom"> New to Whole Earth Organia? <a
-                                                                                        href="register.php">Sign Up</a></div>
                                                                             </div>
-                                                                            <div class="ct-user-footer"> <a
-                                                                                    href="recover-psw.php">Forgot your password?</a></div>
+                                                                            <div
+                                                                                class="grid-item col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 ">
+                                                                                <div class="grid-item-inner  "
+                                                                                    data-wow-duration="1.2s">
+                                                                                    <div class="item--featured"> <a
+                                                                                            href="service/organic-store-services/index.htm"><img
+                                                                                                loading="lazy"
+                                                                                                decoding="async"
+                                                                                                class="no-lazyload "
+                                                                                                src="wp-content/uploads/2021/03/organic14-370x370.jpg"
+                                                                                                width="370" height="370"
+                                                                                                alt="organic14"
+                                                                                                title="organic14"></a>
+                                                                                    </div>
+                                                                                  
+                                                                                    <div class="item--holder">
+                                                                                        <h3 class="item--title">My Orders</h3>
+                                                                                    </div>
+                                                                                    <div class="item--holder-hover">
+                                                                                        <div class="item--holder-inner">
+                                                                                            <h3 class="item--title"><a
+                                                                                                    href="service/organic-store-services/index.htm">My Orders</a>
+                                                                                            </h3>
+                                                                                            
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div
+                                                                                class="grid-sizer col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                                            </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -827,16 +839,14 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                             </section>
                                         </div>
                                     </div><!-- .entry-content -->
-                                </article><!-- #post-1864 -->
+                                </article><!-- #post-4656 -->
                             </main><!-- #main -->
                         </div><!-- #primary -->
                     </div>
                 </div>
             </div><!-- #content inner -->
         </div><!-- #content -->
-        <?php include 'footer.php'?>
-        
-        <a href="#" class="scroll-top"><i class="caseicon-long-arrow-right-three"></i></a>
+        <?php include 'footer.php' ?><a href="#" class="scroll-top"><i class="caseicon-long-arrow-right-three"></i></a>
     </div><!-- #page -->
     <div class="ct-modal ct-modal-search">
         <div class="ct-modal-close"><i class="ct-icon-close"></i></div>
@@ -866,7 +876,69 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
             </div>
         </div>
     </div>
-
+    <div class="ct-modal ct-user-popup">
+        <div class="ct-modal-close"><i class="ct-icon-close"></i></div>
+        <div class="ct-modal-content">
+            <div class="ct-user ct-user-register u-close">
+                <div class="ct-user-content">
+                    <h3 class="ct-user-heading">Create your account</h3>
+                    <div class="ct-user-form">
+                        <div class="ct-user-form-body ct-user-form-register">
+                            <div class="register-form">
+                                <div class="fields-content">
+                                    <div class="field-group"> <input id="res_user" type="text" class="input"
+                                            placeholder="Username" data-validate="Required Field"
+                                            data-user-length="Username too short. At least 4 characters is required."
+                                            data-special-char="The value of text field can&#039;t contain any of the following characters: \ / : * ? &quot; &lt; &gt; space">
+                                        <i class="zmdi zmdi-account"></i></div>
+                                    <div class="field-group"> <input id="res_email" type="text" class="input"
+                                            placeholder="Email Address" data-validate="Required Field"
+                                            data-email-format="The Email address is incorrect!"> <i
+                                            class="zmdi zmdi-email"></i></div>
+                                    <div class="field-group"> <input id="res_pass1" type="password" class="input"
+                                            data-type="password" placeholder="Password" data-validate="Required Field"
+                                            data-pass-length="Password length must be greater than 5."> <i
+                                            class="zmdi zmdi-lock"></i></div>
+                                    <div class="field-group"> <input id="res_pass2" type="password" class="input"
+                                            data-type="password" placeholder="Confirm Password"
+                                            data-validate="Required Field"
+                                            data-pass-confirm="Your password and confirmation password do not match.">
+                                        <i class="zmdi zmdi-lock"></i></div>
+                                    <div class="field-group"> <button type="button"
+                                            class="button btn-up-register">Create Account</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ct-user-footer"> <a href="javascript:void(0)" class="btn-sign-in"> Sign In</a></div>
+                </div>
+            </div>
+            <div class="ct-user ct-user-login">
+                <div class="ct-user-content">
+                    <h3 class="ct-user-heading">Log in to Your Account</h3>
+                    <div class="ct-user-form">
+                        <div class="ct-user-form-body ct-user-form-login">
+                            <div class="login-form">
+                                <div class="fields-content">
+                                    <div class="field-group"> <input id="user" type="text" class="input user_name"
+                                            placeholder="Username" data-validate="Required Field"> <i
+                                            class="zmdi zmdi-account"></i></div>
+                                    <div class="field-group"> <input id="pass" type="password" class="input password"
+                                            placeholder="Password" data-validate="Required Field"> <i
+                                            class="zmdi zmdi-lock"></i></div>
+                                    <div class="field-group field-footer-group"> <button type="button"
+                                            class="button button-login">Log In</button></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ct-user-footer"> <a href="javascript:void(0)" class="btn-sign-up"> Sign Up</a></div>
+                    <div class="ct-user-forgot-pass"><a href="my-account/lost-password/index.htm">Forgot your
+                            password?</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="ct-cursor ct-js-cursor">
         <div class="ct-cursor-wrapper">
             <div class="ct-cursor--follower ct-js-follower"></div>
@@ -874,12 +946,7 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
             <div class="ct-cursor--icon ct-js-icon"></div>
         </div>
     </div>
-    <script> window.RS_MODULES = window.RS_MODULES || {};
-        window.RS_MODULES.modules = window.RS_MODULES.modules || {};
-        window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
-        window.RS_MODULES.defered = true;
-        window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
-        window.RS_MODULES.type = 'compiled'; </script>
+
     <script>(function () {
             function maybePrefixUrlField() {
                 const value = this.value.trim()
@@ -919,23 +986,23 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                     </ul> Select the fields to be shown. Others will be hidden. Drag and drop to rearrange the order.<ul
                         class="woosc-settings-fields">
                         <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="gwt6" checked/=""><span class="move">Image</span></li>
+                                value="w1m2" checked/=""><span class="move">Image</span></li>
                         <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="2a1a" checked/=""><span class="move">SKU</span></li>
+                                value="vhsa" checked/=""><span class="move">SKU</span></li>
                         <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="ouo3" checked/=""><span class="move">Rating</span></li>
+                                value="r2xv" checked/=""><span class="move">Rating</span></li>
                         <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="vxov" checked/=""><span class="move">Price</span></li>
+                                value="x88i" checked/=""><span class="move">Price</span></li>
                         <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="pk9r" checked/=""><span class="move">Stock</span></li>
+                                value="9vrx" checked/=""><span class="move">Stock</span></li>
                         <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="f5is" checked/=""><span class="move">Availability</span></li>
+                                value="ou2c" checked/=""><span class="move">Availability</span></li>
                         <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="f8tx" checked/=""><span class="move">Add to cart</span></li>
+                                value="o519" checked/=""><span class="move">Add to cart</span></li>
                         <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="1m6l" checked/=""><span class="move">Description</span></li>
+                                value="3fy8" checked/=""><span class="move">Description</span></li>
                         <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="pul2" checked/=""><span class="move">Weight</span></li>
+                                value="wcts" checked/=""><span class="move">Weight</span></li>
                     </ul>
                 </div>
             </div>
@@ -1035,16 +1102,11 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
         href='wp-content/uploads/elementor/css/post-5090.css?ver=1731037036' type='text/css' media='all'>
     <link rel='stylesheet' id='elementor-post-4527-css'
         href='wp-content/uploads/elementor/css/post-4527.css?ver=1731037036' type='text/css' media='all'>
-    <link rel='stylesheet' id='font-awesome-5-all-css'
-        href='wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.25.4' type='text/css'
-        media='all'>
-    <link rel='stylesheet' id='font-awesome-4-shim-css'
-        href='wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.25.4' type='text/css'
-        media='all'>
     <link rel='stylesheet' id='widget-divider-css'
-        href='wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.25.4' type='text/css' media='all'>
+        href='wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.25.4' type='text/css'
+        media='all'>
     <link rel='stylesheet' id='google-fonts-2-css'
-        href='css-3?family=Fira+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.7.1'
+        href='../css-3?family=Fira+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.7.1'
         type='text/css' media='all'>
     <link rel='stylesheet' id='elementor-icons-fa-regular-css'
         href='wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.15.3' type='text/css'
@@ -1054,7 +1116,8 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
     <style id='rs-plugin-settings-inline-css' type='text/css'>
         #rs-demo-id {}
     </style>
-    <script type="text/javascript" src="wp-content/uploads/siteground-optimizer-assets/ct-core-main.min.js?ver=1.0.0"
+    <script type="text/javascript"
+        src="wp-content/uploads/siteground-optimizer-assets/ct-core-main.min.js?ver=1.0.0"
         id="ct-core-main-js"></script>
     <script type="text/javascript" src="wp-content/plugins/case-theme-user/acess/js/notify.min.js?ver=1.0.0"
         id="notify-js"></script>
@@ -1063,7 +1126,8 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
     <script type="text/javascript" id="ct-user-form-js-extra"> /* <![CDATA[ */
         var userpress = { "ajax": "https:\/\/demo.casethemes.net\/organio\/wp-admin\/admin-ajax.php", "nonce": "cd3b3a353b" };
         /* ]]> */ </script>
-    <script type="text/javascript" src="wp-content/uploads/siteground-optimizer-assets/ct-user-form.min.js?ver=1.0.0"
+    <script type="text/javascript"
+        src="wp-content/uploads/siteground-optimizer-assets/ct-user-form.min.js?ver=1.0.0"
         id="ct-user-form-js"></script>
     <script type="text/javascript" src="wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6"
         id="wp-hooks-js"></script>
@@ -1082,7 +1146,8 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
             }
         };
         /* ]]> */ </script>
-    <script type="text/javascript" src="wp-content/uploads/siteground-optimizer-assets/contact-form-7.min.js?ver=6.0"
+    <script type="text/javascript"
+        src="wp-content/uploads/siteground-optimizer-assets/contact-form-7.min.js?ver=6.0"
         id="contact-form-7-js"></script>
     <script type="text/javascript" src="wp-content/plugins/revslider/sr6/assets/js/rbtools.min.js?ver=6.7.20"
         defer="" async="" id="tp-tools-js"></script>
@@ -1091,7 +1156,8 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
     <script type="text/javascript" id="wp-api-request-js-extra"> /* <![CDATA[ */
         var wpApiSettings = { "root": "https:\/\/demo.casethemes.net\/organio\/wp-json\/", "nonce": "7a7befeb17", "versionString": "wp\/v2\/" };
         /* ]]> */ </script>
-    <script type="text/javascript" src="wp-includes/js/api-request.min.js?ver=6.7.1" id="wp-api-request-js"></script>
+    <script type="text/javascript" src="wp-includes/js/api-request.min.js?ver=6.7.1"
+        id="wp-api-request-js"></script>
     <script type="text/javascript" src="wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0"
         id="wp-polyfill-js"></script>
     <script type="text/javascript" src="wp-includes/js/dist/url.min.js?ver=e87eb76272a3a08402d2"
@@ -1159,16 +1225,30 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
         id="bootstrap-js"></script>
     <script type="text/javascript" src="wp-content/themes/orgio/assets/js/nice-select.min.js?ver=all"
         id="nice-select-js"></script>
-    <script type="text/javascript" src="wp-content/uploads/siteground-optimizer-assets/match-height.min.js?ver=1.0.0"
+    <script type="text/javascript"
+        src="wp-content/uploads/siteground-optimizer-assets/match-height.min.js?ver=1.0.0"
         id="match-height-js"></script>
     <script type="text/javascript" src="wp-content/themes/orgio/assets/js/progressbar.min.js?ver=1.0.0"
         id="progressbar-js"></script>
-    <script type="text/javascript" src="wp-content/themes/orgio/assets/js/wow.min.js?ver=1.0.0" id="wow-js"></script>
-    <script type="text/javascript" src="wp-content/uploads/siteground-optimizer-assets/organio-main.min.js?ver=1.5.7"
+    <script type="text/javascript" src="wp-content/themes/orgio/assets/js/wow.min.js?ver=1.0.0"
+        id="wow-js"></script>
+    <script type="text/javascript"
+        src="wp-content/uploads/siteground-optimizer-assets/organio-main.min.js?ver=1.5.7"
         id="organio-main-js"></script>
     <script type="text/javascript"
         src="wp-content/uploads/siteground-optimizer-assets/organio-woocommerce.min.js?ver=1.5.7"
         id="organio-woocommerce-js"></script>
+    <script type="text/javascript" src="wp-includes/js/imagesloaded.min.js?ver=5.0.0"
+        id="imagesloaded-js"></script>
+    <script type="text/javascript" id="ct-post-masonry-widget-js-js-extra"> /* <![CDATA[ */
+        var main_data = { "ajax_url": "https:\/\/demo.casethemes.net\/organio\/wp-admin\/admin-ajax.php" };
+        /* ]]> */ </script>
+    <script type="text/javascript"
+        src="wp-content/uploads/siteground-optimizer-assets/ct-post-masonry-widget-js.min.js?ver=1.5.7"
+        id="ct-post-masonry-widget-js-js"></script>
+    <script type="text/javascript"
+        src="wp-content/uploads/siteground-optimizer-assets/ct-post-grid-widget-js.min.js?ver=1.5.7"
+        id="ct-post-grid-widget-js-js"></script>
     <script type="text/javascript"
         src="wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=9.3.3"
         id="sourcebuster-js-js"></script>
@@ -1178,9 +1258,6 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
     <script type="text/javascript"
         src="wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=9.3.3"
         id="wc-order-attribution-js"></script>
-    <script type="text/javascript"
-        src="wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.25.4"
-        id="font-awesome-4-shim-js"></script>
     <script type="text/javascript" id="sbi_scripts-js-extra"> /* <![CDATA[ */
         var sb_instagram_js_options = { "font_method": "svg", "resized_url": "https:\/\/demo.casethemes.net\/organio\/wp-content\/uploads\/sb-instagram-feed-images\/", "placeholder": "https:\/\/demo.casethemes.net\/organio\/wp-content\/plugins\/instagram-feed\/img\/placeholder.png", "ajax_url": "https:\/\/demo.casethemes.net\/organio\/wp-admin\/admin-ajax.php" };
         /* ]]> */ </script>
@@ -1188,8 +1265,8 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
         id="sbi_scripts-js"></script>
     <script type="text/javascript" src="wp-content/themes/orgio/assets/js/cursor.js?ver=1.0.0"
         id="organio-cursor-js"></script>
-    <script type="text/javascript" defer="" src="wp-content/plugins/mailchimp-for-wp/assets/js/forms.js?ver=4.9.18"
-        id="mc4wp-forms-api-js"></script>
+    <script type="text/javascript" defer=""
+        src="wp-content/plugins/mailchimp-for-wp/assets/js/forms.js?ver=4.9.18" id="mc4wp-forms-api-js"></script>
     <script type="text/javascript" src="wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.25.4"
         id="elementor-webpack-runtime-js"></script>
     <script type="text/javascript" src="wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.25.4"
@@ -1199,7 +1276,7 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
             "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": {
                 "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } },
                 "hasCustomBreakpoints": false
-            }, "version": "3.25.4", "is_static": false, "experimentalFeatures": { "additional_custom_breakpoints": true, "e_swiper_latest": true, "e_nested_atomic_repeaters": true, "e_onboarding": true, "e_css_smooth_scroll": true, "home_screen": true, "landing-pages": true, "nested-elements": true, "editor_v2": true, "link-in-bio": true, "floating-buttons": true }, "urls": { "assets": "https:\/\/demo.casethemes.net\/organio\/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "https:\/\/demo.casethemes.net\/organio\/wp-admin\/admin-ajax.php", "uploadUrl": "https:\/\/demo.casethemes.net\/organio\/wp-content\/uploads" }, "nonces": { "floatingButtonsClickTracking": "90a1169fa1" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 30, "title": "Sign%20In%20%E2%80%93%20Organio", "excerpt": "", "featuredImage": false }
+            }, "version": "3.25.4", "is_static": false, "experimentalFeatures": { "additional_custom_breakpoints": true, "e_swiper_latest": true, "e_nested_atomic_repeaters": true, "e_onboarding": true, "e_css_smooth_scroll": true, "home_screen": true, "landing-pages": true, "nested-elements": true, "editor_v2": true, "link-in-bio": true, "floating-buttons": true }, "urls": { "assets": "https:\/\/demo.casethemes.net\/organio\/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "https:\/\/demo.casethemes.net\/organio\/wp-admin\/admin-ajax.php", "uploadUrl": "https:\/\/demo.casethemes.net\/organio\/wp-content\/uploads" }, "nonces": { "floatingButtonsClickTracking": "90a1169fa1" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 30, "title": "Services%20Grid%20%E2%80%93%20Organio", "excerpt": "", "featuredImage": false }
         };
         /* ]]> */ </script>
     <script type="text/javascript" src="wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.25.4"

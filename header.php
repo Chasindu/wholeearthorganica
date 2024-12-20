@@ -1,3 +1,6 @@
+<?php 
+if(session_status() !== PHP_SESSION_ACTIVE) session_start();
+?>
 <header id="ct-masthead">
     <div id="ct-header-wrap" class="ct-header-layout1 item-menu-style1 fixed-height  is-sticky scroll-to-bottom"
         data-offset-sticky="100">
@@ -399,12 +402,36 @@
                                         </ul>
                                     </li>
                                 </ul>
-                                <ul id="ct-main-menu-right" class="ct-main-menu children-arrow clearfix">
 
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22">
-                                        <a href="login.php"><span>My Account - Login</span></a>
-                                    </li>
-                                </ul>
+                                <ul id="ct-main-menu-right" class="ct-main-menu children-arrow clearfix">                                 
+<?php if (($_SESSION['user_name']) == ""){?>    
+
+    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22">
+    <a href="login.php"><span>My Account - Login</span></a>
+    </li>
+<?php }
+
+else{
+    ?>
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22">
+<a href="my-account.php"><span>Hello - <?php echo $_SESSION['user_name']?></span></a>
+    </li>
+   
+
+
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22">
+    <a href="log_out.php"><span>Log out</span></a>
+    </li>
+   
+<?php }
+?>
+
+</ul>
+
+                                        
+                                   
                             </div>
                         </nav>
                         <div class="ct-header-meta">

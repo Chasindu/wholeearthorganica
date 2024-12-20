@@ -3,7 +3,7 @@ session_start();
 
 // Database configuration
 $host = 'localhost';
-$db = 'juice_centerdb';
+$db = 'organica';
 $user = 'xcopet_juice';
 $password = 'fEa7UiyN8l_qi62L';
 
