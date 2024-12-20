@@ -4,8 +4,8 @@ session_start();
 // Database configuration
 $host = 'localhost';
 $db = 'organica';
-$user = 'xcopet_juice';
-$password = 'fEa7UiyN8l_qi62L';
+$user = '4413';
+$password = '4413';
 
 // Connect to the database securely with PDO
 try {

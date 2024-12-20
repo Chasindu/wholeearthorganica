@@ -736,7 +736,7 @@ $username = $_SESSION['user_name'];
                     </div>
                     <ul class="ct-breadcrumb">
                         <li><a class="breadcrumb-entry" href="index.php">Home</a></li>
-                        <li><a class="breadcrumb-entry" href="my-account.php">My Account - Sellers</a></li>
+                        <li><a class="breadcrumb-entry" href="my-account-seller.php">My Account - Sellers</a></li>
                         <!-- <li><span class="breadcrumb-entry">Services Grid</span></li> -->
                     </ul>
                 </div>
@@ -770,6 +770,7 @@ $username = $_SESSION['user_name'];
                                                                         data-perpage="6" data-next-link="">
                                                                         <div class="ct-grid-inner ct-grid-masonry row animate-time"
                                                                             data-gutter="15">
+
                                                                             <div
                                                                                 class="grid-item col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 ">
                                                                                 <div class="grid-item-inner active "
@@ -786,12 +787,42 @@ $username = $_SESSION['user_name'];
                                                                                     </div>                                                                                    
                                                                                     <div class="item--holder">
                                                                                         <h3 class="item--title">
-                                                                                            View My Cart</h3>
+                                                                                            View Inventry</h3>
                                                                                     </div>
                                                                                     <div class="item--holder-hover">
                                                                                         <div class="item--holder-inner">
                                                                                             <h3 class="item--title"><a
-                                                                                                    href="service/agricultural-services/index.htm">View My Cart</a></h3>
+                                                                                                    href="service/agricultural-services/index.htm">View Inventry</a></h3>
+                                                                                            
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+
+                                                                            
+                                                                            <div
+                                                                                class="grid-item col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 ">
+                                                                                <div class="grid-item-inner active "
+                                                                                    data-wow-duration="1.2s">
+                                                                                    <div class="item--featured"> <a
+                                                                                            href="cart.php"><img
+                                                                                                loading="lazy"
+                                                                                                decoding="async"
+                                                                                                class="no-lazyload "
+                                                                                                src="wp-content/uploads/2021/03/organic13-370x370.jpg"
+                                                                                                width="370" height="370"
+                                                                                                alt="organic13"
+                                                                                                title="organic13"></a>
+                                                                                    </div>                                                                                    
+                                                                                    <div class="item--holder">
+                                                                                        <h3 class="item--title">
+                                                                                            View Orders</h3>
+                                                                                    </div>
+                                                                                    <div class="item--holder-hover">
+                                                                                        <div class="item--holder-inner">
+                                                                                            <h3 class="item--title"><a
+                                                                                                    href="service/agricultural-services/index.htm">View Orders</a></h3>
                                                                                             
                                                                                         </div>
                                                                                     </div>
@@ -813,12 +844,12 @@ $username = $_SESSION['user_name'];
                                                                                     </div>
                                                                                   
                                                                                     <div class="item--holder">
-                                                                                        <h3 class="item--title">My Orders</h3>
+                                                                                        <h3 class="item--title">Publish New Items</h3>
                                                                                     </div>
                                                                                     <div class="item--holder-hover">
                                                                                         <div class="item--holder-inner">
                                                                                             <h3 class="item--title"><a
-                                                                                                    href="service/organic-store-services/index.htm">My Orders</a>
+                                                                                                    href="service/organic-store-services/index.htm">Publish New Items</a>
                                                                                             </h3>
                                                                                             
                                                                                         </div>
