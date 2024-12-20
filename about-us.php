@@ -20,7 +20,7 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
         href="comments/feed/index.htm">
     <script type="text/javascript"> /* <![CDATA[ */
         window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/demo.casethemes.net\/organio\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.1" } };
-        /*! This file is auto-generated */
+        
         !function (i, n) { var o, s, e; function c(e) { try { var t = { supportTests: e, timestamp: (new Date).valueOf() }; sessionStorage.setItem(o, JSON.stringify(t)) } catch (e) { } } function p(e, t, n) { e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(t, 0, 0); var t = new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data), r = (e.clearRect(0, 0, e.canvas.width, e.canvas.height), e.fillText(n, 0, 0), new Uint32Array(e.getImageData(0, 0, e.canvas.width, e.canvas.height).data)); return t.every(function (e, t) { return e === r[t] }) } function u(e, t, n) { switch (t) { case "flag": return n(e, "\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f", "\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f") ? !1 : !n(e, "\ud83c\uddfa\ud83c\uddf3", "\ud83c\uddfa\u200b\ud83c\uddf3") && !n(e, "\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f", "\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f"); case "emoji": return !n(e, "\ud83d\udc26\u200d\u2b1b", "\ud83d\udc26\u200b\u2b1b") }return !1 } function f(e, t, n) { var r = "undefined" != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope ? new OffscreenCanvas(300, 150) : i.createElement("canvas"), a = r.getContext("2d", { willReadFrequently: !0 }), o = (a.textBaseline = "top", a.font = "600 32px Arial", {}); return e.forEach(function (e) { o[e] = t(a, e, n) }), o } function t(e) { var t = i.createElement("script"); t.src = e, t.defer = !0, i.head.appendChild(t) } "undefined" != typeof Promise && (o = "wpEmojiSettingsSupports", s = ["flag", "emoji"], n.supports = { everything: !0, everythingExceptFlag: !0 }, e = new Promise(function (e) { i.addEventListener("DOMContentLoaded", e, { once: !0 }) }), new Promise(function (t) { var n = function () { try { var e = JSON.parse(sessionStorage.getItem(o)); if ("object" == typeof e && "number" == typeof e.timestamp && (new Date).valueOf() < e.timestamp + 604800 && "object" == typeof e.supportTests) return e.supportTests } catch (e) { } return null }(); if (!n) { if ("undefined" != typeof Worker && "undefined" != typeof OffscreenCanvas && "undefined" != typeof URL && URL.createObjectURL && "undefined" != typeof Blob) try { var e = "postMessage(" + f.toString() + "(" + [JSON.stringify(s), u.toString(), p.toString()].join(",") + "));", r = new Blob([e], { type: "text/javascript" }), a = new Worker(URL.createObjectURL(r), { name: "wpTestEmojiSupports" }); return void (a.onmessage = function (e) { c(n = e.data), a.terminate(), t(n) }) } catch (e) { } c(n = f(s, u, p)) } t(n) }).then(function (e) { for (var t in e) n.supports[t] = e[t], n.supports.everything = n.supports.everything && n.supports[t], "flag" !== t && (n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && n.supports[t]); n.supports.everythingExceptFlag = n.supports.everythingExceptFlag && !n.supports.flag, n.DOMReady = !1, n.readyCallback = function () { n.DOMReady = !0 } }).then(function () { return e }).then(function () { var e; n.supports.everything || (n.readyCallback(), (e = n.source || {}).concatemoji ? t(e.concatemoji) : e.wpemoji && e.twemoji && (t(e.twemoji), t(e.wpemoji))) })) }((window, document), window._wpemojiSettings);
         /* ]]> */ </script>
     <link rel='stylesheet' id='sbi_styles-css'
@@ -802,9 +802,7 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                                                                                 Return Policy</h5>
                                                                                             <div
                                                                                                 class="item--description">
-                                                                                                Purchasing from select
-                                                                                                family farmers who farm
-                                                                                                organically.</div>
+                                                                                                Shop worry-free with our flexible return policy. Your satisfaction is always our priority.</div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -827,9 +825,7 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                                                                                 Support 24/7</h5>
                                                                                             <div
                                                                                                 class="item--description">
-                                                                                                Purchasing from select
-                                                                                                family farmers who farm
-                                                                                                organically.</div>
+                                                                                                Our team is here to assist you whenever you need. Customer happiness, guaranteed.</div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -858,9 +854,7 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                                                                                 100% Fresh</h5>
                                                                                             <div
                                                                                                 class="item--description">
-                                                                                                Purchasing from select
-                                                                                                family farmers who farm
-                                                                                                organically.</div>
+                                                                                                From farm to table, we deliver freshness that you can see, smell, and taste</div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -883,9 +877,7 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                                                                                 Secured Payment</h5>
                                                                                             <div
                                                                                                 class="item--description">
-                                                                                                Purchasing from select
-                                                                                                family farmers who farm
-                                                                                                organically.</div>
+                                                                                                Shop with confidence. We ensure secure and easy payment options for your convenience.</div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -911,25 +903,20 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                                                             <h3 class="item--title case-animate-time st-default "
                                                                                 data-wow-delay="ms"> <span
                                                                                     class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">We</span></span>
-                                                                                <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">do</span></span>
-                                                                                <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">not</span></span>
-                                                                                <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">buy</span></span>
-                                                                                <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">from</span></span>
+                                                                                        class="d-inline-block wow case-fade-in-up">Experience</span></span>
                                                                                 <span class="slide-in-container"><span
                                                                                         class="d-inline-block wow case-fade-in-up">the</span></span>
                                                                                 <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">open</span></span>
+                                                                                        class="d-inline-block wow case-fade-in-up">Difference</span></span>
                                                                                 <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">market</span></span>
+                                                                                        class="d-inline-block wow case-fade-in-up">of</span></span>
                                                                                 <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">&</span></span>
+                                                                                        class="d-inline-block wow case-fade-in-up">True</span></span>
                                                                                 <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">traders.</span></span>
+                                                                                        class="d-inline-block wow case-fade-in-up">Organic</span></span>
+                                                                                <span class="slide-in-container"><span
+                                                                                        class="d-inline-block wow case-fade-in-up">Living</span></span>
+
                                                                             </h3>
                                                                         </div>
                                                                     </div>
@@ -946,12 +933,7 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
  "></div>
                                                                             <div
                                                                                 class="ct-text-editor elementor-clearfix">
-                                                                                Purchasing from select family farmers
-                                                                                who farm organically because they
-                                                                                believe in it and so we do. We are
-                                                                                conscious of air miles and our carbon
-                                                                                footprint so a lot of our produce comes
-                                                                                from Egypt.</div>
+                                                                                We work directly with farmers who share our passion for organic and sustainable practices.</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -967,13 +949,8 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
  "></div>
                                                                             <div
                                                                                 class="ct-text-editor elementor-clearfix">
-                                                                                Organic Foods and Café is a family run
-                                                                                company that runs organic super
-                                                                                markets and cafés selling fresh organic
-                                                                                and biodynamic food, supplers, skincare,
-                                                                                cosmetics, baby items and household
-                                                                                cleaning products. We have 5 shops in
-                                                                                Dubai – on Sheikh Zayed Road.</div>
+                                                                                By partnering with those who value quality and care, we bring you fresh, ethical, and environmentally conscious products.
+                                                                                Every purchase supports not just your health, but also a greener planet for future generations.</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1214,18 +1191,15 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                                                                                 loading="lazy"
                                                                                                 decoding="async"
                                                                                                 class="no-lazyload "
-                                                                                                src="wp-content/uploads/2021/03/author1-176x176.jpg"
+                                                                                                src="wp-content/uploads/2021/03/cha.png"
                                                                                                 width="176" height="176"
                                                                                                 alt="author1"
                                                                                                 title="author1"></div>
                                                                                         <div class="item--holder">
                                                                                             <div class="item--meta">
                                                                                                 <h3 class="item--title">
-                                                                                                    Alisa Lisa</h3>
-                                                                                                <div
-                                                                                                    class="item--position">
-                                                                                                    Customer Care
-                                                                                                    Officer</div>
+                                                                                                    Chasindu</h3>
+                                                                                                
                                                                                                 <div
                                                                                                     class="item--image-fixed">
                                                                                                     <img loading="lazy"
@@ -1245,20 +1219,10 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                                                                             </div>
                                                                                             <div
                                                                                                 class="item--description">
-                                                                                                Lisa focuses on
-                                                                                                providing customers with
-                                                                                                Organic and Fair Trade
-                                                                                                Food.</div>
-                                                                                            <div class="item--social">
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-facebook-f"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-twitter"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-dribbble"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-behance"></i></a>
-                                                                                            </div>
+                                                                                                Chasindu coordinated the project by assigning tasks, managing the technical framework,
+                                                                                                and ensuring seamless collaboration within the team.
+                                                                                                Chasindu also focused on backend functionalities and network integration.</div>
+                                                                                          
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -1268,17 +1232,15 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                                                                                 loading="lazy"
                                                                                                 decoding="async"
                                                                                                 class="no-lazyload "
-                                                                                                src="wp-content/uploads/2021/03/author2-176x176.jpg"
+                                                                                                src="wp-content/uploads/2021/03/efi.jpg"
                                                                                                 width="176" height="176"
                                                                                                 alt="author2"
                                                                                                 title="author2"></div>
                                                                                         <div class="item--holder">
                                                                                             <div class="item--meta">
                                                                                                 <h3 class="item--title">
-                                                                                                    Robert Leo</h3>
-                                                                                                <div
-                                                                                                    class="item--position">
-                                                                                                    Farmer</div>
+                                                                                                    Elif</h3>
+                                                                                               
                                                                                                 <div
                                                                                                     class="item--image-fixed">
                                                                                                     <img loading="lazy"
@@ -1298,183 +1260,14 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                                                                             </div>
                                                                                             <div
                                                                                                 class="item--description">
-                                                                                                Lisa focuses on
-                                                                                                providing customers with
-                                                                                                Organic and Fair Trade
-                                                                                                Food.</div>
-                                                                                            <div class="item--social">
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-facebook-f"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-twitter"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-dribbble"></i></a>
-                                                                                                <a href=""><i
-                                                                                                        class="fab fa-behance"></i></a>
-                                                                                            </div>
+                                                                                                Elif contributed by researching organic farm data and taking the lead on UI/UX improvements,
+                                                                                                ensuring a user-friendly and visually appealing design.
+                                                                                                She also collaborated closely with the team on implementing key frontend features.</div>
+                                                                                          
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
-                                                                                <div class="slick-slide">
-                                                                                    <div class="item--inner ">
-                                                                                        <div class="item--image"> <img
-                                                                                                loading="lazy"
-                                                                                                decoding="async"
-                                                                                                class="no-lazyload "
-                                                                                                src="wp-content/uploads/2021/03/author3-176x176.jpg"
-                                                                                                width="176" height="176"
-                                                                                                alt="author3"
-                                                                                                title="author3"></div>
-                                                                                        <div class="item--holder">
-                                                                                            <div class="item--meta">
-                                                                                                <h3 class="item--title">
-                                                                                                    Nora Bell</h3>
-                                                                                                <div
-                                                                                                    class="item--position">
-                                                                                                    Sales Executive
-                                                                                                </div>
-                                                                                                <div
-                                                                                                    class="item--image-fixed">
-                                                                                                    <img loading="lazy"
-                                                                                                        decoding="async"
-                                                                                                        width="95"
-                                                                                                        height="90"
-                                                                                                        src="wp-content/uploads/2021/03/team-leaf.png"
-                                                                                                        class="attachment-full"
-                                                                                                        alt=""><img
-                                                                                                        loading="lazy"
-                                                                                                        decoding="async"
-                                                                                                        width="95"
-                                                                                                        height="90"
-                                                                                                        src="wp-content/uploads/2021/03/team-leaf.png"
-                                                                                                        class="attachment-full"
-                                                                                                        alt=""></div>
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="item--description">
-                                                                                                Lisa focuses on
-                                                                                                providing customers with
-                                                                                                Organic and Fair Trade
-                                                                                                Food.</div>
-                                                                                            <div class="item--social">
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-facebook-f"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-twitter"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-dribbble"></i></a>
-                                                                                                <a href=""><i
-                                                                                                        class="fab fa-behance"></i></a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="slick-slide">
-                                                                                    <div class="item--inner ">
-                                                                                        <div class="item--image"> <img
-                                                                                                loading="lazy"
-                                                                                                decoding="async"
-                                                                                                class="no-lazyload "
-                                                                                                src="wp-content/uploads/2021/03/author6-176x176.jpg"
-                                                                                                width="176" height="176"
-                                                                                                alt="author6"
-                                                                                                title="author6"></div>
-                                                                                        <div class="item--holder">
-                                                                                            <div class="item--meta">
-                                                                                                <h3 class="item--title">
-                                                                                                    Sherri Horton</h3>
-                                                                                                <div
-                                                                                                    class="item--position">
-                                                                                                    Farmer</div>
-                                                                                                <div
-                                                                                                    class="item--image-fixed">
-                                                                                                    <img loading="lazy"
-                                                                                                        decoding="async"
-                                                                                                        width="95"
-                                                                                                        height="90"
-                                                                                                        src="wp-content/uploads/2021/03/team-leaf.png"
-                                                                                                        class="attachment-full"
-                                                                                                        alt=""><img
-                                                                                                        loading="lazy"
-                                                                                                        decoding="async"
-                                                                                                        width="95"
-                                                                                                        height="90"
-                                                                                                        src="wp-content/uploads/2021/03/team-leaf.png"
-                                                                                                        class="attachment-full"
-                                                                                                        alt=""></div>
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="item--description">
-                                                                                                Lisa focuses on
-                                                                                                providing customers with
-                                                                                                Organic and Fair Trade
-                                                                                                Food.</div>
-                                                                                            <div class="item--social">
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-facebook-f"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-twitter"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-dribbble"></i></a>
-                                                                                                <a href=""><i
-                                                                                                        class="fab fa-behance"></i></a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="slick-slide">
-                                                                                    <div class="item--inner ">
-                                                                                        <div class="item--image"> <img
-                                                                                                loading="lazy"
-                                                                                                decoding="async"
-                                                                                                class="no-lazyload "
-                                                                                                src="wp-content/uploads/2021/03/author5-176x176.jpg"
-                                                                                                width="176" height="176"
-                                                                                                alt="author5"
-                                                                                                title="author5"></div>
-                                                                                        <div class="item--holder">
-                                                                                            <div class="item--meta">
-                                                                                                <h3 class="item--title">
-                                                                                                    Sinira Fro</h3>
-                                                                                                <div
-                                                                                                    class="item--position">
-                                                                                                    Farmer</div>
-                                                                                                <div
-                                                                                                    class="item--image-fixed">
-                                                                                                    <img loading="lazy"
-                                                                                                        decoding="async"
-                                                                                                        width="95"
-                                                                                                        height="90"
-                                                                                                        src="wp-content/uploads/2021/03/team-leaf.png"
-                                                                                                        class="attachment-full"
-                                                                                                        alt=""><img
-                                                                                                        loading="lazy"
-                                                                                                        decoding="async"
-                                                                                                        width="95"
-                                                                                                        height="90"
-                                                                                                        src="wp-content/uploads/2021/03/team-leaf.png"
-                                                                                                        class="attachment-full"
-                                                                                                        alt=""></div>
-                                                                                            </div>
-                                                                                            <div
-                                                                                                class="item--description">
-                                                                                                Lisa focuses on
-                                                                                                providing customers with
-                                                                                                Organic and Fair Trade
-                                                                                                Food.</div>
-                                                                                            <div class="item--social">
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-facebook-f"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-twitter"></i></a>
-                                                                                                <a href="#"><i
-                                                                                                        class="fab fa-dribbble"></i></a>
-                                                                                                <a href=""><i
-                                                                                                        class="fab fa-behance"></i></a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
+                                                                                
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -1519,22 +1312,19 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                                                             <div class="item--sub-title style-default">
                                                                                 <span> <span>~</span> About us
                                                                                     <span>~</span> </span></div>
-                                                                            <h3 class="item--title case-animate-time st-default "
+                                                                                    <h3 class="item--title case-animate-time st-default "
                                                                                 data-wow-delay="ms"> <span
                                                                                     class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">We</span></span>
+                                                                                        class="d-inline-block wow case-fade-in-up">Driven</span></span>
                                                                                 <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">believe</span></span>
+                                                                                        class="d-inline-block wow case-fade-in-up">by</span></span>
                                                                                 <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">in</span></span>
+                                                                                        class="d-inline-block wow case-fade-in-up">Innovation</span></span>
                                                                                 <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">working</span></span>
+                                                                                        class="d-inline-block wow case-fade-in-up">and</span></span>
                                                                                 <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">with</span></span>
-                                                                                <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">accredited</span></span>
-                                                                                <span class="slide-in-container"><span
-                                                                                        class="d-inline-block wow case-fade-in-up">farmers</span></span>
+                                                                                        class="d-inline-block wow case-fade-in-up">Passion</span></span>
+                                                                                
                                                                             </h3>
                                                                         </div>
                                                                     </div>
@@ -1551,9 +1341,9 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
  "></div>
                                                                             <div
                                                                                 class="ct-text-editor elementor-clearfix">
-                                                                                Organic Foods and Café is a family run
-                                                                                company founded in
-                                                                                2004 that runs organic supermarkets
+                                                                                We are two Computer Science students
+                                                                                with a shared vision to promote healthier living
+                                                                                through technology and organic food.
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -1570,11 +1360,10 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
  "></div>
                                                                             <div
                                                                                 class="ct-text-editor elementor-clearfix">
-                                                                                Organic means growing our food, which is
-                                                                                to nourish us, without chemical aids
-                                                                                during the growing process such as
-                                                                                fertilisers, pesticides, fungcides,
-                                                                                herbacides, larbicides etc</div>
+                                                                                Organic means more than just food;
+                                                                                it's a lifestyle of sustainibility, health, and
+                                                                                community. We're here to make that accessible to everyone,
+                                                                                powered by our passion and commitment to a better future.</div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -1609,9 +1398,8 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                                                                                     Why Organic?</h5>
                                                                                                 <div
                                                                                                     class="item--description">
-                                                                                                    We're making room
-                                                                                                    for self care today
-                                                                                                    with plan.</div>
+                                                                                                    Healthier planet starts with healthier choices.
+                                                                                                    We aim to make organic living a part of everyone's lifestyle.</div>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -1644,13 +1432,12 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                                                                             </div>
                                                                                             <div class="item--holder">
                                                                                                 <h5 class="item--title">
-                                                                                                    Speciality Produce
+                                                                                                    Our mission
                                                                                                 </h5>
                                                                                                 <div
                                                                                                     class="item--description">
-                                                                                                    We're making room
-                                                                                                    for self care today
-                                                                                                    with plan.</div>
+                                                                                                    To empower individuals to make healthier choices by
+                                                                                                    merging the best of organic farming and modern innovation.</div>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
