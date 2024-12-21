@@ -52,7 +52,7 @@ try {
         }
         else if($searchCondition=="popularity")
         {
-            $stmt = $pdo->prepare("SELECT * FROM items ORDER BY qty ASC");
+            $stmt = $pdo->prepare("SELECT * FROM items ORDER BY qty DESC");
         }
         else
         {

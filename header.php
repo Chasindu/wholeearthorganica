@@ -2,9 +2,7 @@
 if(session_status() !== PHP_SESSION_ACTIVE){    
     session_start();
     $_SESSION['user_name'] = "";
-;
 } 
-
 ?>
 <header id="ct-masthead">
     <div id="ct-header-wrap" class="ct-header-layout1 item-menu-style1 fixed-height  is-sticky scroll-to-bottom"

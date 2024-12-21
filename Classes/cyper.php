@@ -1,6 +1,5 @@
 <?php
 include 'DB_RUN.php';
-
 $key = bin2hex('2d3408431f33bcf5e16e637753a02483d498a2b55a0821402260c237c165cb67');
 
 $cipher = "aes-256-cbc";

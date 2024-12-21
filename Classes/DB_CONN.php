@@ -1,6 +1,5 @@
 <?php
 session_start();
-// Database configuration
 $host = 'localhost';
 $db = 'kbiibemy_organica';
 $user = 'kbiibemy_4413';
