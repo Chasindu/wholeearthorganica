@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en-US">
 <?php
 include 'Classes/DB_RUN.php';
@@ -6,17 +6,28 @@ include 'Classes/DB_RUN.php';
 if (session_status() !== PHP_SESSION_ACTIVE)
     session_start();
 
-    $stmt = $pdo->prepare("SELECT * FROM orders WHERE cus_id= :cus_id");
-    $stmt->bindParam(':cus_id',$_SESSION['user_id']);
-    $stmt->execute();
-    $order = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    if (isset($_POST['shipped'])) {
+
+                $stmt = $pdo->prepare("UPDATE orders SET status = 'shipped' WHERE rand_order_id = :id");
+                $stmt->bindParam(':id', $_POST['update_id'], PDO::PARAM_INT);
+
+                // Execute the query
+               $stmt->execute() ;
+            
+    }
+
+
+$stmt = $pdo->prepare("SELECT orders.*, items.id, orders.status, orders.date  FROM orders INNER JOIN items ON orders.item = items.id WHERE items.seller_id =:seller");
+$stmt->bindParam(':seller', $_SESSION['user_id']);
+$stmt->execute();
+$order = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="//gmpg.org/xfn/11">
-    <title>Cart &#8211; Organio</title>
+    <title>My Inventry &#8211; Organio</title>
     <meta name='robots' content='max-image-preview:large, noindex, follow'>
     <style>
         img:is([sizes="auto" i], [sizes^="auto," i]) {
@@ -765,80 +776,81 @@ if (session_status() !== PHP_SESSION_ACTIVE)
 
 
 
-            <div id="content" class="site-content">
-                <div class="content-inner">
-                    <div class="container content-container">
-                        <div class="row content-row">
-                            <div id="primary" class="content-area content-full-width col-12">
-                                <main id="main" class="site-main">
-                                    <article id="post-8" class="post-8 page type-page status-publish hentry">
-                                        <div class="entry-content clearfix">
-                                            <div class="woocommerce">
-                                                <div class="woocommerce-notices-wrapper"></div>
-                                                <form class="woocommerce-cart-form"
-                                                    action=""
-                                                    method="post">
-                                                    <table
-                                                        class="shop_table shop_table_responsive cart woocommerce-cart-form__contents"
-                                                        cellspacing="0">
-                                                        <thead>
-                                                            <tr>
-                                                                
-                                                                <th class="product-thumbnail"><span
-                                                                        class="screen-reader-text">Thumbnail image</span>
-                                                                </th>
-                                                                <th class="product-name">Product</th>
-                                                                <th class="product-price">Price</th>
-                                                                <th class="product-quantity">Quantity</th>
-                                                                <th class="product-quantity">Total</th>
-                                                                <th class="product-quantity">Status</th>
-                                                             
-                                                                
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <?php
+        <div id="content" class="site-content">
+            <div class="content-inner">
+                <div class="container content-container">
+                    <div class="row content-row">
+                        <div id="primary" class="content-area content-full-width col-12">
+                            <main id="main" class="site-main">
+                                <article id="post-8" class="post-8 page type-page status-publish hentry">
+                                    <div class="entry-content clearfix">
+                                        <div class="woocommerce">
+                                            <div class="woocommerce-notices-wrapper"></div>
+                                            <form class="woocommerce-cart-form" action="" method="post">
+                                                <table
+                                                    class="shop_table shop_table_responsive cart woocommerce-cart-form__contents"
+                                                    cellspacing="0">
+                                                    <thead>
+                                                        <tr>
 
-                                                            
-                                                            foreach ($order as $item) {
+                                                            <th class="product-thumbnail"><span
+                                                                    class="screen-reader-text">Thumbnail image</span>
+                                                            </th>
+                                                            <th class="product-name">Product</th>
+                                                            <th class="product-price">Customer</th>
+                                                            <th class="product-quantity">Quantity</th>
+                                                            <th class="product-quantity">Status</th>
 
-                                                                $stmt = $pdo->prepare("SELECT * FROM items WHERE id= :item_id");
-                                                                $stmt->bindParam(':item_id',$item['item']);
-                                                                $stmt->execute();
-                                                                $order_element = $stmt->fetch(PDO::FETCH_ASSOC);
-                                                            
-                                                                $itemTotal = $order_element['price'] * $item['qty'];
 
-                                                                ?>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <?php
 
-                                                                <tr class="woocommerce-cart-form__cart-item cart_item">
-                                                                    
-                                                                    <td class="product-thumbnail"> <a
-                                                                            href="product.php?id=<?php echo $order_element['id']; ?>"><img
-                                                                                loading="lazy" decoding="async" width="600"
-                                                                                height="500" src="Classes"
-                                                                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                                                alt=""
-                                                                                srcset="Classes/image/<?php echo $order_element['image']; ?>, Classes/image/<?php echo $order_element['image']; ?>, Classes/image/<?php echo $order_element['image']; ?>"
-                                                                                sizes="(max-width: 600px) 100vw, 600px"></a>
-                                                                    </td>
-                                                                    <td class="product-name" data-title="Product"> <a
-                                                                            href="product.php?id=<?php echo $order_element['id']; ?>"><?php echo $order_element['name'] ?></a>
-                                                                    </td>
-                                                                    <td class="product-price" data-title="Price"> <span
-                                                                            class="woocommerce-Price-amount amount"><bdi><span
-                                                                                    class="woocommerce-Price-currencySymbol">&#36;</span><?php echo $order_element['price'] ?></bdi></span>
-                                                                    </td>
-                                                                    
-                                                                    <td class="product-price" data-title="Price"> <span
-                                                                            class="woocommerce-Price-amount amount"><bdi><?php echo $item['qty'] ?></bdi></span>
-                                                                    </td>
-                                                                    <td class="product-subtotal" data-title="Subtotal"> <span
-                                                                            class="woocommerce-Price-amount amount"><bdi><span
-                                                                                    class="woocommerce-Price-currencySymbol">&#36;</span><?php echo number_format($itemTotal, 2) ?></bdi></span>
-                                                                    </td>
 
-                                                                    <td class="product-subtotal" data-title="Subtotal"> <span
+                                                        foreach ($order as $item) {
+
+                                                            $stmt = $pdo->prepare("SELECT * FROM items WHERE id= :item_id");
+                                                            $stmt->bindParam(':item_id', $item['item']);
+                                                            $stmt->execute();
+                                                            $order_element = $stmt->fetch(PDO::FETCH_ASSOC);
+
+                                                            $itemTotal = $order_element['price'] * $item['qty'];
+
+                                                            ?>
+
+                                                            <tr class="woocommerce-cart-form__cart-item cart_item">
+
+                                                                <td class="product-thumbnail"> <a
+                                                                        href="product.php?id=<?php echo $order_element['id']; ?>"><img
+                                                                            loading="lazy" decoding="async" width="600"
+                                                                            height="500" src="Classes"
+                                                                            class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                                            alt=""
+                                                                            srcset="Classes/image/<?php echo $order_element['image']; ?>, Classes/image/<?php echo $order_element['image']; ?>, Classes/image/<?php echo $order_element['image']; ?>"
+                                                                            sizes="(max-width: 600px) 100vw, 600px"></a>
+                                                                </td>
+                                                                <td class="product-name" data-title="Product"> <a
+                                                                        href="product.php?id=<?php echo $order_element['id']; ?>"><?php echo $order_element['name'] ?></a>
+                                                                </td>
+                                                                <td class="product-price" data-title="Price"> <span
+                                                                        class="woocommerce-Price-amount amount"><bdi><span
+                                                                                class="woocommerce-Price-currencySymbol"></span>
+                                                                                
+                                                                                
+                                                                                <a
+                                                                        href="customer_data.php?id=<?php echo $item['cus_id']; ?>"><?php echo $item['cus_id'] ?> Click Here</a>
+                                                                                
+                                                                                
+                                                                            
+                                                                            
+                                                                            </bdi></span>
+                                                                </td>
+
+                                                                <td class="product-price" data-title="Price"> <span
+                                                                        class="woocommerce-Price-amount amount"><bdi><?php echo $item['qty'] ?></bdi></span>
+                                                                </td>
+                                                                <td class="product-subtotal" data-title="Subtotal"> <span
                                                                         class="woocommerce-Price-amount amount"><bdi><span
                                                                                 class="woocommerce-Price-currencySymbol"></span><?php echo $item['status'] . " (" . $item['date'] . ")" ?>
                                                                         </bdi></span>
@@ -846,34 +858,48 @@ if (session_status() !== PHP_SESSION_ACTIVE)
 
                                                                 </td>
 
+                                                                <td class="actions">
+                                                                    <div>
+                                                                        <form action="" method="POST">
+                                                                            <input type="hidden"
+                                                                                value="<?php echo $item['rand_order_id'] ?>"
+                                                                                name="update_id">
+                                                                            <button type="submit" class="button"
+                                                                                name="shipped">Mark As Shipped</button>
+
+                                                                        </form>
+                                                                    </div>
+
+                                                                </td>
 
 
-                                                                </tr>
 
-                                                                <?php
+                                                            </tr>
 
-} ?>
+                                                            <?php
 
-
-
-                                                      
+                                                        } ?>
 
 
 
-                                                        </tbody>
-                                                    </table>
-                                                </form>
 
 
-                                            </div>
-                                        </div><!-- .entry-content -->
-                                    </article><!-- #post-8 -->
-                                </main><!-- #main -->
-                            </div><!-- #primary -->
-                        </div>
+
+
+                                                    </tbody>
+                                                </table>
+                                            </form>
+
+
+                                        </div>
+                                    </div><!-- .entry-content -->
+                                </article><!-- #post-8 -->
+                            </main><!-- #main -->
+                        </div><!-- #primary -->
                     </div>
-                </div><!-- #content inner -->
-            </div><!-- #content -->
+                </div>
+            </div><!-- #content inner -->
+        </div><!-- #content -->
 
 
 

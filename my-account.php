@@ -3,6 +3,11 @@
 <?php 
 if(session_status() !== PHP_SESSION_ACTIVE) session_start();
 $username = $_SESSION['user_name'];
+
+if ($_SESSION['auth']=="s"){
+    header("Location:my-account-seller.php");
+}
+
 ?>
 <head>
     <meta charset="UTF-8">

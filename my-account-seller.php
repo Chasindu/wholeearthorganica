@@ -775,7 +775,7 @@ $username = $_SESSION['user_name'];
                                                                                 <div class="grid-item-inner active "
                                                                                     data-wow-duration="1.2s">
                                                                                     <div class="item--featured"> <a
-                                                                                            href="cart.php"><img
+                                                                                            href="inventry.php"><img
                                                                                                 loading="lazy"
                                                                                                 decoding="async"
                                                                                                 class="no-lazyload "
@@ -791,7 +791,7 @@ $username = $_SESSION['user_name'];
                                                                                     <div class="item--holder-hover">
                                                                                         <div class="item--holder-inner">
                                                                                             <h3 class="item--title"><a
-                                                                                                    href="service/agricultural-services/index.htm">View Inventry</a></h3>
+                                                                                                    href="inventry.php">View Inventry</a></h3>
                                                                                             
                                                                                         </div>
                                                                                     </div>
