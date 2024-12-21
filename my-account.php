@@ -3,8 +3,12 @@
 <?php 
 if(session_status() !== PHP_SESSION_ACTIVE) session_start();
 $username = $_SESSION['user_name'];
-?>
 
+if ($_SESSION['auth']=="s"){
+    header("Location:my-account-seller.php");
+}
+
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -791,7 +795,7 @@ $username = $_SESSION['user_name'];
                                                                                     <div class="item--holder-hover">
                                                                                         <div class="item--holder-inner">
                                                                                             <h3 class="item--title"><a
-                                                                                                    href="service/agricultural-services/index.htm">View My Cart</a></h3>
+                                                                                                    href="cart.php">View My Cart</a></h3>
                                                                                             
                                                                                         </div>
                                                                                     </div>
@@ -802,7 +806,7 @@ $username = $_SESSION['user_name'];
                                                                                 <div class="grid-item-inner  "
                                                                                     data-wow-duration="1.2s">
                                                                                     <div class="item--featured"> <a
-                                                                                            href="service/organic-store-services/index.htm"><img
+                                                                                            href="my-orders.php"><img
                                                                                                 loading="lazy"
                                                                                                 decoding="async"
                                                                                                 class="no-lazyload "
@@ -818,7 +822,7 @@ $username = $_SESSION['user_name'];
                                                                                     <div class="item--holder-hover">
                                                                                         <div class="item--holder-inner">
                                                                                             <h3 class="item--title"><a
-                                                                                                    href="service/organic-store-services/index.htm">My Orders</a>
+                                                                                                    href="my-orders.php">My Orders</a>
                                                                                             </h3>
                                                                                             
                                                                                         </div>

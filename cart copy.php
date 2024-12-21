@@ -8,7 +8,6 @@ if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];
 }
 
-
 if (isset($_POST['add-to-cart'])) {
     addToCart($_POST['p_id'], $_POST['image'], $_POST['name'], $_POST['price'], $_POST['quantity']);
 
@@ -41,7 +40,6 @@ function addToCart($id, $image, $name, $price, $quantity)
         'price' => $price,
         'quantity' => $quantity,
     ];
-
 }
 
 // Remove item from the cart
@@ -839,7 +837,7 @@ function updateCartQuantity($id, $quantity)
                                                     </div>
                                                 </div>
                                                 <p class="return-to-shop"> <a class="button wc-backward"
-                                                        href="shop.php"> Return to shop </a></p>
+                                                        href="shop/index.htm"> Return to shop </a></p>
                                             </div>
                                         </div><!-- .entry-content -->
                                     </article><!-- #post-8 -->
@@ -869,7 +867,9 @@ function updateCartQuantity($id, $quantity)
                                         <div class="entry-content clearfix">
                                             <div class="woocommerce">
                                                 <div class="woocommerce-notices-wrapper"></div>
-                                                <form class="woocommerce-cart-form" action="" method="post">
+                                                <form class="woocommerce-cart-form"
+                                                    action=""
+                                                    method="post">
                                                     <table
                                                         class="shop_table shop_table_responsive cart woocommerce-cart-form__contents"
                                                         cellspacing="0">
@@ -890,7 +890,6 @@ function updateCartQuantity($id, $quantity)
                                                         <tbody>
                                                             <?php
                                                             foreach ($_SESSION['cart'] as $item) {
-
                                                                 $itemTotal = $item['price'] * $item['quantity'];
                                                                 $totalAmount += $itemTotal;
                                                                 $totalItems += $item['quantity'];
@@ -898,83 +897,83 @@ function updateCartQuantity($id, $quantity)
 
                                                                 <tr class="woocommerce-cart-form__cart-item cart_item">
                                                                     <td class="product-remove">
-
-                                                                        <form action="" method="POST"></form>
-
-                                                                        <input type="hidden" value="<?php echo $item['id'] ?>"
-                                                                            name="delete_id">
-                                                                        <button type="submit" class="button"
+                                                                            
+                                                                    <form action = "" method="POST"></form>
+                                                                            
+                                                                            <input type="hidden" value="<?php echo $item['id'] ?>" name="delete_id">
+                                                                            <button type="submit" class="button"
                                                                             name="delete_cart">Dalete</button>
-                                                    </form>
-                                                    </td>
-                                                    <td class="product-thumbnail"> <a
-                                                            href="../product/sleek-bronze/index.htm#woosq-6408"><img
-                                                                loading="lazy" decoding="async" width="600" height="500"
-                                                                src="Classes"
-                                                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                                alt=""
-                                                                srcset="Classes/image/<?php echo $item['image']; ?>, Classes/image/<?php echo $item['image']; ?>, Classes/image/<?php echo $item['image']; ?>"
-                                                                sizes="(max-width: 600px) 100vw, 600px"></a>
-                                                    </td>
-                                                    <td class="product-name" data-title="Product"> <a
-                                                            href="../product/sleek-bronze/index.htm#woosq-6408"><?php echo $item['name'] ?></a>
-                                                    </td>
-                                                    <td class="product-price" data-title="Price"> <span
-                                                            class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol">&#36;</span><?php echo $item['price'] ?></bdi></span>
-                                                    </td>
-                                                    <form action="" method="POST">
-                                                        <td class="product-quantity" data-title="Quantity">
-                                                            <div class="quantity"> <label class="screen-reader-text"
-                                                                    for="quantity_6746bc7bc45ab"><?php echo $item['name'] ?>
-                                                                    quantity</label> <input type="number"
-                                                                    id="quantity_6746bc7bc45ab" class="input-text qty text"
-                                                                    name="qty" value="<?php echo $item['quantity'] ?>"
-                                                                    aria-label="Product quantity" size="4" min="0" max=""
-                                                                    step="1" placeholder="" inputmode="numeric"
-                                                                    autocomplete="off"></div>
-                                                        </td>
-                                                        <td class="product-subtotal" data-title="Subtotal"> <span
-                                                                class="woocommerce-Price-amount amount"><bdi><span
-                                                                        class="woocommerce-Price-currencySymbol">&#36;</span><?php echo number_format($itemTotal, 2) ?></bdi></span>
-                                                        </td>
+                                                                            </form></td>
+                                                                    <td class="product-thumbnail"> <a
+                                                                            href="../product/sleek-bronze/index.htm#woosq-6408"><img
+                                                                                loading="lazy" decoding="async" width="600"
+                                                                                height="500" src="Classes"
+                                                                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                                                alt=""
+                                                                                srcset="Classes/image/<?php echo $item['image']; ?>, Classes/image/<?php echo $item['image']; ?>, Classes/image/<?php echo $item['image']; ?>"
+                                                                                sizes="(max-width: 600px) 100vw, 600px"></a>
+                                                                    </td>
+                                                                    <td class="product-name" data-title="Product"> <a
+                                                                            href="../product/sleek-bronze/index.htm#woosq-6408"><?php echo $item['name'] ?></a>
+                                                                    </td>
+                                                                    <td class="product-price" data-title="Price"> <span
+                                                                            class="woocommerce-Price-amount amount"><bdi><span
+                                                                                    class="woocommerce-Price-currencySymbol">&#36;</span><?php echo $item['price'] ?></bdi></span>
+                                                                    </td>
+                                                                    <form action = "" method="POST">
+                                                                    <td class="product-quantity" data-title="Quantity">
+                                                                        <div class="quantity"> <label class="screen-reader-text"
+                                                                                for="quantity_6746bc7bc45ab"><?php echo $item['name'] ?>
+                                                                                quantity</label> <input type="number"
+                                                                                id="quantity_6746bc7bc45ab"
+                                                                                class="input-text qty text"
+                                                                                name="qty"
+                                                                                value="<?php echo $item['quantity'] ?>"
+                                                                                aria-label="Product quantity" size="4" min="0"
+                                                                                max="" step="1" placeholder=""
+                                                                                inputmode="numeric" autocomplete="off"></div>
+                                                                    </td>
+                                                                    <td class="product-subtotal" data-title="Subtotal"> <span
+                                                                            class="woocommerce-Price-amount amount"><bdi><span
+                                                                                    class="woocommerce-Price-currencySymbol">&#36;</span><?php echo number_format($itemTotal, 2) ?></bdi></span>
+                                                                    </td>
 
 
-                                                        <td class="actions">
-
-                                                            <input type="hidden" value="<?php echo $item['id'] ?>"
-                                                                name="update_id">
-                                                            <button type="submit" class="button"
-                                                                name="update_cart">Update</button>
-                                                    </form>
-
-
-
-                                                    </td>
-                                                    </tr>
+                                                                    <td class="actions">
+                                                                        
+                                                                    <input type="hidden" value="<?php echo $item['id'] ?>" name="update_id">
+                                                                    <button type="submit" class="button"
+                                                                    name="update_cart">Update</button>
+                                                                    </form>
 
 
 
-                                                    <?php
+                                                                    </td>
+                                                                </tr>
+
+
+
+                                                                <?php
                                                             }
                                                             ?>
 
 
 
-                                                <tr>
-                                                    <td colspan="6" class="actions">
-                                                        <div class="coupon"> <label for="coupon_code"
-                                                                class="screen-reader-text">Coupon:</label>
-                                                            <input type="text" name="coupon_code" class="input-text"
-                                                                id="coupon_code" value="" placeholder="Coupon code"> <button
-                                                                type="submit" class="button" name="apply_coupon"
-                                                                value="Apply coupon">Apply coupon</button>
-                                                        </div>
+                                                            <tr>
+                                                                <td colspan="6" class="actions">
+                                                                    <div class="coupon"> <label for="coupon_code"
+                                                                            class="screen-reader-text">Coupon:</label>
+                                                                        <input type="text" name="coupon_code"
+                                                                            class="input-text" id="coupon_code" value=""
+                                                                            placeholder="Coupon code"> <button type="submit"
+                                                                            class="button" name="apply_coupon"
+                                                                            value="Apply coupon">Apply coupon</button>
+                                                                    </div>
 
-                                                    </td>
-                                                </tr>
-                                                </tbody>
-                                                </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
                                                 </form>
                                                 <div class="cart-collaterals">
                                                     <div class="cart_totals ">
@@ -994,78 +993,14 @@ function updateCartQuantity($id, $quantity)
                                                                 </td>
                                                             </tr>
                                                         </table>
-
-                                                        <?php
-                                                        $_SESSION['cart_total'] = $totalAmount;
-                                                        $_SESSION['cart_total_pcs'] = $totalItems;
-
-                                                        ?>
-                                                        <!-- <div class="wc-proceed-to-checkout"> <a href="index.htm"
+                                                        <div class="wc-proceed-to-checkout"> <a href="index.htm"
                                                                 class="checkout-button button alt wc-forward"> Proceed to
                                                                 checkout</a></div>
-                                                    </div> -->
                                                     </div>
-
                                                 </div>
-                                                </br>
-                                                <div class="">
-                                                    <div class=" ">
-                                                        <h2>Express Checkout</h2>
-                                                        <div class=" " id="wpcf7-f341-p18-o1" lang="en-US" dir="ltr"
-                                                            data-wpcf7-id="341">
 
-
-
-
-                                                            <form action="Classes/DB_RUN.php" method="post"
-                                                                enctype="multipart/form-data">
-                                                                <div class="col-lg-12 col-md-12">
-                                                                    <p><label>Card Number*
-                                                                        </label><span class="wpcf7-form-control-wrap">
-                                                                            <input size="40" maxlength="400"
-                                                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                                                aria-required="true" aria-invalid="false"
-                                                                                placeholder="Card Number" value=""
-                                                                                name="name" type="text" required>
-                                                                        </span>
-                                                                    </p>
-                                                                </div>
-
-
-                                                                <div class="col-lg-6 col-md-6">
-                                                                    <p><label>Name on the card</label>
-                                                                        <span class="wpcf7-form-control-wrap">
-                                                                            <input size="40" maxlength="400"
-                                                                                class="wpcf7-form-control"
-                                                                                placeholder="Name on the card" value=""
-                                                                                name="name_on_card" min="1" type="text"
-                                                                                required>
-                                                                        </span>
-                                                                    </p>
-                                                                </div>
-                                                                <div class="col-lg-6 col-md-6">
-                                                                    <p><label>Address*</label><span
-                                                                            class="wpcf7-form-control-wrap">
-                                                                            <input size="40" maxlength="400"
-                                                                                class="wpcf7-form-control "
-                                                                                placeholder="Address" name="address"
-                                                                                type="text" required>
-                                                                        </span>
-                                                                    </p>
-                                                                </div>
-
-
-                                                                <button type="submit" name="order"
-                                                                    class="">Checkout</button>
-                                                            </form>
-                                                            <div class="wpcf7-response-output" aria-hidden="true"></div>
-                                                        </div>
-                                                        <!-- <div class="wc-proceed-to-checkout"> <a href="index.htm"
-                                                                class="checkout-button button alt wc-forward"> Proceed to
-                                                                checkout</a></div>
-                                                    </div> -->
-                                                    </div>
-                                                </div><!-- .entry-content -->
+                                            </div>
+                                        </div><!-- .entry-content -->
                                     </article><!-- #post-8 -->
                                 </main><!-- #main -->
                             </div><!-- #primary -->

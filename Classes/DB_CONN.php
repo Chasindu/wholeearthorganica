@@ -1,11 +1,9 @@
 <?php
 session_start();
-
-// Database configuration
 $host = 'localhost';
-$db = 'organica';
-$user = '4413';
-$password = '4413';
+$db = 'kbiibemy_organica';
+$user = 'kbiibemy_4413';
+$password = 'Xl@%$[*_U=BR';
 
 // Connect to the database securely with PDO
 try {

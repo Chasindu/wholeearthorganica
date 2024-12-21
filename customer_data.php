@@ -1,5 +1,6 @@
 ﻿<?php 
 if(session_status() !== PHP_SESSION_ACTIVE) session_start();
+include 'Classes/DB_RUN.php';
 ?>
 <!doctype html>
 <html lang="en-US"></html>
@@ -7,7 +8,7 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="//gmpg.org/xfn/11">
-    <title>Sign In &#8211; Organio</title>
+    <title>Customer Data &#8211; Address</title>
     <meta name='robots' content='max-image-preview:large'>
     <style>
         img:is([sizes="auto" i], [sizes^="auto," i]) {
@@ -737,11 +738,11 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
             <div class="container">
                 <div class="page-title-inner">
                     <div class="page-title-holder">
-                        <h1 class="page-title">Sign In</h1>
+                        <h1 class="page-title">Order Received</h1>
                     </div>
                     <ul class="ct-breadcrumb">
                         <li><a class="breadcrumb-entry" href="index.htm">Home</a></li>
-                        <li><span class="breadcrumb-entry">Sign In</span></li>
+                        <li><span class="breadcrumb-entry">Order Received</span></li>
                     </ul>
                 </div>
             </div>
@@ -772,52 +773,22 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                                                         <div class="ct-user-inner">
                                                                             <div class="ct-user-holder">
                                                                                 <div class="ct-user-meta">
-                                                                                    <form method="post" action="Classes/DB_RUN.php">
-                                                                                    <h4 class="ct-user-title">Log in to
-                                                                                        Your Account</h4>
-                                                                                    <div class="ct-user-form">
-                                                                                        <div
-                                                                                            class="ct-user-form-body ct-user-form-login">
-                                                                                            <div class="login-form">
-                                                                                                <div
-                                                                                                    class="fields-content">
-                                                                                                    <div
-                                                                                                        class="field-group">
-                                                                                                        <input id="user" name="email"
-                                                                                                            type="text"
-                                                                                                            class="input user_name"
-                                                                                                            placeholder="Email"
-                                                                                                            data-validate="Required Field">
-                                                                                                        <i
-                                                                                                            class="zmdi zmdi-account"></i>
-                                                                                                    </div>
-                                                                                                    <div
-                                                                                                        class="field-group">
-                                                                                                        <input id="pass" name="psw"
-                                                                                                            type="password"
-                                                                                                            class="input password"
-                                                                                                            placeholder="Password"
-                                                                                                            data-validate="Required Field">
-                                                                                                        <i
-                                                                                                            class="zmdi zmdi-lock"></i>
-                                                                                                    </div>
-                                                                                                    <div
-                                                                                                        class="field-group field-footer-group">
-                                                                                                        
-                                                                                                        <button type="submit" class="button" name="login">Login</button>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    </form>
+                                                                                    <?php
+
+$stmt = $pdo->prepare("SELECT address FROM users WHERE id = :id LIMIT 1");
+            $stmt->bindParam(':id', $_GET['id']);
+            $stmt->execute();
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+?>
+                                                                                    <h3><?php echo $user['address'] ?></h3>
+                                                                              
+                                                                                    <h4 class="ct-user-title"><a href = "view-orders.php">Go Back To Orders</a></h4>
+                                                                                    
+                                                                            
                                                                                 </div>
-                                                                                <div class="ct-user-bottom"> New to Whole Earth Organia? <a
-                                                                                        href="register.php">Sign Up</a></div>
+                                                                                
                                                                             </div>
-                                                                            <div class="ct-user-footer"> <a
-                                                                                    href="recover-psw.php">Forgot your password?</a></div>
-                                                                        </div>
+                                                                            
                                                                     </div>
                                                                 </div>
                                                             </div>
