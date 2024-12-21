@@ -1737,7 +1737,7 @@ $_SESSION['user_name']="";
                                                                                                 <div
                                                                                                     class="item--description">
                                                                                                     To empower individuals to make healthier choices by
-                                                                                                    merging the best of organic farming and modern innovation</div>
+                                                                                                    merging the best of organic farming and modern innovation.</div>
                                                                                             </div>
                                                                                         </div>
                                                                                     </div>
@@ -2437,7 +2437,7 @@ $_SESSION['user_name']="";
                                                                                                 loading="lazy"
                                                                                                 decoding="async"
                                                                                                 class="no-lazyload "
-                                                                                                src="wp-content/uploads/2021/03/author1-176x176.jpg"
+                                                                                                src="wp-content/uploads/2021/03/cha.png"
                                                                                                 width="176" height="176"
                                                                                                 alt="author1"
                                                                                                 title="author1"></div>
@@ -2481,7 +2481,7 @@ $_SESSION['user_name']="";
                                                                                                 loading="lazy"
                                                                                                 decoding="async"
                                                                                                 class="no-lazyload "
-                                                                                                src="wp-content/uploads/2021/03/author3-176x176.jpg"
+                                                                                                src="wp-content/uploads/2021/03/efi.jpg"
                                                                                                 width="176" height="176"
                                                                                                 alt="author3"
                                                                                                 title="author3"></div>
