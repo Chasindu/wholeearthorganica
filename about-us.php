@@ -1775,13 +1775,7 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
             <div class="ct-cursor--icon ct-js-icon"></div>
         </div>
     </div>
-    <script> window.RS_MODULES = window.RS_MODULES || {};
-        window.RS_MODULES.modules = window.RS_MODULES.modules || {};
-        window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
-        window.RS_MODULES.defered = true;
-        window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
-        window.RS_MODULES.type = 'compiled'; </script> <a class="pxl-buy-now" href="https://1.envato.market/mOR6oa"
-        target="_blank"> <span>Buy on Envato</span> </a>
+
     <script>(function () {
             function maybePrefixUrlField() {
                 const value = this.value.trim()

@@ -2355,58 +2355,7 @@ $_SESSION['user_name']="";
                                                                         data-id="5bfb0015" data-element_type="column">
                                                                         <div class="elementor-widget-wrap"></div>
                                                                     </div>
-                                                                    <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-7120302"
-                                                                        data-id="7120302" data-element_type="column">
-                                                                        <div
-                                                                            class="elementor-widget-wrap elementor-element-populated">
-                                                                            <div class="elementor-element elementor-element-d96260b elementor-widget elementor-widget-ct_heading"
-                                                                                data-id="d96260b"
-                                                                                data-element_type="widget"
-                                                                                data-widget_type="ct_heading.default">
-                                                                                <div class="elementor-widget-container">
-                                                                                    <div
-                                                                                        class="ct-heading h-align-center item-st-default">
-                                                                                        <div class="ct-heading--inner">
-                                                                                            <div
-                                                                                                class="item--sub-title style-default">
-                                                                                                <span> <span>~</span>
-                                                                                                    Products
-                                                                                                    <span>~</span>
-                                                                                                </span>
-                                                                                            </div>
-                                                                                            <h3 class="item--title case-animate-time st-default "
-                                                                                                data-wow-delay="ms">
-                                                                                                <span
-                                                                                                    class="slide-in-container"><span
-                                                                                                        class="d-inline-block wow case-fade-in-up">All</span></span>
-                                                                                                <span
-                                                                                                    class="slide-in-container"><span
-                                                                                                        class="d-inline-block wow case-fade-in-up">of</span></span>
-                                                                                                <span
-                                                                                                    class="slide-in-container"><span
-                                                                                                        class="d-inline-block wow case-fade-in-up">our</span></span>
-                                                                                                <span
-                                                                                                    class="slide-in-container"><span
-                                                                                                        class="d-inline-block wow case-fade-in-up">products</span></span>
-                                                                                                <span
-                                                                                                    class="slide-in-container"><span
-                                                                                                        class="d-inline-block wow case-fade-in-up">are</span></span>
-                                                                                                <span
-                                                                                                    class="slide-in-container"><span
-                                                                                                        class="d-inline-block wow case-fade-in-up">organic</span></span>
-                                                                                                <span
-                                                                                                    class="slide-in-container"><span
-                                                                                                        class="d-inline-block wow case-fade-in-up">&</span></span>
-                                                                                                <span
-                                                                                                    class="slide-in-container"><span
-                                                                                                        class="d-inline-block wow case-fade-in-up">fresh.</span></span>
-                                                                                            </h3>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
+
                                                                     <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-75e89df9"
                                                                         data-id="75e89df9" data-element_type="column">
                                                                         <div class="elementor-widget-wrap"></div>
