@@ -816,7 +816,7 @@ $_SESSION['user_name']="";
                                                                                                     data-lazyload="//demo.casethemes.net/organio/wp-content/uploads/2021/03/slider-arow1.png"
                                                                                                     data-no-retina="">
                                                                                             </rs-layer><!--
- --><a id="slider-1-slide-1-layer-6" class="rs-layer" href="shop/index.htm" target="_self" data-type="text"
+ --><a id="slider-1-slide-1-layer-6" class="rs-layer" href="shop.php" target="_self" data-type="text"
                                                                                                 data-color="#000000"
                                                                                                 data-xy="y:b;"
                                                                                                 data-pos="a"
@@ -1040,7 +1040,7 @@ $_SESSION['user_name']="";
                                                                                             data-frame_1="sp:0;"
                                                                                             data-frame_999="o:0;st:w;sR:9000;sA:9000;"
                                                                                             style="z-index:13;"><!--
- --><a id="slider-1-slide-3-layer-6" class="rs-layer" href="shop/index.htm" target="_self" data-type="text"
+ --><a id="slider-1-slide-3-layer-6" class="rs-layer" href="shop.php" target="_self" data-type="text"
                                                                                                 data-color="#000000"
                                                                                                 data-xy="y:b;"
                                                                                                 data-pos="a"
@@ -1530,7 +1530,7 @@ $_SESSION['user_name']="";
                                                                                 your health</div> <a
                                                                                 class="btn item--button-outline wow fadeInUp"
                                                                                 data-wow-delay="150ms"
-                                                                                href="shop/index.htm"> Shop now <i
+                                                                                href="shop.php"> Shop now <i
                                                                                     class="flaticon-next"></i> </a>
                                                                         </div>
                                                                     </div>
@@ -1565,7 +1565,7 @@ $_SESSION['user_name']="";
                                                                                 Start your journey to health now.</div> <a
                                                                                 class="btn item--button-default wow fadeInUp"
                                                                                 data-wow-delay="150ms"
-                                                                                href="shop/index.htm"> Shop now <i
+                                                                                href="shop.php"> Shop now <i
                                                                                     class="flaticon-next"></i> </a>
                                                                         </div>
                                                                     </div>
@@ -1854,7 +1854,7 @@ $_SESSION['user_name']="";
                                                                                                 Our organic vegetables bring unmatched freshness to your meals.</div>
                                                                                             <div class="item--readmore">
                                                                                                 <a class="btn-icon-animate"
-                                                                                                    href="product-category/organic/index.htm">
+                                                                                                    href="shop.php">
                                                                                                     <i
                                                                                                         class="ct-icon-frist flaticon-next"></i>
                                                                                                     Shop now <i
@@ -1898,7 +1898,7 @@ $_SESSION['user_name']="";
                                                                                                 taste buds.</div>
                                                                                             <div class="item--readmore">
                                                                                                 <a class="btn-icon-animate"
-                                                                                                    href="product-category/organic/index.htm">
+                                                                                                    href="shop.php">
                                                                                                     <i
                                                                                                         class="ct-icon-frist flaticon-next"></i>
                                                                                                     Shop now <i
@@ -1943,7 +1943,7 @@ $_SESSION['user_name']="";
                                                                                                 </div>
                                                                                             <div class="item--readmore">
                                                                                                 <a class="btn-icon-animate"
-                                                                                                    href="product-category/organic/index.htm">
+                                                                                                    href="shop.php">
                                                                                                     <i
                                                                                                         class="ct-icon-frist flaticon-next"></i>
                                                                                                     Shop now <i
@@ -1987,7 +1987,7 @@ $_SESSION['user_name']="";
                                                                                                 </div>
                                                                                             <div class="item--readmore">
                                                                                                 <a class="btn-icon-animate"
-                                                                                                    href="product-category/organic/index.htm">
+                                                                                                    href="shop.php">
                                                                                                     <i
                                                                                                         class="ct-icon-frist flaticon-next"></i>
                                                                                                     Shop now <i
@@ -2510,9 +2510,8 @@ $_SESSION['user_name']="";
                                                                                             </div>
                                                                                             <div
                                                                                                 class="item--description">
-                                                                                                Elif contributed by researching organic farm data and taking the lead on UI/UX improvements,
-                                                                                                ensuring a user-friendly and visually appealing design.
-                                                                                                She also collaborated closely with the team on implementing key frontend features.</div>
+                                                                                                Elif collaborated closely with the team on implementing key frontend features and assisted with data integration.
+                                                                                                She also  played a role in debugging and troubleshooting code issues to ensure the smooth functioning of the application.</div>
                                                                                            
                                                                                         </div>
                                                                                     </div>
