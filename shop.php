@@ -1,5 +1,63 @@
 ﻿<?php 
-if(session_status() !== PHP_SESSION_ACTIVE) session_start();
+include 'Classes/DB_RUN.php';
+// $email = filter_var(sanitizeInput($_POST['email']), FILTER_SANITIZE_EMAIL);
+// $password = sanitizeInput($_POST['psw']);
+
+try {
+
+    if (isset($_POST['search_btn'])) {
+
+        $searchTerm = "%".$_POST['seach_input']."%";
+
+        $stmt = $pdo->prepare("SELECT * FROM items WHERE name LIKE :name");
+        $stmt->bindParam(':name', $searchTerm);
+        $stmt->execute();
+        $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+        $stmt = $pdo->prepare("SELECT * FROM items WHERE name LIKE :name ORDER BY qty DESC LIMIT 3");
+        $stmt->bindParam(':name', $searchTerm);
+        $stmt->execute();
+        $items_most_available = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    
+
+    }
+    else if (isset($_GET['cat'])) {
+
+        $searchTerm = $_GET['cat'];
+
+        $stmt = $pdo->prepare("SELECT * FROM items WHERE cat= :cat");
+        $stmt->bindParam(':cat', $searchTerm);
+        $stmt->execute();
+        $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+        $stmt = $pdo->prepare("SELECT * FROM items WHERE cat= :cat ORDER BY qty DESC LIMIT 3");
+        $stmt->bindParam(':cat', $searchTerm);
+        $stmt->execute();
+        $items_most_available = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    }
+    else {
+
+        $stmt = $pdo->prepare("SELECT * FROM items");
+        $stmt->execute();
+        $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+        $stmt = $pdo->prepare("SELECT * FROM items ORDER BY qty DESC LIMIT 3");
+        $stmt->execute();
+        $items_most_available = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
+
+
+
+
+} catch (PDOException $e) {
+    error_log("Query error: " . $e->getMessage());
+    die("An error occurred. Please try again.");
+}
+
 ?>
 <!doctype html>
 <html lang="en-US">
@@ -740,7 +798,7 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                             <main id="main" class="site-main" role="main">
                                 <div class="woocommerce-topbar">
                                     <div class="woocommerce-result-count">
-                                        <p class="woocommerce-result-count"> Showing 1&ndash;12 of 45 results</p>
+                                        <p class="woocommerce-result-count"> Showing <?php echo count($items)?> results</p>
                                     </div>
                                     <div class="woocommerce-archive-layout"> <span
                                             class="archive-layout layout-grid active"></span> <span
@@ -759,550 +817,16 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                 </div>
                                 <div class="woocommerce-notices-wrapper"></div>
                                 <ul class="products columns-4">
-                                    <li
-                                        class="product type-product post-1006 status-publish first instock product_cat-food product_cat-organic product_tag-apple product_tag-bread product_tag-cheese has-post-thumbnail shipping-taxable purchasable product-type-variable">
-                                        <a href="product/organic-juice/index.htm"
-                                            class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
-                                        <div class="woocommerce-product-inner style-1">
-                                            <div class="woocommerce-product-header"> <a
-                                                    class="woocommerce-product-details"
-                                                    href="product/organic-juice/index.htm"> <img loading="lazy"
-                                                        width="600" height="500"
-                                                        src="wp-content/uploads/2021/03/product1-600x500.jpg"
-                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                        alt="" decoding="async"
-                                                        srcset="wp-content/uploads/2021/03/product1-600x500.jpg 600w, wp-content/uploads/2021/03/product1-1024x853.jpg 1024w, wp-content/uploads/2021/03/product1-768x640.jpg 768w, wp-content/uploads/2021/03/product1.jpg 1260w"
-                                                        sizes="(max-width: 600px) 100vw, 600px"> </a>
-                                                <div class="woocommerce-product-meta">
-                                                    <div class="woocommerce-compare"> <button
-                                                            class="woosc-btn woosc-btn-1006 " data-id="1006"
-                                                            data-product_name="Organic Juice"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product1-300x300.jpg">Compare</button>
-                                                    </div>
-                                                    <div class="woocommerce-wishlist"> <button
-                                                            class="woosw-btn woosw-btn-1006 .ct-woosw-btn"
-                                                            data-id="1006" data-product_name="Organic Juice"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product1-300x300.jpg"
-                                                            aria-label="Add to wishlist">Add to wishlist</button></div>
-                                                    <div class="woocommerce-quick-view"> <a
-                                                            href="index-4.htm?quick-view=1006"
-                                                            class="woosq-btn woosq-btn-1006" data-id="1006"
-                                                            data-effect="mfp-3d-unfold" data-context="default"
-                                                            rel="nofollow">Quick view</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="woocommerce-product-content">
-                                                <h4 class="woocommerce-product--title"> <a
-                                                        href="product/organic-juice/index.htm">Organic Juice</a></h4>
-                                                <span class="price"><span
-                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">&#36;</span>10.00</bdi></span>
-                                                    &ndash; <span class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">&#36;</span>20.00</bdi></span></span>
-                                                <div class="woocommerce-product--rating">
-                                                    <div class="star-rating" role="img"
-                                                        aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated
-                                                            <strong class="rating">5.00</strong> out of 5</span></div>
-                                                </div>
-                                                <div class="woocommerce-product--excerpt " style="display: none;">
-                                                    <div class="woocommerce-product-details__short-description">
-                                                        <p>Sumptuous, filling, and temptingly healthy. Our Biona Organic
-                                                            Granola with Wild Berries is just the thing to get you out
-                                                            of bed. The goodness of rolled wholegrain oats are combined
-                                                            with a variety of tangy organic berries, and baked into
-                                                            crispy clusters that are as nutritious.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="woocommerce-add-to-cart"> <a
-                                                        href="product/organic-juice/index.htm"
-                                                        aria-describedby="woocommerce_loop_add_to_cart_link_describedby_1006"
-                                                        data-quantity="1"
-                                                        class="button product_type_variable add_to_cart_button"
-                                                        data-product_id="1006" data-product_sku="0012"
-                                                        aria-label="Select options for &ldquo;Organic Juice&rdquo;"
-                                                        rel="nofollow">Select options</a> <span
-                                                        id="woocommerce_loop_add_to_cart_link_describedby_1006"
-                                                        class="screen-reader-text"> This product has multiple variants.
-                                                        The options may be chosen on the product page </span></div>
-                                            </div>
-                                        </div> <button class="woosc-btn woosc-btn-1006 " data-id="1006"
-                                            data-product_name="Organic Juice"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product1-300x300.jpg">Compare</button><a
-                                            href="index-4.htm?quick-view=1006" class="woosq-btn woosq-btn-1006"
-                                            data-id="1006" data-effect="mfp-3d-unfold" data-context="default"
-                                            rel="nofollow">Quick view</a><button
-                                            class="woosw-btn woosw-btn-1006 .ct-woosw-btn" data-id="1006"
-                                            data-product_name="Organic Juice"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product1-300x300.jpg"
-                                            aria-label="Add to wishlist">Add to wishlist</button>
-                                    </li>
-                                    <li
-                                        class="product type-product post-1005 status-publish instock product_cat-fresh-fruits product_tag-coffee product_tag-fish product_tag-grape has-post-thumbnail shipping-taxable purchasable product-type-variable">
-                                        <a href="product/fresh-orange/index.htm"
-                                            class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
-                                        <div class="woocommerce-product-inner style-1">
-                                            <div class="woocommerce-product-header"> <a
-                                                    class="woocommerce-product-details"
-                                                    href="product/fresh-orange/index.htm"> <img loading="lazy"
-                                                        width="600" height="500"
-                                                        src="wp-content/uploads/2021/04/h3-product2-1-600x500.png"
-                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                        alt="" decoding="async"
-                                                        srcset="wp-content/uploads/2021/04/h3-product2-1-600x500.png 600w, wp-content/uploads/2021/04/h3-product2-1-1024x853.png 1024w, wp-content/uploads/2021/04/h3-product2-1-768x640.png 768w, wp-content/uploads/2021/04/h3-product2-1.png 1260w"
-                                                        sizes="(max-width: 600px) 100vw, 600px"> </a>
-                                                <div class="woocommerce-product-meta">
-                                                    <div class="woocommerce-compare"> <button
-                                                            class="woosc-btn woosc-btn-1005 " data-id="1005"
-                                                            data-product_name="Fresh Orange"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/04/h3-product2-1-300x300.png">Compare</button>
-                                                    </div>
-                                                    <div class="woocommerce-wishlist"> <button
-                                                            class="woosw-btn woosw-btn-1005 .ct-woosw-btn"
-                                                            data-id="1005" data-product_name="Fresh Orange"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/04/h3-product2-1-300x300.png"
-                                                            aria-label="Add to wishlist">Add to wishlist</button></div>
-                                                    <div class="woocommerce-quick-view"> <a
-                                                            href="index-5.htm?quick-view=1005"
-                                                            class="woosq-btn woosq-btn-1005" data-id="1005"
-                                                            data-effect="mfp-3d-unfold" data-context="default"
-                                                            rel="nofollow">Quick view</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="woocommerce-product-content">
-                                                <h4 class="woocommerce-product--title"> <a
-                                                        href="product/fresh-orange/index.htm">Fresh Orange</a></h4>
-                                                <span class="price"><span
-                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">&#36;</span>12.00</bdi></span>
-                                                    &ndash; <span class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">&#36;</span>65.00</bdi></span></span>
-                                                <div class="woocommerce-product--rating">
-                                                    <div class="star-rating" role="img"
-                                                        aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated
-                                                            <strong class="rating">5.00</strong> out of 5</span></div>
-                                                </div>
-                                                <div class="woocommerce-product--excerpt " style="display: none;">
-                                                    <div class="woocommerce-product-details__short-description">
-                                                        <p>Sumptuous, filling, and temptingly healthy, our Biona Organic
-                                                            Granola with Wild Berries is just the thing to get you out
-                                                            of bed. The goodness of rolled wholegrain oats are combined
-                                                            with a variety of tangy organic berries, and baked into
-                                                            crispy clusters that are as nutritious.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="woocommerce-add-to-cart"> <a
-                                                        href="product/fresh-orange/index.htm"
-                                                        aria-describedby="woocommerce_loop_add_to_cart_link_describedby_1005"
-                                                        data-quantity="1"
-                                                        class="button product_type_variable add_to_cart_button"
-                                                        data-product_id="1005" data-product_sku="0011"
-                                                        aria-label="Select options for &ldquo;Fresh Orange&rdquo;"
-                                                        rel="nofollow">Select options</a> <span
-                                                        id="woocommerce_loop_add_to_cart_link_describedby_1005"
-                                                        class="screen-reader-text"> This product has multiple variants.
-                                                        The options may be chosen on the product page </span></div>
-                                            </div>
-                                        </div> <button class="woosc-btn woosc-btn-1005 " data-id="1005"
-                                            data-product_name="Fresh Orange"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/04/h3-product2-1-300x300.png">Compare</button><a
-                                            href="index-5.htm?quick-view=1005" class="woosq-btn woosq-btn-1005"
-                                            data-id="1005" data-effect="mfp-3d-unfold" data-context="default"
-                                            rel="nofollow">Quick view</a><button
-                                            class="woosw-btn woosw-btn-1005 .ct-woosw-btn" data-id="1005"
-                                            data-product_name="Fresh Orange"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/04/h3-product2-1-300x300.png"
-                                            aria-label="Add to wishlist">Add to wishlist</button>
-                                    </li>
-                                    <li
-                                        class="product type-product post-1004 status-publish instock product_cat-fresh-nuts product_cat-organic product_tag-apple product_tag-bread product_tag-cheese has-post-thumbnail shipping-taxable purchasable product-type-variable">
-                                        <a href="product/organic-cabbage/index.htm"
-                                            class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
-                                        <div class="woocommerce-product-inner style-1"
-                                            style="border-color: rgba(189,4,150,0.32)">
-                                            <div class="woocommerce-product-header"> <a
-                                                    class="woocommerce-product-details"
-                                                    href="product/organic-cabbage/index.htm"> <img loading="lazy"
-                                                        width="600" height="500"
-                                                        src="wp-content/uploads/2021/03/product3-600x500.jpg"
-                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                        alt="" decoding="async"
-                                                        srcset="wp-content/uploads/2021/03/product3-600x500.jpg 600w, wp-content/uploads/2021/03/product3-1024x853.jpg 1024w, wp-content/uploads/2021/03/product3-768x640.jpg 768w, wp-content/uploads/2021/03/product3.jpg 1260w"
-                                                        sizes="(max-width: 600px) 100vw, 600px"> </a>
-                                                <div class="woocommerce-product-meta">
-                                                    <div class="woocommerce-compare"> <button
-                                                            class="woosc-btn woosc-btn-1004 " data-id="1004"
-                                                            data-product_name="Organic Cabbage"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product3-300x300.jpg">Compare</button>
-                                                    </div>
-                                                    <div class="woocommerce-wishlist"> <button
-                                                            class="woosw-btn woosw-btn-1004 .ct-woosw-btn"
-                                                            data-id="1004" data-product_name="Organic Cabbage"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product3-300x300.jpg"
-                                                            aria-label="Add to wishlist">Add to wishlist</button></div>
-                                                    <div class="woocommerce-quick-view"> <a
-                                                            href="index-6.htm?quick-view=1004"
-                                                            class="woosq-btn woosq-btn-1004" data-id="1004"
-                                                            data-effect="mfp-3d-unfold" data-context="default"
-                                                            rel="nofollow">Quick view</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="woocommerce-product-content">
-                                                <h4 class="woocommerce-product--title"> <a
-                                                        href="product/organic-cabbage/index.htm">Organic Cabbage</a>
-                                                </h4> <span class="price"><span
-                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">&#36;</span>4.00</bdi></span></span>
-                                                <div class="woocommerce-product--rating">
-                                                    <div class="star-rating" role="img"
-                                                        aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated
-                                                            <strong class="rating">5.00</strong> out of 5</span></div>
-                                                </div>
-                                                <div class="woocommerce-product--excerpt " style="display: none;">
-                                                    <div class="woocommerce-product-details__short-description">
-                                                        <p>Sumptuous, filling, and temptingly healthy, our Biona Organic
-                                                            Granola with Wild Berries is just the thing to get you out
-                                                            of bed. The goodness of rolled wholegrain oats are combined
-                                                            with a variety of tangy organic berries, and baked into
-                                                            crispy clusters that are as nutritious.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="woocommerce-add-to-cart"> <a
-                                                        href="product/organic-cabbage/index.htm"
-                                                        aria-describedby="woocommerce_loop_add_to_cart_link_describedby_1004"
-                                                        data-quantity="1"
-                                                        class="button product_type_variable add_to_cart_button"
-                                                        data-product_id="1004" data-product_sku="0010"
-                                                        aria-label="Select options for &ldquo;Organic Cabbage&rdquo;"
-                                                        rel="nofollow">Select options</a> <span
-                                                        id="woocommerce_loop_add_to_cart_link_describedby_1004"
-                                                        class="screen-reader-text"> This product has multiple variants.
-                                                        The options may be chosen on the product page </span></div>
-                                            </div>
-                                        </div> <button class="woosc-btn woosc-btn-1004 " data-id="1004"
-                                            data-product_name="Organic Cabbage"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product3-300x300.jpg">Compare</button><a
-                                            href="index-6.htm?quick-view=1004" class="woosq-btn woosq-btn-1004"
-                                            data-id="1004" data-effect="mfp-3d-unfold" data-context="default"
-                                            rel="nofollow">Quick view</a><button
-                                            class="woosw-btn woosw-btn-1004 .ct-woosw-btn" data-id="1004"
-                                            data-product_name="Organic Cabbage"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product3-300x300.jpg"
-                                            aria-label="Add to wishlist">Add to wishlist</button>
-                                    </li>
-                                    <li
-                                        class="product type-product post-1003 status-publish last instock product_cat-bread-bakery product_cat-food product_cat-organic product_tag-coffee product_tag-fish product_tag-grape has-post-thumbnail shipping-taxable purchasable product-type-variable">
-                                        <a href="product/brown-bread/index.htm"
-                                            class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
-                                        <div class="woocommerce-product-inner style-1">
-                                            <div class="woocommerce-product-header"> <a
-                                                    class="woocommerce-product-details"
-                                                    href="product/brown-bread/index.htm"> <img loading="lazy"
-                                                        width="600" height="500"
-                                                        src="wp-content/uploads/2021/03/product4-600x500.jpg"
-                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                        alt="" decoding="async"
-                                                        srcset="wp-content/uploads/2021/03/product4-600x500.jpg 600w, wp-content/uploads/2021/03/product4-1024x853.jpg 1024w, wp-content/uploads/2021/03/product4-768x640.jpg 768w, wp-content/uploads/2021/03/product4.jpg 1260w"
-                                                        sizes="(max-width: 600px) 100vw, 600px"> </a>
-                                                <div class="woocommerce-product-meta">
-                                                    <div class="woocommerce-compare"> <button
-                                                            class="woosc-btn woosc-btn-1003 " data-id="1003"
-                                                            data-product_name="Brown Bread"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product4-300x300.jpg">Compare</button>
-                                                    </div>
-                                                    <div class="woocommerce-wishlist"> <button
-                                                            class="woosw-btn woosw-btn-1003 .ct-woosw-btn"
-                                                            data-id="1003" data-product_name="Brown Bread"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product4-300x300.jpg"
-                                                            aria-label="Add to wishlist">Add to wishlist</button></div>
-                                                    <div class="woocommerce-quick-view"> <a
-                                                            href="index-7.htm?quick-view=1003"
-                                                            class="woosq-btn woosq-btn-1003" data-id="1003"
-                                                            data-effect="mfp-3d-unfold" data-context="default"
-                                                            rel="nofollow">Quick view</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="woocommerce-product-content">
-                                                <h4 class="woocommerce-product--title"> <a
-                                                        href="product/brown-bread/index.htm">Brown Bread</a></h4>
-                                                <span class="price"><span
-                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">&#36;</span>6.00</bdi></span></span>
-                                                <div class="woocommerce-product--rating">
-                                                    <div class="star-rating" role="img"
-                                                        aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated
-                                                            <strong class="rating">5.00</strong> out of 5</span></div>
-                                                </div>
-                                                <div class="woocommerce-product--excerpt " style="display: none;">
-                                                    <div class="woocommerce-product-details__short-description">
-                                                        <p>Sumptuous, filling, and temptingly healthy, our Biona Organic
-                                                            Granola with Wild Berries is just the thing to get you out
-                                                            of bed. The goodness of rolled wholegrain oats are combined
-                                                            with a variety of tangy organic berries, and baked into
-                                                            crispy clusters that are as nutritious.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="woocommerce-add-to-cart"> <a
-                                                        href="product/brown-bread/index.htm"
-                                                        aria-describedby="woocommerce_loop_add_to_cart_link_describedby_1003"
-                                                        data-quantity="1"
-                                                        class="button product_type_variable add_to_cart_button"
-                                                        data-product_id="1003" data-product_sku="009"
-                                                        aria-label="Select options for &ldquo;Brown Bread&rdquo;"
-                                                        rel="nofollow">Select options</a> <span
-                                                        id="woocommerce_loop_add_to_cart_link_describedby_1003"
-                                                        class="screen-reader-text"> This product has multiple variants.
-                                                        The options may be chosen on the product page </span></div>
-                                            </div>
-                                        </div> <button class="woosc-btn woosc-btn-1003 " data-id="1003"
-                                            data-product_name="Brown Bread"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product4-300x300.jpg">Compare</button><a
-                                            href="index-7.htm?quick-view=1003" class="woosq-btn woosq-btn-1003"
-                                            data-id="1003" data-effect="mfp-3d-unfold" data-context="default"
-                                            rel="nofollow">Quick view</a><button
-                                            class="woosw-btn woosw-btn-1003 .ct-woosw-btn" data-id="1003"
-                                            data-product_name="Brown Bread"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product4-300x300.jpg"
-                                            aria-label="Add to wishlist">Add to wishlist</button>
-                                    </li>
-                                    <li
-                                        class="product type-product post-1002 status-publish first instock product_cat-organic product_tag-apple product_tag-bread product_tag-cheese has-post-thumbnail shipping-taxable purchasable product-type-simple">
-                                        <a href="product/fresh-juice/index.htm"
-                                            class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
-                                        <div class="woocommerce-product-inner style-1">
-                                            <div class="woocommerce-product-header"> <a
-                                                    class="woocommerce-product-details"
-                                                    href="product/fresh-juice/index.htm"> <img loading="lazy"
-                                                        width="600" height="500"
-                                                        src="wp-content/uploads/2021/03/product5-600x500.jpg"
-                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                        alt="" decoding="async"
-                                                        srcset="wp-content/uploads/2021/03/product5-600x500.jpg 600w, wp-content/uploads/2021/03/product5-1024x853.jpg 1024w, wp-content/uploads/2021/03/product5-768x640.jpg 768w, wp-content/uploads/2021/03/product5.jpg 1260w"
-                                                        sizes="(max-width: 600px) 100vw, 600px"> </a>
-                                                <div class="woocommerce-product-meta">
-                                                    <div class="woocommerce-compare"> <button
-                                                            class="woosc-btn woosc-btn-1002 " data-id="1002"
-                                                            data-product_name="Fresh Juice"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product5-300x300.jpg">Compare</button>
-                                                    </div>
-                                                    <div class="woocommerce-wishlist"> <button
-                                                            class="woosw-btn woosw-btn-1002 .ct-woosw-btn"
-                                                            data-id="1002" data-product_name="Fresh Juice"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product5-300x300.jpg"
-                                                            aria-label="Add to wishlist">Add to wishlist</button></div>
-                                                    <div class="woocommerce-quick-view"> <a
-                                                            href="index-8.htm?quick-view=1002"
-                                                            class="woosq-btn woosq-btn-1002" data-id="1002"
-                                                            data-effect="mfp-3d-unfold" data-context="default"
-                                                            rel="nofollow">Quick view</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="woocommerce-product-content">
-                                                <h4 class="woocommerce-product--title"> <a
-                                                        href="product/fresh-juice/index.htm">Fresh Juice</a></h4>
-                                                <span class="price"><span
-                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">&#36;</span>8.00</bdi></span></span>
-                                                <div class="woocommerce-product--rating">
-                                                    <div class="star-rating" role="img"
-                                                        aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated
-                                                            <strong class="rating">5.00</strong> out of 5</span></div>
-                                                </div>
-                                                <div class="woocommerce-product--excerpt " style="display: none;">
-                                                    <div class="woocommerce-product-details__short-description">
-                                                        <p>Sumptuous, filling, and temptingly healthy, our Biona Organic
-                                                            Granola with Wild Berries is just the thing to get you out
-                                                            of bed. The goodness of rolled wholegrain oats are combined
-                                                            with a variety of tangy organic berries, and baked into
-                                                            crispy clusters that are as nutritious.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="woocommerce-add-to-cart"> <a
-                                                        href="index-9.htm?add-to-cart=1002"
-                                                        aria-describedby="woocommerce_loop_add_to_cart_link_describedby_1002"
-                                                        data-quantity="1"
-                                                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                        data-product_id="1002" data-product_sku="008"
-                                                        aria-label="Add to cart: &ldquo;Fresh Juice&rdquo;"
-                                                        rel="nofollow"
-                                                        data-success_message="&ldquo;Fresh Juice&rdquo; has been added to your cart">Add
-                                                        to cart</a> <span
-                                                        id="woocommerce_loop_add_to_cart_link_describedby_1002"
-                                                        class="screen-reader-text"> </span></div>
-                                            </div>
-                                        </div> <button class="woosc-btn woosc-btn-1002 " data-id="1002"
-                                            data-product_name="Fresh Juice"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product5-300x300.jpg">Compare</button><a
-                                            href="index-8.htm?quick-view=1002" class="woosq-btn woosq-btn-1002"
-                                            data-id="1002" data-effect="mfp-3d-unfold" data-context="default"
-                                            rel="nofollow">Quick view</a><button
-                                            class="woosw-btn woosw-btn-1002 .ct-woosw-btn" data-id="1002"
-                                            data-product_name="Fresh Juice"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product5-300x300.jpg"
-                                            aria-label="Add to wishlist">Add to wishlist</button>
-                                    </li>
-                                    <li
-                                        class="product type-product post-1001 status-publish instock product_cat-organic product_tag-organic product_tag-pasta has-post-thumbnail sale shipping-taxable purchasable product-type-variable">
-                                        <a href="product/organic-rice/index.htm"
-                                            class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> <span
-                                                class="onsale">Sale!</span> </a>
-                                        <div class="woocommerce-product-inner style-1"
-                                            style="border-color: rgba(26,129,52,0.32)">
-                                            <div class="woocommerce-product-header"> <a
-                                                    class="woocommerce-product-details"
-                                                    href="product/organic-rice/index.htm"> <img loading="lazy"
-                                                        width="600" height="500"
-                                                        src="wp-content/uploads/2021/03/product6-600x500.jpg"
-                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                        alt="" decoding="async"
-                                                        srcset="wp-content/uploads/2021/03/product6-600x500.jpg 600w, wp-content/uploads/2021/03/product6-1024x853.jpg 1024w, wp-content/uploads/2021/03/product6-768x640.jpg 768w, wp-content/uploads/2021/03/product6.jpg 1260w"
-                                                        sizes="(max-width: 600px) 100vw, 600px"> </a>
-                                                <div class="woocommerce-product-meta">
-                                                    <div class="woocommerce-compare"> <button
-                                                            class="woosc-btn woosc-btn-1001 " data-id="1001"
-                                                            data-product_name="Organic Rice"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product6-300x300.jpg">Compare</button>
-                                                    </div>
-                                                    <div class="woocommerce-wishlist"> <button
-                                                            class="woosw-btn woosw-btn-1001 .ct-woosw-btn"
-                                                            data-id="1001" data-product_name="Organic Rice"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product6-300x300.jpg"
-                                                            aria-label="Add to wishlist">Add to wishlist</button></div>
-                                                    <div class="woocommerce-quick-view"> <a
-                                                            href="index-10.htm?quick-view=1001"
-                                                            class="woosq-btn woosq-btn-1001" data-id="1001"
-                                                            data-effect="mfp-3d-unfold" data-context="default"
-                                                            rel="nofollow">Quick view</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="woocommerce-product-content">
-                                                <h4 class="woocommerce-product--title"> <a
-                                                        href="product/organic-rice/index.htm">Organic Rice</a></h4>
-                                                <span class="price"><span
-                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">&#36;</span>10.00</bdi></span>
-                                                    &ndash; <span class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">&#36;</span>20.00</bdi></span></span>
-                                                <div class="woocommerce-product--rating">
-                                                    <div class="star-rating" role="img"
-                                                        aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated
-                                                            <strong class="rating">5.00</strong> out of 5</span></div>
-                                                </div>
-                                                <div class="woocommerce-product--excerpt " style="display: none;">
-                                                    <div class="woocommerce-product-details__short-description">
-                                                        <p>Sumptuous, filling, and temptingly healthy, our Biona Organic
-                                                            Granola with Wild Berries is just the thing to get you out
-                                                            of bed. The goodness of rolled wholegrain oats are combined
-                                                            with a variety of tangy organic berries, and baked into
-                                                            crispy clusters that are as nutritious.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="woocommerce-add-to-cart"> <a
-                                                        href="product/organic-rice/index.htm"
-                                                        aria-describedby="woocommerce_loop_add_to_cart_link_describedby_1001"
-                                                        data-quantity="1"
-                                                        class="button product_type_variable add_to_cart_button"
-                                                        data-product_id="1001" data-product_sku="007"
-                                                        aria-label="Select options for &ldquo;Organic Rice&rdquo;"
-                                                        rel="nofollow">Select options</a> <span
-                                                        id="woocommerce_loop_add_to_cart_link_describedby_1001"
-                                                        class="screen-reader-text"> This product has multiple variants.
-                                                        The options may be chosen on the product page </span></div>
-                                            </div>
-                                        </div> <button class="woosc-btn woosc-btn-1001 " data-id="1001"
-                                            data-product_name="Organic Rice"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product6-300x300.jpg">Compare</button><a
-                                            href="index-10.htm?quick-view=1001" class="woosq-btn woosq-btn-1001"
-                                            data-id="1001" data-effect="mfp-3d-unfold" data-context="default"
-                                            rel="nofollow">Quick view</a><button
-                                            class="woosw-btn woosw-btn-1001 .ct-woosw-btn" data-id="1001"
-                                            data-product_name="Organic Rice"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product6-300x300.jpg"
-                                            aria-label="Add to wishlist">Add to wishlist</button>
-                                    </li>
-                                    <li
-                                        class="product type-product post-999 status-publish instock product_cat-discount-weekly product_cat-fresh-fruits product_cat-organic product_tag-organic product_tag-pasta has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                                        <a href="product/red-apple-envy/index.htm"
-                                            class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> <span
-                                                class="onsale">Sale!</span> </a>
-                                        <div class="woocommerce-product-inner style-1"
-                                            style="border-color: rgba(166,46,37,0.22)">
-                                            <div class="woocommerce-product-header"> <a
-                                                    class="woocommerce-product-details"
-                                                    href="product/red-apple-envy/index.htm"> <img loading="lazy"
-                                                        width="600" height="500"
-                                                        src="wp-content/uploads/2021/03/h3-product5-600x500.png"
-                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                        alt="" decoding="async"
-                                                        srcset="wp-content/uploads/2021/03/h3-product5-600x500.png 600w, wp-content/uploads/2021/03/h3-product5-768x640.png 768w, wp-content/uploads/2021/03/h3-product5.png 800w"
-                                                        sizes="(max-width: 600px) 100vw, 600px"> </a>
-                                                <div class="woocommerce-product-meta">
-                                                    <div class="woocommerce-compare"> <button
-                                                            class="woosc-btn woosc-btn-999 " data-id="999"
-                                                            data-product_name="Red Apple Envy"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/h3-product5-300x300.png">Compare</button>
-                                                    </div>
-                                                    <div class="woocommerce-wishlist"> <button
-                                                            class="woosw-btn woosw-btn-999 .ct-woosw-btn" data-id="999"
-                                                            data-product_name="Red Apple Envy"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/h3-product5-300x300.png"
-                                                            aria-label="Add to wishlist">Add to wishlist</button></div>
-                                                    <div class="woocommerce-quick-view"> <a
-                                                            href="index-11.htm?quick-view=999"
-                                                            class="woosq-btn woosq-btn-999" data-id="999"
-                                                            data-effect="mfp-3d-unfold" data-context="default"
-                                                            rel="nofollow">Quick view</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="woocommerce-product-content">
-                                                <h4 class="woocommerce-product--title"> <a
-                                                        href="product/red-apple-envy/index.htm">Red Apple Envy</a>
-                                                </h4> <span class="price"><del aria-hidden="true"><span
-                                                            class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>24.00</bdi></span></del>
-                                                    <span class="screen-reader-text">Original price was:
-                                                        &#036;24.00.</span><ins aria-hidden="true"><span
-                                                            class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>18.00</bdi></span></ins><span
-                                                        class="screen-reader-text">Current price is:
-                                                        &#036;18.00.</span></span>
-                                                <div class="woocommerce-product--rating">
-                                                    <div class="star-rating" role="img"
-                                                        aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated
-                                                            <strong class="rating">5.00</strong> out of 5</span></div>
-                                                </div>
-                                                <div class="woocommerce-product--excerpt " style="display: none;">
-                                                    <div class="woocommerce-product-details__short-description">
-                                                        <p>Sumptuous, filling, and temptingly healthy, our Biona Organic
-                                                            Granola with Wild Berries is just the thing to get you out
-                                                            of bed. The goodness of rolled wholegrain oats are combined
-                                                            with a variety of tangy organic berries, and baked into
-                                                            crispy clusters that are as nutritious.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="woocommerce-add-to-cart"> <a
-                                                        href="index-12.htm?add-to-cart=999"
-                                                        aria-describedby="woocommerce_loop_add_to_cart_link_describedby_999"
-                                                        data-quantity="1"
-                                                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                        data-product_id="999" data-product_sku="006"
-                                                        aria-label="Add to cart: &ldquo;Red Apple Envy&rdquo;"
-                                                        rel="nofollow"
-                                                        data-success_message="&ldquo;Red Apple Envy&rdquo; has been added to your cart">Add
-                                                        to cart</a> <span
-                                                        id="woocommerce_loop_add_to_cart_link_describedby_999"
-                                                        class="screen-reader-text"> </span></div>
-                                            </div>
-                                        </div> <button class="woosc-btn woosc-btn-999 " data-id="999"
-                                            data-product_name="Red Apple Envy"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/h3-product5-300x300.png">Compare</button><a
-                                            href="index-11.htm?quick-view=999" class="woosq-btn woosq-btn-999"
-                                            data-id="999" data-effect="mfp-3d-unfold" data-context="default"
-                                            rel="nofollow">Quick view</a><button
-                                            class="woosw-btn woosw-btn-999 .ct-woosw-btn" data-id="999"
-                                            data-product_name="Red Apple Envy"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/h3-product5-300x300.png"
-                                            aria-label="Add to wishlist">Add to wishlist</button>
-                                    </li>
+
+                                <?php
+
+if (count($items) > 0) {
+
+    
+    foreach ($items as $item) 
+    
+    {?>
+
                                     <li
                                         class="product type-product post-998 status-publish last instock product_cat-bread-bakery product_tag-coffee product_tag-fish product_tag-grape has-post-thumbnail shipping-taxable purchasable product-type-simple">
                                         <a href="product/oat-cake/index.htm"
@@ -1311,406 +835,39 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                             style="border-color: rgba(167,73,48,0.32)">
                                             <div class="woocommerce-product-header"> <a
                                                     class="woocommerce-product-details"
-                                                    href="product/oat-cake/index.htm"> <img loading="lazy"
+                                                    href="Classes/image/<?php echo$item['image'];?>"> <img loading="lazy"
                                                         width="600" height="500"
                                                         src="wp-content/uploads/2021/03/product8-600x500.jpg"
                                                         class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                                         alt="" decoding="async"
-                                                        srcset="wp-content/uploads/2021/03/product8-600x500.jpg 600w, wp-content/uploads/2021/03/product8-1024x853.jpg 1024w, wp-content/uploads/2021/03/product8-768x640.jpg 768w, wp-content/uploads/2021/03/product8.jpg 1260w"
-                                                        sizes="(max-width: 600px) 100vw, 600px"> </a>
-                                                <div class="woocommerce-product-meta">
-                                                    <div class="woocommerce-compare"> <button
-                                                            class="woosc-btn woosc-btn-998 " data-id="998"
-                                                            data-product_name="Oat Cake"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product8-300x300.jpg">Compare</button>
-                                                    </div>
-                                                    <div class="woocommerce-wishlist"> <button
-                                                            class="woosw-btn woosw-btn-998 .ct-woosw-btn" data-id="998"
-                                                            data-product_name="Oat Cake"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product8-300x300.jpg"
-                                                            aria-label="Add to wishlist">Add to wishlist</button></div>
-                                                    <div class="woocommerce-quick-view"> <a
-                                                            href="index-13.htm?quick-view=998"
-                                                            class="woosq-btn woosq-btn-998" data-id="998"
-                                                            data-effect="mfp-3d-unfold" data-context="default"
-                                                            rel="nofollow">Quick view</a></div>
-                                                </div>
+                                                        srcset="Classes/image/<?php echo$item['image'];?>, Classes/image/<?php echo$item['image'];?>, Classes/image/<?php echo$item['image'];?>, Classes/image/<?php echo$item['image'];?>"
+                                                        sizes="(max-width: 600px) 100vw, 600px"> </a>                                            
                                             </div>
                                             <div class="woocommerce-product-content">
                                                 <h4 class="woocommerce-product--title"> <a
-                                                        href="product/oat-cake/index.htm">Oat Cake</a></h4> <span
+                                                        href="product/oat-cake/index.htm"><?php echo  $item['name']; ?></a></h4> <span
                                                     class="price"><span
                                                         class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">&#36;</span>14.00</bdi></span></span>
-                                                <div class="woocommerce-product--rating">
-                                                    <div class="star-rating" role="img"
-                                                        aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated
-                                                            <strong class="rating">5.00</strong> out of 5</span></div>
-                                                </div>
-                                                <div class="woocommerce-product--excerpt " style="display: none;">
-                                                    <div class="woocommerce-product-details__short-description">
-                                                        <p>Sumptuous, filling, and temptingly healthy, our Biona Organic
-                                                            Granola with Wild Berries is just the thing to get you out
-                                                            of bed. The goodness of rolled wholegrain oats are combined
-                                                            with a variety of tangy organic berries, and baked into
-                                                            crispy clusters that are as nutritious.</p>
-                                                    </div>
-                                                </div>
+                                                                class="woocommerce-Price-currencySymbol">&#36;</span><?php echo number_format((float)$item['price'], 2, '.', ''); ?></bdi></span></span>
+
                                                 <div class="woocommerce-add-to-cart"> <a
                                                         href="index-14.htm?add-to-cart=998"
                                                         aria-describedby="woocommerce_loop_add_to_cart_link_describedby_998"
                                                         data-quantity="1"
                                                         class="button product_type_simple add_to_cart_button ajax_add_to_cart"
                                                         data-product_id="998" data-product_sku="005"
-                                                        aria-label="Add to cart: &ldquo;Oat Cake&rdquo;" rel="nofollow"
-                                                        data-success_message="&ldquo;Oat Cake&rdquo; has been added to your cart">Add
+                                                        aria-label="Add to cart: &ldquo;<?php echo $item['name']; ?>&rdquo;" rel="nofollow"
+                                                        data-success_message="&ldquo;<?php echo $item['name']; ?>&rdquo; has been added to your cart">Add
                                                         to cart</a> <span
                                                         id="woocommerce_loop_add_to_cart_link_describedby_998"
                                                         class="screen-reader-text"> </span></div>
                                             </div>
-                                        </div> <button class="woosc-btn woosc-btn-998 " data-id="998"
-                                            data-product_name="Oat Cake"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product8-300x300.jpg">Compare</button><a
-                                            href="index-13.htm?quick-view=998" class="woosq-btn woosq-btn-998"
-                                            data-id="998" data-effect="mfp-3d-unfold" data-context="default"
-                                            rel="nofollow">Quick view</a><button
-                                            class="woosw-btn woosw-btn-998 .ct-woosw-btn" data-id="998"
-                                            data-product_name="Oat Cake"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product8-300x300.jpg"
-                                            aria-label="Add to wishlist">Add to wishlist</button>
+                                        </div> 
                                     </li>
-                                    <li
-                                        class="product type-product post-996 status-publish first instock product_cat-organic product_tag-apple product_tag-bread product_tag-cheese has-post-thumbnail shipping-taxable purchasable product-type-simple">
-                                        <a href="product/red-berries/index.htm"
-                                            class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
-                                        <div class="woocommerce-product-inner style-1"
-                                            style="border-color: rgba(223,27,47,0.32)">
-                                            <div class="woocommerce-product-header"> <a
-                                                    class="woocommerce-product-details"
-                                                    href="product/red-berries/index.htm"> <img loading="lazy"
-                                                        width="600" height="500"
-                                                        src="wp-content/uploads/2021/03/product9-600x500.jpg"
-                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                        alt="" decoding="async"
-                                                        srcset="wp-content/uploads/2021/03/product9-600x500.jpg 600w, wp-content/uploads/2021/03/product9-1024x853.jpg 1024w, wp-content/uploads/2021/03/product9-768x640.jpg 768w, wp-content/uploads/2021/03/product9.jpg 1260w"
-                                                        sizes="(max-width: 600px) 100vw, 600px"> </a>
-                                                <div class="woocommerce-product-meta">
-                                                    <div class="woocommerce-compare"> <button
-                                                            class="woosc-btn woosc-btn-996 " data-id="996"
-                                                            data-product_name="Red Berries"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product9-300x300.jpg">Compare</button>
-                                                    </div>
-                                                    <div class="woocommerce-wishlist"> <button
-                                                            class="woosw-btn woosw-btn-996 .ct-woosw-btn" data-id="996"
-                                                            data-product_name="Red Berries"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product9-300x300.jpg"
-                                                            aria-label="Add to wishlist">Add to wishlist</button></div>
-                                                    <div class="woocommerce-quick-view"> <a
-                                                            href="index-15.htm?quick-view=996"
-                                                            class="woosq-btn woosq-btn-996" data-id="996"
-                                                            data-effect="mfp-3d-unfold" data-context="default"
-                                                            rel="nofollow">Quick view</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="woocommerce-product-content">
-                                                <h4 class="woocommerce-product--title"> <a
-                                                        href="product/red-berries/index.htm">Red Berries</a></h4>
-                                                <span class="price"><span
-                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">&#36;</span>2.00</bdi></span></span>
-                                                <div class="woocommerce-product--rating">
-                                                    <div class="star-rating" role="img"
-                                                        aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated
-                                                            <strong class="rating">5.00</strong> out of 5</span></div>
-                                                </div>
-                                                <div class="woocommerce-product--excerpt " style="display: none;">
-                                                    <div class="woocommerce-product-details__short-description">
-                                                        <p>Sumptuous, filling, and temptingly healthy, our Biona Organic
-                                                            Granola with Wild Berries is just the thing to get you out
-                                                            of bed. The goodness of rolled wholegrain oats are combined
-                                                            with a variety of tangy organic berries, and baked into
-                                                            crispy clusters that are as nutritious.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="woocommerce-add-to-cart"> <a
-                                                        href="index-16.htm?add-to-cart=996"
-                                                        aria-describedby="woocommerce_loop_add_to_cart_link_describedby_996"
-                                                        data-quantity="1"
-                                                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                        data-product_id="996" data-product_sku="004"
-                                                        aria-label="Add to cart: &ldquo;Red Berries&rdquo;"
-                                                        rel="nofollow"
-                                                        data-success_message="&ldquo;Red Berries&rdquo; has been added to your cart">Add
-                                                        to cart</a> <span
-                                                        id="woocommerce_loop_add_to_cart_link_describedby_996"
-                                                        class="screen-reader-text"> </span></div>
-                                            </div>
-                                        </div> <button class="woosc-btn woosc-btn-996 " data-id="996"
-                                            data-product_name="Red Berries"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product9-300x300.jpg">Compare</button><a
-                                            href="index-15.htm?quick-view=996" class="woosq-btn woosq-btn-996"
-                                            data-id="996" data-effect="mfp-3d-unfold" data-context="default"
-                                            rel="nofollow">Quick view</a><button
-                                            class="woosw-btn woosw-btn-996 .ct-woosw-btn" data-id="996"
-                                            data-product_name="Red Berries"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product9-300x300.jpg"
-                                            aria-label="Add to wishlist">Add to wishlist</button>
-                                    </li>
-                                    <li
-                                        class="product type-product post-995 status-publish instock product_cat-food product_cat-fresh-meat product_cat-grocery-frozen product_cat-organic product_tag-organic product_tag-pasta has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                                        <a href="product/french-beef/index.htm"
-                                            class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> <span
-                                                class="onsale">Sale!</span> </a>
-                                        <div class="woocommerce-product-inner style-1">
-                                            <div class="woocommerce-product-header"> <a
-                                                    class="woocommerce-product-details"
-                                                    href="product/french-beef/index.htm"> <img loading="lazy"
-                                                        width="600" height="500"
-                                                        src="wp-content/uploads/2021/03/product11-600x500.jpg"
-                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                        alt="" decoding="async"
-                                                        srcset="wp-content/uploads/2021/03/product11-600x500.jpg 600w, wp-content/uploads/2021/03/product11-1024x853.jpg 1024w, wp-content/uploads/2021/03/product11-768x640.jpg 768w, wp-content/uploads/2021/03/product11.jpg 1260w"
-                                                        sizes="(max-width: 600px) 100vw, 600px"> </a>
-                                                <div class="woocommerce-product-meta">
-                                                    <div class="woocommerce-compare"> <button
-                                                            class="woosc-btn woosc-btn-995 " data-id="995"
-                                                            data-product_name="French Beef"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product11-300x300.jpg">Compare</button>
-                                                    </div>
-                                                    <div class="woocommerce-wishlist"> <button
-                                                            class="woosw-btn woosw-btn-995 .ct-woosw-btn" data-id="995"
-                                                            data-product_name="French Beef"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product11-300x300.jpg"
-                                                            aria-label="Add to wishlist">Add to wishlist</button></div>
-                                                    <div class="woocommerce-quick-view"> <a
-                                                            href="index-17.htm?quick-view=995"
-                                                            class="woosq-btn woosq-btn-995" data-id="995"
-                                                            data-effect="mfp-3d-unfold" data-context="default"
-                                                            rel="nofollow">Quick view</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="woocommerce-product-content">
-                                                <h4 class="woocommerce-product--title"> <a
-                                                        href="product/french-beef/index.htm">French Beef</a></h4>
-                                                <span class="price"><del aria-hidden="true"><span
-                                                            class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>20.00</bdi></span></del>
-                                                    <span class="screen-reader-text">Original price was:
-                                                        &#036;20.00.</span><ins aria-hidden="true"><span
-                                                            class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>15.00</bdi></span></ins><span
-                                                        class="screen-reader-text">Current price is:
-                                                        &#036;15.00.</span></span>
-                                                <div class="woocommerce-product--rating">
-                                                    <div class="star-rating" role="img"
-                                                        aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated
-                                                            <strong class="rating">5.00</strong> out of 5</span></div>
-                                                </div>
-                                                <div class="woocommerce-product--excerpt " style="display: none;">
-                                                    <div class="woocommerce-product-details__short-description">
-                                                        <p>Sumptuous, filling, and temptingly healthy, our Biona Organic
-                                                            Granola with Wild Berries is just the thing to get you out
-                                                            of bed. The goodness of rolled wholegrain oats are combined
-                                                            with a variety of tangy organic berries, and baked into
-                                                            crispy clusters that are as nutritious.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="woocommerce-add-to-cart"> <a
-                                                        href="index-18.htm?add-to-cart=995"
-                                                        aria-describedby="woocommerce_loop_add_to_cart_link_describedby_995"
-                                                        data-quantity="1"
-                                                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                        data-product_id="995" data-product_sku="003"
-                                                        aria-label="Add to cart: &ldquo;French Beef&rdquo;"
-                                                        rel="nofollow"
-                                                        data-success_message="&ldquo;French Beef&rdquo; has been added to your cart">Add
-                                                        to cart</a> <span
-                                                        id="woocommerce_loop_add_to_cart_link_describedby_995"
-                                                        class="screen-reader-text"> </span></div>
-                                            </div>
-                                        </div> <button class="woosc-btn woosc-btn-995 " data-id="995"
-                                            data-product_name="French Beef"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product11-300x300.jpg">Compare</button><a
-                                            href="index-17.htm?quick-view=995" class="woosq-btn woosq-btn-995"
-                                            data-id="995" data-effect="mfp-3d-unfold" data-context="default"
-                                            rel="nofollow">Quick view</a><button
-                                            class="woosw-btn woosw-btn-995 .ct-woosw-btn" data-id="995"
-                                            data-product_name="French Beef"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/product11-300x300.jpg"
-                                            aria-label="Add to wishlist">Add to wishlist</button>
-                                    </li>
-                                    <li
-                                        class="product type-product post-994 status-publish instock product_cat-nature product_cat-organic product_cat-vegetable product_tag-apple product_tag-bread product_tag-cheese has-post-thumbnail shipping-taxable purchasable product-type-simple">
-                                        <a href="product/green-bow/index.htm"
-                                            class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
-                                        <div class="woocommerce-product-inner style-1"
-                                            style="border-color: rgba(118,167,19,0.32)">
-                                            <div class="woocommerce-product-header"> <a
-                                                    class="woocommerce-product-details"
-                                                    href="product/green-bow/index.htm"> <img loading="lazy"
-                                                        width="600" height="500"
-                                                        src="wp-content/uploads/2021/03/h3-product11-600x500.png"
-                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                        alt="" decoding="async"
-                                                        srcset="wp-content/uploads/2021/03/h3-product11-600x500.png 600w, wp-content/uploads/2021/03/h3-product11-768x640.png 768w, wp-content/uploads/2021/03/h3-product11.png 800w"
-                                                        sizes="(max-width: 600px) 100vw, 600px"> </a>
-                                                <div class="woocommerce-product-meta">
-                                                    <div class="woocommerce-compare"> <button
-                                                            class="woosc-btn woosc-btn-994 " data-id="994"
-                                                            data-product_name="Green Bow"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/h3-product11-300x300.png">Compare</button>
-                                                    </div>
-                                                    <div class="woocommerce-wishlist"> <button
-                                                            class="woosw-btn woosw-btn-994 .ct-woosw-btn" data-id="994"
-                                                            data-product_name="Green Bow"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/h3-product11-300x300.png"
-                                                            aria-label="Add to wishlist">Add to wishlist</button></div>
-                                                    <div class="woocommerce-quick-view"> <a
-                                                            href="index-19.htm?quick-view=994"
-                                                            class="woosq-btn woosq-btn-994" data-id="994"
-                                                            data-effect="mfp-3d-unfold" data-context="default"
-                                                            rel="nofollow">Quick view</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="woocommerce-product-content">
-                                                <h4 class="woocommerce-product--title"> <a
-                                                        href="product/green-bow/index.htm">Green Bow</a></h4> <span
-                                                    class="price"><span
-                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">&#36;</span>4.00</bdi></span></span>
-                                                <div class="woocommerce-product--rating">
-                                                    <div class="star-rating" role="img"
-                                                        aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated
-                                                            <strong class="rating">5.00</strong> out of 5</span></div>
-                                                </div>
-                                                <div class="woocommerce-product--excerpt " style="display: none;">
-                                                    <div class="woocommerce-product-details__short-description">
-                                                        <p>Sumptuous, filling, and temptingly healthy, our Biona Organic
-                                                            Granola with Wild Berries is just the thing to get you out
-                                                            of bed. The goodness of rolled wholegrain oats are combined
-                                                            with a variety of tangy organic berries, and baked into
-                                                            crispy clusters that are as nutritious.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="woocommerce-add-to-cart"> <a
-                                                        href="index-20.htm?add-to-cart=994"
-                                                        aria-describedby="woocommerce_loop_add_to_cart_link_describedby_994"
-                                                        data-quantity="1"
-                                                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                        data-product_id="994" data-product_sku="002"
-                                                        aria-label="Add to cart: &ldquo;Green Bow&rdquo;" rel="nofollow"
-                                                        data-success_message="&ldquo;Green Bow&rdquo; has been added to your cart">Add
-                                                        to cart</a> <span
-                                                        id="woocommerce_loop_add_to_cart_link_describedby_994"
-                                                        class="screen-reader-text"> </span></div>
-                                            </div>
-                                        </div> <button class="woosc-btn woosc-btn-994 " data-id="994"
-                                            data-product_name="Green Bow"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/h3-product11-300x300.png">Compare</button><a
-                                            href="index-19.htm?quick-view=994" class="woosq-btn woosq-btn-994"
-                                            data-id="994" data-effect="mfp-3d-unfold" data-context="default"
-                                            rel="nofollow">Quick view</a><button
-                                            class="woosw-btn woosw-btn-994 .ct-woosw-btn" data-id="994"
-                                            data-product_name="Green Bow"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/h3-product11-300x300.png"
-                                            aria-label="Add to wishlist">Add to wishlist</button>
-                                    </li>
-                                    <li
-                                        class="product type-product post-2972 status-publish last instock product_cat-food product_cat-fresh-fish product_cat-grocery-frozen product_cat-organic product_tag-organic product_tag-pasta has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                                        <a href="product/fresh-sea-fish/index.htm"
-                                            class="woocommerce-LoopProduct-link woocommerce-loop-product__link"> <span
-                                                class="onsale">Sale!</span> </a>
-                                        <div class="woocommerce-product-inner style-1">
-                                            <div class="woocommerce-product-header"> <a
-                                                    class="woocommerce-product-details"
-                                                    href="product/fresh-sea-fish/index.htm"> <img loading="lazy"
-                                                        width="600" height="500"
-                                                        src="wp-content/uploads/2021/03/h3-product111-600x500.png"
-                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                        alt="" decoding="async"
-                                                        srcset="wp-content/uploads/2021/03/h3-product111-600x500.png 600w, wp-content/uploads/2021/03/h3-product111-768x640.png 768w, wp-content/uploads/2021/03/h3-product111.png 800w"
-                                                        sizes="(max-width: 600px) 100vw, 600px"> </a>
-                                                <div class="woocommerce-product-meta">
-                                                    <div class="woocommerce-compare"> <button
-                                                            class="woosc-btn woosc-btn-2972 " data-id="2972"
-                                                            data-product_name="Fresh Sea Fish"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/h3-product111-300x300.png">Compare</button>
-                                                    </div>
-                                                    <div class="woocommerce-wishlist"> <button
-                                                            class="woosw-btn woosw-btn-2972 .ct-woosw-btn"
-                                                            data-id="2972" data-product_name="Fresh Sea Fish"
-                                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/h3-product111-300x300.png"
-                                                            aria-label="Add to wishlist">Add to wishlist</button></div>
-                                                    <div class="woocommerce-quick-view"> <a
-                                                            href="index-21.htm?quick-view=2972"
-                                                            class="woosq-btn woosq-btn-2972" data-id="2972"
-                                                            data-effect="mfp-3d-unfold" data-context="default"
-                                                            rel="nofollow">Quick view</a></div>
-                                                </div>
-                                            </div>
-                                            <div class="woocommerce-product-content">
-                                                <h4 class="woocommerce-product--title"> <a
-                                                        href="product/fresh-sea-fish/index.htm">Fresh Sea Fish</a>
-                                                </h4> <span class="price"><del aria-hidden="true"><span
-                                                            class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>20.00</bdi></span></del>
-                                                    <span class="screen-reader-text">Original price was:
-                                                        &#036;20.00.</span><ins aria-hidden="true"><span
-                                                            class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>15.00</bdi></span></ins><span
-                                                        class="screen-reader-text">Current price is:
-                                                        &#036;15.00.</span></span>
-                                                <div class="woocommerce-product--rating">
-                                                    <div class="star-rating" role="img"
-                                                        aria-label="Rated 5.00 out of 5"><span style="width:100%">Rated
-                                                            <strong class="rating">5.00</strong> out of 5</span></div>
-                                                </div>
-                                                <div class="woocommerce-product--excerpt " style="display: none;">
-                                                    <div class="woocommerce-product-details__short-description">
-                                                        <p>Sumptuous, filling, and temptingly healthy, our Biona Organic
-                                                            Granola with Wild Berries is just the thing to get you out
-                                                            of bed. The goodness of rolled wholegrain oats are combined
-                                                            with a variety of tangy organic berries, and baked into
-                                                            crispy clusters that are as nutritious.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="woocommerce-add-to-cart"> <a
-                                                        href="index-22.htm?add-to-cart=2972"
-                                                        aria-describedby="woocommerce_loop_add_to_cart_link_describedby_2972"
-                                                        data-quantity="1"
-                                                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                        data-product_id="2972" data-product_sku="0023"
-                                                        aria-label="Add to cart: &ldquo;Fresh Sea Fish&rdquo;"
-                                                        rel="nofollow"
-                                                        data-success_message="&ldquo;Fresh Sea Fish&rdquo; has been added to your cart">Add
-                                                        to cart</a> <span
-                                                        id="woocommerce_loop_add_to_cart_link_describedby_2972"
-                                                        class="screen-reader-text"> </span></div>
-                                            </div>
-                                        </div> <button class="woosc-btn woosc-btn-2972 " data-id="2972"
-                                            data-product_name="Fresh Sea Fish"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/h3-product111-300x300.png">Compare</button><a
-                                            href="index-21.htm?quick-view=2972" class="woosq-btn woosq-btn-2972"
-                                            data-id="2972" data-effect="mfp-3d-unfold" data-context="default"
-                                            rel="nofollow">Quick view</a><button
-                                            class="woosw-btn woosw-btn-2972 .ct-woosw-btn" data-id="2972"
-                                            data-product_name="Fresh Sea Fish"
-                                            data-product_image="https://demo.casethemes.net/organio/wp-content/uploads/2021/03/h3-product111-300x300.png"
-                                            aria-label="Add to wishlist">Add to wishlist</button>
-                                    </li>
+
+<?php }}?>
                                 </ul>
-                                <nav class="woocommerce-pagination" aria-label="Product Pagination">
-                                    <ul class='page-numbers'>
-                                        <li><span aria-current="page" class="page-numbers current">1</span></li>
-                                        <li><a class="page-numbers" href="page/2/index-1.htm?sidebar-shop=left">2</a>
-                                        </li>
-                                        <li><span class="page-numbers dots">&hellip;</span></li>
-                                        <li><a class="page-numbers" href="page/4/index-1.htm?sidebar-shop=left">4</a>
-                                        </li>
-                                        <li><a class="next page-numbers"
-                                                href="page/2/index-1.htm?sidebar-shop=left">&rarr;</a></li>
-                                    </ul>
-                                </nav>
+
                             </main><!-- #main -->
                         </div><!-- #primary -->
                         <aside id="secondary"
@@ -1719,13 +876,13 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                 <section id="woocommerce_product_search-2"
                                     class="widget woocommerce widget_product_search">
                                     <div class="widget-content">
-                                        <form role="search" method="get" class="woocommerce-product-search"
-                                            action="https://demo.casethemes.net/organio/"> <label
+                                        <form role="search" method="post" class="woocommerce-product-search"
+                                            action=""> <label
                                                 class="screen-reader-text"
                                                 for="woocommerce-product-search-field-0">Search for:</label> <input
-                                                type="search" id="woocommerce-product-search-field-0"
+                                                type="search" name="seach_input" id="woocommerce-product-search-field-0"
                                                 class="search-field" placeholder="Search products&hellip;" value=""
-                                                name="s"> <button type="submit" value="Search" class="">Search</button>
+                                                name="s"> <button type="submit" name="search_btn" value="Search" class="">Search</button>
                                             <input type="hidden" name="post_type" value="product"></form>
                                     </div>
                                 </section>
@@ -1737,154 +894,58 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                             <li class="cat-item cat-item-69"><a
                                                     href="shop.php?cat=chicken">Chicken
                                                     </a></li>
-                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=chicken">Chicken</a></li>
-                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=chicken">Beef</a></li>
-                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=chicken">Eggs</a></li>
-                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=chicken">Milk</a></li>
-                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=chicken">Cheese</a></li>
-                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=chicken">Butter</a></li>
-                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=chicken">Yorgurt</a></li>
-                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=chicken">Vegitable</a></li>
-                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=chicken">Fruits</a></li>
+                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=beef">Beef</a></li>
+                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=eggs">Eggs</a></li>
+                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=milk">Milk</a></li>
+                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=cheese">Cheese</a></li>
+                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=butter">Butter</a></li>
+                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=yorgurt">Yorgurt</a></li>
+                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=vegitable">Vegitable</a></li>
+                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=fruits">Fruits</a></li>
                                         </ul>
                                     </div>
                                 </section>
-                                <section id="woocommerce_price_filter-2" class="widget woocommerce widget_price_filter">
-                                    <div class="widget-content">
-                                        <h2 class="widget-title"><span>Filter By Price</span></h2>
-                                        <form method="get" action="https://demo.casethemes.net/organio/shop/">
-                                            <div class="price_slider_wrapper">
-                                                <div class="price_slider" style="display:none;"></div>
-                                                <div class="price_slider_amount" data-step="10"> <label
-                                                        class="screen-reader-text" for="min_price">Min price</label>
-                                                    <input type="text" id="min_price" name="min_price" value="0"
-                                                        data-min="0" placeholder="Min price"> <label
-                                                        class="screen-reader-text" for="max_price">Max price</label>
-                                                    <input type="text" id="max_price" name="max_price" value="120"
-                                                        data-max="120" placeholder="Max price"> <button type="submit"
-                                                        class="button">Filter</button>
-                                                    <div class="price_label" style="display:none;"> Price: <span
-                                                            class="from"></span> &mdash; <span class="to"></span></div>
-                                                    <input type="hidden" name="sidebar-shop" value="left">
-                                                    <div class="clear"></div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </section>
+
                                 <section id="woocommerce_products-2" class="widget woocommerce widget_products">
                                     <div class="widget-content">
-                                        <h2 class="widget-title"><span>Best Seller</span></h2>
+                                        <h2 class="widget-title"><span>Most Availability</span></h2>
                                         <ul class="product_list_widget">
-                                            <li>
-                                                <div class="wg-product-inner">
-                                                    <div class="wg-product-image"> <a
-                                                            href="product/organic-juice/index.htm"> <img
-                                                                loading="lazy" width="300" height="300"
-                                                                src="wp-content/uploads/2021/03/product1-300x300.jpg"
-                                                                class="attachment-300x300 size-300x300" alt=""
-                                                                decoding="async"
-                                                                srcset="wp-content/uploads/2021/03/product1-300x300.jpg 300w, wp-content/uploads/2021/03/product1-600x600.jpg 600w, wp-content/uploads/2021/03/product1-96x96.jpg 96w, wp-content/uploads/2021/03/product1-460x460.jpg 460w"
-                                                                sizes="(max-width: 300px) 100vw, 300px"> </a></div>
-                                                    <div class="wg-product-holder">
-                                                        <h3 class="product-title"> <a
-                                                                href="product/organic-juice/index.htm">Organic
-                                                                Juice</a></h3>
-                                                        <div class="star-rating" role="img"
-                                                            aria-label="Rated 5.00 out of 5"><span
-                                                                style="width:100%">Rated <strong
-                                                                    class="rating">5.00</strong> out of 5</span></div>
-                                                        <span class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>10.00</bdi></span>
-                                                        &ndash; <span class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>20.00</bdi></span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="wg-product-inner">
-                                                    <div class="wg-product-image"> <a
-                                                            href="product/fresh-orange/index.htm"> <img
-                                                                loading="lazy" width="300" height="300"
-                                                                src="wp-content/uploads/2021/04/h3-product2-1-300x300.png"
-                                                                class="attachment-300x300 size-300x300" alt=""
-                                                                decoding="async"
-                                                                srcset="wp-content/uploads/2021/04/h3-product2-1-300x300.png 300w, wp-content/uploads/2021/04/h3-product2-1-600x600.png 600w, wp-content/uploads/2021/04/h3-product2-1-96x96.png 96w, wp-content/uploads/2021/04/h3-product2-1-460x460.png 460w"
-                                                                sizes="(max-width: 300px) 100vw, 300px"> </a></div>
-                                                    <div class="wg-product-holder">
-                                                        <h3 class="product-title"> <a
-                                                                href="product/fresh-orange/index.htm">Fresh
-                                                                Orange</a></h3>
-                                                        <div class="star-rating" role="img"
-                                                            aria-label="Rated 5.00 out of 5"><span
-                                                                style="width:100%">Rated <strong
-                                                                    class="rating">5.00</strong> out of 5</span></div>
-                                                        <span class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>12.00</bdi></span>
-                                                        &ndash; <span class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>65.00</bdi></span>
-                                                    </div>
-                                                </div>
-                                            </li>
+
+                                        <?php
+
+if (count($items_most_available) > 0) {
+
+    
+    foreach ($items_most_available as $item) 
+    
+    {?>
                                             <li>
                                                 <div class="wg-product-inner">
                                                     <div class="wg-product-image"> <a
                                                             href="product/organic-cabbage/index.htm"> <img
                                                                 loading="lazy" width="300" height="300"
-                                                                src="wp-content/uploads/2021/03/product3-300x300.jpg"
+                                                                src="Classes/image/<?php echo$item['image'];?>"
                                                                 class="attachment-300x300 size-300x300" alt=""
                                                                 decoding="async"
-                                                                srcset="wp-content/uploads/2021/03/product3-300x300.jpg 300w, wp-content/uploads/2021/03/product3-600x600.jpg 600w, wp-content/uploads/2021/03/product3-96x96.jpg 96w, wp-content/uploads/2021/03/product3-460x460.jpg 460w"
+                                                                srcset="Classes/image/<?php echo$item['image'];?>, Classes/image/<?php echo$item['image'];?>, Classes/image/<?php echo$item['image'];?>, Classes/image/<?php echo$item['image'];?>"
                                                                 sizes="(max-width: 300px) 100vw, 300px"> </a></div>
                                                     <div class="wg-product-holder">
                                                         <h3 class="product-title"> <a
-                                                                href="product/organic-cabbage/index.htm">Organic
-                                                                Cabbage</a></h3>
-                                                        <div class="star-rating" role="img"
-                                                            aria-label="Rated 5.00 out of 5"><span
-                                                                style="width:100%">Rated <strong
-                                                                    class="rating">5.00</strong> out of 5</span></div>
+                                                                href="product/organic-cabbage/index.htm"><?php echo $item['name']; ?></a></h3>
+
                                                         <span class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol">&#36;</span>4.00</bdi></span>
+                                                                    class="woocommerce-Price-currencySymbol">&#36;</span><?php echo number_format((float)$item['price'], 2, '.', ''); ?></bdi></span>
                                                     </div>
                                                 </div>
                                             </li>
+
+                                            <?php }}?>
+
+
                                         </ul>
                                     </div>
                                 </section>
-                                <section id="woocommerce_product_tag_cloud-2"
-                                    class="widget woocommerce widget_product_tag_cloud">
-                                    <div class="widget-content">
-                                        <h2 class="widget-title"><span>Tags</span></h2>
-                                        <div class="tagcloud"><a href="product-tag/apple/index.htm"
-                                                class="tag-cloud-link tag-link-51 tag-link-position-1"
-                                                style="font-size: 22pt;" aria-label="apple (24 products)">apple</a> <a
-                                                href="product-tag/bread/index.htm"
-                                                class="tag-cloud-link tag-link-52 tag-link-position-2"
-                                                style="font-size: 22pt;" aria-label="bread (24 products)">bread</a> <a
-                                                href="product-tag/cheese/index.htm"
-                                                class="tag-cloud-link tag-link-53 tag-link-position-3"
-                                                style="font-size: 22pt;" aria-label="cheese (24 products)">cheese</a> <a
-                                                href="product-tag/coffee/index.htm"
-                                                class="tag-cloud-link tag-link-54 tag-link-position-4"
-                                                style="font-size: 16.909090909091pt;"
-                                                aria-label="coffee (15 products)">coffee</a> <a
-                                                href="product-tag/fish/index.htm"
-                                                class="tag-cloud-link tag-link-55 tag-link-position-5"
-                                                style="font-size: 16.909090909091pt;"
-                                                aria-label="fish (15 products)">fish</a> <a
-                                                href="product-tag/grape/index.htm"
-                                                class="tag-cloud-link tag-link-56 tag-link-position-6"
-                                                style="font-size: 16.909090909091pt;"
-                                                aria-label="grape (15 products)">grape</a> <a
-                                                href="product-tag/organic/index.htm"
-                                                class="tag-cloud-link tag-link-57 tag-link-position-7"
-                                                style="font-size: 8pt;" aria-label="organic (6 products)">organic</a> <a
-                                                href="product-tag/pasta/index.htm"
-                                                class="tag-cloud-link tag-link-58 tag-link-position-8"
-                                                style="font-size: 8pt;" aria-label="pasta (6 products)">pasta</a></div>
-                                    </div>
-                                </section>
+
                             </div>
                         </aside>
                     </div>
@@ -1923,69 +984,7 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
             </div>
         </div>
     </div>
-    <div class="ct-modal ct-user-popup">
-        <div class="ct-modal-close"><i class="ct-icon-close"></i></div>
-        <div class="ct-modal-content">
-            <div class="ct-user ct-user-register u-close">
-                <div class="ct-user-content">
-                    <h3 class="ct-user-heading">Create your account</h3>
-                    <div class="ct-user-form">
-                        <div class="ct-user-form-body ct-user-form-register">
-                            <div class="register-form">
-                                <div class="fields-content">
-                                    <div class="field-group"> <input id="res_user" type="text" class="input"
-                                            placeholder="Username" data-validate="Required Field"
-                                            data-user-length="Username too short. At least 4 characters is required."
-                                            data-special-char="The value of text field can&#039;t contain any of the following characters: \ / : * ? &quot; &lt; &gt; space">
-                                        <i class="zmdi zmdi-account"></i></div>
-                                    <div class="field-group"> <input id="res_email" type="text" class="input"
-                                            placeholder="Email Address" data-validate="Required Field"
-                                            data-email-format="The Email address is incorrect!"> <i
-                                            class="zmdi zmdi-email"></i></div>
-                                    <div class="field-group"> <input id="res_pass1" type="password" class="input"
-                                            data-type="password" placeholder="Password" data-validate="Required Field"
-                                            data-pass-length="Password length must be greater than 5."> <i
-                                            class="zmdi zmdi-lock"></i></div>
-                                    <div class="field-group"> <input id="res_pass2" type="password" class="input"
-                                            data-type="password" placeholder="Confirm Password"
-                                            data-validate="Required Field"
-                                            data-pass-confirm="Your password and confirmation password do not match.">
-                                        <i class="zmdi zmdi-lock"></i></div>
-                                    <div class="field-group"> <button type="button"
-                                            class="button btn-up-register">Create Account</button></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ct-user-footer"> <a href="javascript:void(0)" class="btn-sign-in"> Sign In</a></div>
-                </div>
-            </div>
-            <div class="ct-user ct-user-login">
-                <div class="ct-user-content">
-                    <h3 class="ct-user-heading">Log in to Your Account</h3>
-                    <div class="ct-user-form">
-                        <div class="ct-user-form-body ct-user-form-login">
-                            <div class="login-form">
-                                <div class="fields-content">
-                                    <div class="field-group"> <input id="user" type="text" class="input user_name"
-                                            placeholder="Username" data-validate="Required Field"> <i
-                                            class="zmdi zmdi-account"></i></div>
-                                    <div class="field-group"> <input id="pass" type="password" class="input password"
-                                            placeholder="Password" data-validate="Required Field"> <i
-                                            class="zmdi zmdi-lock"></i></div>
-                                    <div class="field-group field-footer-group"> <button type="button"
-                                            class="button button-login">Log In</button></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ct-user-footer"> <a href="javascript:void(0)" class="btn-sign-up"> Sign Up</a></div>
-                    <div class="ct-user-forgot-pass"><a href="my-account/lost-password/index.htm">Forgot your
-                            password?</a></div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div class="ct-cursor ct-js-cursor">
         <div class="ct-cursor-wrapper">
             <div class="ct-cursor--follower ct-js-follower"></div>
@@ -2020,41 +1019,7 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
             </div>
         </div>
     </div>
-    <div class="woosc-popup woosc-settings">
-        <div class="woosc-popup-inner">
-            <div class="woosc-popup-content">
-                <div class="woosc-popup-content-inner">
-                    <div class="woosc-popup-close"></div>
-                    <ul class="woosc-settings-tools">
-                        <li> <label><input type="checkbox" class="woosc-settings-tool" value="hide_similarities"
-                                    id="woosc_hide_similarities"> Hide similarities </label></li>
-                        <li> <label><input type="checkbox" class="woosc-settings-tool" value="highlight_differences"
-                                    id="woosc_highlight_differences"> Highlight differences </label></li>
-                    </ul> Select the fields to be shown. Others will be hidden. Drag and drop to rearrange the order.<ul
-                        class="woosc-settings-fields">
-                        <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="whmf" checked/=""><span class="move">Image</span></li>
-                        <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="tpln" checked/=""><span class="move">SKU</span></li>
-                        <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="y8n9" checked/=""><span class="move">Rating</span></li>
-                        <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="3thx" checked/=""><span class="move">Price</span></li>
-                        <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="trar" checked/=""><span class="move">Stock</span></li>
-                        <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="17jc" checked/=""><span class="move">Availability</span></li>
-                        <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="fayt" checked/=""><span class="move">Add to cart</span></li>
-                        <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="n2gc" checked/=""><span class="move">Description</span></li>
-                        <li class="woosc-settings-field-li"><input type="checkbox" class="woosc-settings-field"
-                                value="q7ru" checked/=""><span class="move">Weight</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div class="woosc-popup woosc-share">
         <div class="woosc-popup-inner">
             <div class="woosc-popup-content">
@@ -2065,31 +1030,7 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
             </div>
         </div>
     </div>
-    <div id="woosc-area"
-        class="woosc-area woosc-bar-bottom woosc-bar-right woosc-bar-click-outside-yes woosc-hide-checkout"
-        data-bg-color="#292a30" data-btn-color="#76a713">
-        <div class="woosc-inner">
-            <div class="woosc-table">
-                <div class="woosc-table-inner"> <a href="#close" id="woosc-table-close"
-                        class="woosc-table-close hint--left" aria-label="Close"><span
-                            class="woosc-table-close-icon"></span></a>
-                    <div class="woosc-table-items"></div>
-                </div>
-            </div>
-            <div class="woosc-bar">
-                <div class="woosc-bar-notice"> Click outside to hide the comparison bar</div> <a href="#print"
-                    class="woosc-bar-print hint--top" aria-label="Print"></a> <a href="#share"
-                    class="woosc-bar-share hint--top" aria-label="Share"></a> <a href="#search"
-                    class="woosc-bar-search hint--top" aria-label="Add product"></a>
-                <div class="woosc-bar-items"></div>
-                <div class="woosc-bar-btn woosc-bar-btn-text">
-                    <div class="woosc-bar-btn-icon-wrapper">
-                        <div class="woosc-bar-btn-icon-inner"><span></span><span></span><span></span></div>
-                    </div> Compare
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div id="woosw_wishlist" class="woosw-popup woosw-popup-center"></div>
     <script type="text/javascript"> jQuery(function ($) {
             if (typeof wc_add_to_cart_params === 'undefined')
@@ -2109,6 +1050,8 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                 });
             });
         }); </script>
+
+        
     <script type='text/javascript'> const lazyloadRunObserver = () => {
             const lazyloadBackgrounds = document.querySelectorAll(`.e-con.e-parent:not(.e-lazyloaded)`);
             const lazyloadBackgroundObserver = new IntersectionObserver((entries) => {

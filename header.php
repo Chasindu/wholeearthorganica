@@ -42,7 +42,7 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
 
                                     <li id="menu-item-25"
                                         class="menu-item menu-item-type-post_type menu-item-object-page megamenu megamenu-style-alt menu-item-has-children menu-item-25">
-                                        <a href="shop/index.htm"><span>Shop</span></a>
+                                        <a href="shop.php"><span>Shop</span></a>
                                         <ul class="sub-menu">
                                             <li>
                                                 <div class="container">
@@ -80,15 +80,15 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                                                                 <div class="ct-menu-item-wrap  style1">
                                                                                     <ul class="ct-menu-item ">
                                                                                         <li> <a
-                                                                                                href="shop.php/?cat='Meat'&?subcat='chicken'">
+                                                                                                href="shop.php?cat=chicken'">
                                                                                                 <span>Chicken</span>
                                                                                             </a></li>
                                                                                         <li> <a
-                                                                                                href="product-grid-3-columns/index.htm">
+                                                                                                href="shop.php?cat=beef">
                                                                                                 <span>Beef</span>
                                                                                             </a></li>
                                                                                         <li> <a
-                                                                                                href="product-grid-4-columns/index.htm">
+                                                                                                href="shop.php?cat=eggs">
                                                                                                 <span>Eggs</span>
                                                                                             </a></li>
                                                                                         <!-- <li> <a
@@ -127,19 +127,19 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                                                                 <div class="ct-menu-item-wrap  style1">
                                                                                     <ul class="ct-menu-item ">
                                                                                         <li> <a
-                                                                                                href="shop/index-1.htm?sidebar-shop=left">
+                                                                                                href="shop.php?cat=milk">
                                                                                                 <span>Milk</span>
                                                                                             </a></li>
                                                                                         <li> <a
-                                                                                                href="shop/index-2.htm?sidebar-shop=right">
+                                                                                                href="shop.php?cat=cheese">
                                                                                                 <span>Cheese</span>
                                                                                             </a></li>
                                                                                         <li> <a
-                                                                                                href="shop/index-3.htm?shop-layout=list">
+                                                                                                href="shop.php?cat=butter">
                                                                                                 <span>Butter</span>
                                                                                             </a></li>
                                                                                         <li> <a
-                                                                                                href="product-masonry/index.htm">
+                                                                                                href="shop.php?cat=yorgurt">
                                                                                                 <span>Yorgurt</span>
                                                                                             </a></li>
                                                                                     </ul>
@@ -175,11 +175,11 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                                                                 <div class="ct-menu-item-wrap  style1">
                                                                                     <ul class="ct-menu-item ">
                                                                                         <li> <a
-                                                                                                href="product/indigi-teas/index.htm">
+                                                                                                href="shop.php?cat=vegitable">
                                                                                                 <span>Vegitable</span>
                                                                                             </a></li>
                                                                                         <li> <a
-                                                                                                href="product/organic-juice/index.htm">
+                                                                                                href="shop.php?cat=fruits">
                                                                                                 <span>Fruits</span>
                                                                                             </a></li>
                                                                                         <li>
@@ -276,15 +276,15 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                                                                 <div class="ct-menu-item-wrap  style1">
                                                                                     <ul class="ct-menu-item ">
                                                                                         <li> <a
-                                                                                                href="product-grid-2-columns/index.htm">
+                                                                                                href="shop.php?cat=chicken">
                                                                                                 <span>Chicken</span>
                                                                                             </a></li>
                                                                                         <li> <a
-                                                                                                href="product-grid-3-columns/index.htm">
+                                                                                                href="shop.php?cat=beef">
                                                                                                 <span>Beef</span>
                                                                                             </a></li>
                                                                                         <li> <a
-                                                                                                href="product-grid-4-columns/index.htm">
+                                                                                                href="shop.php?cat=eggs">
                                                                                                 <span>Eggs</span>
                                                                                             </a></li>
 
@@ -320,19 +320,19 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                                                                 <div class="ct-menu-item-wrap  style1">
                                                                                     <ul class="ct-menu-item ">
                                                                                         <li> <a
-                                                                                                href="shop/index-1.htm?sidebar-shop=left">
+                                                                                                href="shop.php?cat=milk">
                                                                                                 <span>Milk</span>
                                                                                             </a></li>
                                                                                         <li> <a
-                                                                                                href="shop/index-2.htm?sidebar-shop=right">
-                                                                                                <span>Cheeser</span>
+                                                                                                href="shop.php?cat=cheese">
+                                                                                                <span>Cheese</span>
                                                                                             </a></li>
                                                                                         <li> <a
-                                                                                                href="shop/index-3.htm?shop-layout=list">
+                                                                                                href="shop.php?cat=butter">
                                                                                                 <span>Butter</span>
                                                                                             </a></li>
                                                                                         <li> <a
-                                                                                                href="product-masonry/index.htm">
+                                                                                                href="shop.php?cat=yorgurt">
                                                                                                 <span>Yorgurt</span>
                                                                                             </a></li>
                                                                                     </ul>
@@ -368,11 +368,11 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                                                                 <div class="ct-menu-item-wrap  style1">
                                                                                     <ul class="ct-menu-item ">
                                                                                         <li> <a
-                                                                                                href="product/indigi-teas/index.htm">
+                                                                                                href="shop.php?cat=vegitable">
                                                                                                 <span>Vegitable</span>
                                                                                             </a></li>
                                                                                         <li> <a
-                                                                                                href="product/organic-juice/index.htm">
+                                                                                                href="shop.php?cat=fruits">
                                                                                                 <span>Fruits</span>
                                                                                             </a></li>
                                                                                         <!-- <li> <a
