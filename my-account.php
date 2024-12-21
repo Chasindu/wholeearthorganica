@@ -783,7 +783,7 @@ if ($_SESSION['auth']=="s"){
                                                                                                 loading="lazy"
                                                                                                 decoding="async"
                                                                                                 class="no-lazyload "
-                                                                                                src="wp-content/uploads/2021/03/organic13-370x370.jpg"
+                                                                                                src="img/cart2.png"
                                                                                                 width="370" height="370"
                                                                                                 alt="organic13"
                                                                                                 title="organic13"></a>
@@ -810,7 +810,7 @@ if ($_SESSION['auth']=="s"){
                                                                                                 loading="lazy"
                                                                                                 decoding="async"
                                                                                                 class="no-lazyload "
-                                                                                                src="wp-content/uploads/2021/03/organic14-370x370.jpg"
+                                                                                                src="img/order6.png"
                                                                                                 width="370" height="370"
                                                                                                 alt="organic14"
                                                                                                 title="organic14"></a>
