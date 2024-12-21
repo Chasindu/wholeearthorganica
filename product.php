@@ -851,18 +851,24 @@ try {
                                                 </div>
 
                                                 <form class="cart"
-                                                    action=""
+                                                    action="cart.php"
                                                     method="post" enctype='multipart/form-data'>
                                                     <div class="quantity"> <label class="screen-reader-text"
                                                             for="quantity_67465c1839722">Quantity</label>
-                                                        <input type="number" id="quantity_67465c1839722"
+
+                                                        <input type="number" 
                                                             class="input-text qty text" name="quantity" value="1"
-                                                            aria-label="Product quantity" size="<?php $product['qty'] ?>" min="1" max=""
+                                                            aria-label="Product quantity" size="5" min="1" max="<?php echo $product['qty'] ?>"
                                                             step="1" placeholder="" inputmode="numeric"
-                                                            autocomplete="off"></div> <button type="submit"
-                                                        name="add-to-cart" value="5671"
-                                                        class="single_add_to_cart_button button alt">Add to
-                                                        cart</button>
+                                                            autocomplete="off">
+                                                        
+                                                        <input type="hidden" name="p_id" value ="<?php echo $product['id'] ?>">
+                                                        <input type="hidden" name="name" value ="<?php echo $product['name'] ?>">
+                                                        <input type="hidden" name="price" value ="<?php echo $product['price'] ?>">
+                                                        <input type="hidden" name="image" value ="<?php echo $product['image'] ?>">
+                                                        </div> 
+                                                            
+                                                        <button type="submit" name="add-to-cart" class="single_add_to_cart_button button alt">Add to cart</button>
                                                 </form>
 
                                                 <div class="product_meta"> <span class="sku_wrapper">SKU: <span
@@ -926,17 +932,7 @@ foreach ($items_same_cat as $item)
         
         <a href="#" class="scroll-top"><i class="caseicon-long-arrow-right-three"></i></a>
     </div><!-- #page -->
-    <div class="ct-modal ct-modal-search">
-        <div class="ct-modal-close"><i class="ct-icon-close"></i></div>
-        <div class="ct-modal-overlay"></div>
-        <div class="ct-modal-content">
-            <form role="search" method="get" class="search-form-popup" action="https://demo.casethemes.net/organio/">
-                <div class="searchform-wrap"> <input type="text" placeholder="Enter Keywords..." id="search" name="s"
-                        class="search-field"> <button type="submit" class="search-submit"><i
-                            class="caseicon-search"></i></button></div>
-            </form>
-        </div>
-    </div>
+
     <div class="ct-widget-cart-wrap">
         <div class="ct-widget-cart-overlay"></div>
         <div class="ct-widget-cart-sidebar">

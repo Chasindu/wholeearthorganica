@@ -1,5 +1,10 @@
 <?php 
-if(session_status() !== PHP_SESSION_ACTIVE) session_start();
+if(session_status() !== PHP_SESSION_ACTIVE){    
+    session_start();
+    $_SESSION['user_name'] = "";
+;
+} 
+
 ?>
 <header id="ct-masthead">
     <div id="ct-header-wrap" class="ct-header-layout1 item-menu-style1 fixed-height  is-sticky scroll-to-bottom"
@@ -9,14 +14,14 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                 <div class="row">
                     <div class="ct-topbar-wellcome"> Welcome to your Organic store></div>
 
-
+<!-- 
                     <div class="ct-topbar-cart">
                         <div class="header-right-item h-btn-cart"> <i class="caseicon-shopping-cart"></i> Cart:
-                            <span class="widget_cart_counter_header">0 - <span class="cart-total"><span
+                            <span class="widget_cart_counter_header"><?php echo $_SESSION['cart_total_pcs']?> - <span class="cart-total"><span
                                         class="woocommerce-Price-amount amount"><bdi><span
-                                                class="woocommerce-Price-currencySymbol">&#36;</span>0.00</bdi></span></span></span>
+                                                class="woocommerce-Price-currencySymbol">&#36;</span><?php echo number_format($_SESSION['cart_total'], 2) ?></bdi></span></span></span>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

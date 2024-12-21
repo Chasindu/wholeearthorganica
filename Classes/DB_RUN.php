@@ -39,9 +39,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['user_name'] = $user['name'];
                 $_SESSION['auth'] = $user['auth'];
-                if($_SESSION['auth'] == 'u'){
+                if ($_SESSION['auth'] == 'u') {
                     header("Location:../my-account.php");
-                } else if($_SESSION['auth']=='s'){
+                } else if ($_SESSION['auth'] == 's') {
                     header("Location:../my-account-seller.php");
                 }
             } else {
@@ -94,6 +94,63 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     }
 
+    if (isset($_POST['order'])) {
+
+
+        foreach ($_SESSION['cart'] as $item) {
+            echo $item['id'];
+            echo $item['quantity'];
+
+            try {
+                // Prepare the SQL query
+                $stmt = $pdo->prepare("UPDATE items SET qty = qty - :reduction WHERE id = :id");
+                $stmt->bindParam(':reduction', $item['quantity'], PDO::PARAM_INT);
+                $stmt->bindParam(':id', $item['id'], PDO::PARAM_INT);
+
+                // Execute the query
+               $stmt->execute() ;
+            }
+
+
+            catch (PDOException $e) {
+                error_log("Query error: " . $e->getMessage());
+                die("An error occurred. Please try again.");
+            }
+
+            $order_number = (rand(10, 100000));
+
+
+
+            try {
+                // $stmt = $pdo->prepare("INSERT INTO items (name, price, qty , seller_id ) VALUES (:name, :price, :qty, :seller_id)");
+                $stmt = $pdo->prepare("INSERT INTO orders (rand_order_id	, cus_id, item, qty ) VALUES (:rand_order_id, :cus_id, :item, :qty)");
+
+                $stmt->bindParam(':rand_order_id', $order_number);
+                $stmt->bindParam(':cus_id', $_SESSION['user_id']);
+                $stmt->bindParam(':item', $item['id']);
+                $stmt->bindParam(':qty', $item['quantity']);
+
+
+                if ($stmt->execute()) { {
+                    unset($_SESSION['cart']);
+                    header("Location:../thanks.php");
+                    }
+                } else {
+                    echo "Failed to insert data.";
+                }
+            } catch (PDOException $e) {
+                error_log("Insert error: " . $e->getMessage());
+                die("An error occurred. Please try again.");
+            }
+
+
+
+
+
+        }
+
+
+    }
 
 
 
@@ -117,7 +174,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         try {
             // $stmt = $pdo->prepare("INSERT INTO items (name, price, qty , seller_id ) VALUES (:name, :price, :qty, :seller_id)");
             $stmt = $pdo->prepare("INSERT INTO items (name, price, qty, image , seller_id, cat ) VALUES (:name, :price, :qty, :uploadfile, :seller_id, :cat)");
-            
+
             $stmt->bindParam(':name', $name);
             $stmt->bindParam(':price', $price);
             $stmt->bindParam(':qty', $qty);
