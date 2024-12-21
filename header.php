@@ -80,7 +80,7 @@ if(session_status() !== PHP_SESSION_ACTIVE) session_start();
                                                                                 <div class="ct-menu-item-wrap  style1">
                                                                                     <ul class="ct-menu-item ">
                                                                                         <li> <a
-                                                                                                href="shop.php?cat=chicken'">
+                                                                                                href="shop.php?cat=chicken">
                                                                                                 <span>Chicken</span>
                                                                                             </a></li>
                                                                                         <li> <a
@@ -434,9 +434,7 @@ else{
                                    
                             </div>
                         </nav>
-                        <div class="ct-header-meta">
-                            <div class="header-right-item h-btn-search"><i class="caseicon-search"></i></div>
-                        </div>
+
                     </div>
                     <div class="ct-menu-overlay"></div>
                 </div>

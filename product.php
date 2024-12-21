@@ -1,72 +1,36 @@
-﻿<?php 
+﻿<!doctype html>
+<html lang="en-US">
+<?php 
 include 'Classes/DB_RUN.php';
-// $email = filter_var(sanitizeInput($_POST['email']), FILTER_SANITIZE_EMAIL);
-// $password = sanitizeInput($_POST['psw']);
+if(session_status() !== PHP_SESSION_ACTIVE) session_start();
 
 try {
 
-    if (isset($_POST['search_btn'])) {
+        $stmt = $pdo->prepare("SELECT * FROM items WHERE id = :id");
 
-        $searchTerm = "%".$_POST['seach_input']."%";
+        $stmt->bindParam(':id', $_GET['id']);
+        $stmt->execute();
+        $product = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+    
+        $stmt = $pdo->prepare("SELECT * FROM items WHERE cat= :cat LIMIT 4");
 
-        $stmt = $pdo->prepare("SELECT * FROM items WHERE name LIKE :name");
-        $stmt->bindParam(':name', $searchTerm);
+        $stmt->bindParam(':cat', $product['cat']);
         $stmt->execute();
-        $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
-        $stmt = $pdo->prepare("SELECT * FROM items WHERE name LIKE :name ORDER BY qty DESC LIMIT 3");
-        $stmt->bindParam(':name', $searchTerm);
-        $stmt->execute();
-        $items_most_available = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
-    
-
-    }
-    else if (isset($_GET['cat'])) {
-
-        $searchTerm = $_GET['cat'];
-
-        $stmt = $pdo->prepare("SELECT * FROM items WHERE cat= :cat");
-        $stmt->bindParam(':cat', $searchTerm);
-        $stmt->execute();
-        $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
-        $stmt = $pdo->prepare("SELECT * FROM items WHERE cat= :cat ORDER BY qty DESC LIMIT 3");
-        $stmt->bindParam(':cat', $searchTerm);
-        $stmt->execute();
-        $items_most_available = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
-    }
-    else {
-
-        $stmt = $pdo->prepare("SELECT * FROM items");
-        $stmt->execute();
-        $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    
-        $stmt = $pdo->prepare("SELECT * FROM items ORDER BY qty DESC LIMIT 3");
-        $stmt->execute();
-        $items_most_available = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $items_same_cat = $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-
-
-
-
-
-} catch (PDOException $e) {
+ catch (PDOException $e) {
     error_log("Query error: " . $e->getMessage());
     die("An error occurred. Please try again.");
 }
 
 ?>
-<!doctype html>
-<html lang="en-US">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="//gmpg.org/xfn/11">
-    <title>Shop &#8211; Organio</title>
+    <title>Products &#8211; <?php echo $product['name'] ?></title>
     <meta name='robots' content='max-image-preview:large'>
     <style>
         img:is([sizes="auto" i], [sizes^="auto," i]) {
@@ -77,7 +41,8 @@ try {
     <link rel="alternate" type="application/rss+xml" title="Organio &raquo; Feed" href="feed/index.htm">
     <link rel="alternate" type="application/rss+xml" title="Organio &raquo; Comments Feed"
         href="comments/feed/index.htm">
-    <link rel="alternate" type="application/rss+xml" title="Organio &raquo; Products Feed" href="feed/index.htm">
+    <link rel="alternate" type="application/rss+xml" title="Organio &raquo; Indigi Teas Comments Feed"
+        href="feed/index.htm">
     <script type="text/javascript"> /* <![CDATA[ */
         window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/demo.casethemes.net\/organio\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.1" } };
         /*! This file is auto-generated */
@@ -464,14 +429,20 @@ try {
     <link rel='stylesheet' id='remodal-css'
         href='wp-content/plugins/case-theme-user/acess/css/remodal.min.css?ver=6.7.1' type='text/css' media='all'>
     <link rel='stylesheet' id='remodal-default-theme-css'
-        href='wp-content/plugins/case-theme-user/acess/css/remodal-default-theme.min.css?ver=6.7.1' type='text/css'
-        media='all'>
+        href='wp-content/plugins/case-theme-user/acess/css/remodal-default-theme.min.css?ver=6.7.1'
+        type='text/css' media='all'>
     <link rel='stylesheet' id='contact-form-7-css'
         href='wp-content/plugins/contact-form-7/includes/css/contact-form-7.min.css?ver=6.0' type='text/css'
         media='all'>
     <link rel='stylesheet' id='purchase-link-css-css'
         href='wp-content/plugins/envato-purchase-link/css/purchase-link-css.min.css?ver=1.0.0' type='text/css'
         media='all'>
+    <link rel='stylesheet' id='photoswipe-css'
+        href='wp-content/plugins/woocommerce/assets/css/photoswipe/photoswipe.min.css?ver=9.3.3' type='text/css'
+        media='all'>
+    <link rel='stylesheet' id='photoswipe-default-skin-css'
+        href='wp-content/plugins/woocommerce/assets/css/photoswipe/default-skin/default-skin.min.css?ver=9.3.3'
+        type='text/css' media='all'>
     <link rel='stylesheet' id='woocommerce-layout-css'
         href='wp-content/plugins/woocommerce/assets/css/woocommerce-layout.min.css?ver=9.3.3' type='text/css'
         media='all'>
@@ -487,8 +458,8 @@ try {
         }
     </style>
     <link rel='stylesheet' id='woo-variation-swatches-css'
-        href='wp-content/plugins/woo-variation-swatches/assets/css/frontend.min.css?ver=1729744251' type='text/css'
-        media='all'>
+        href='wp-content/plugins/woo-variation-swatches/assets/css/frontend.min.css?ver=1729744251'
+        type='text/css' media='all'>
     <style id='woo-variation-swatches-inline-css' type='text/css'>
         :root {
             --wvs-tick: url("data:image/svg+xml;utf8,%3Csvg filter='drop-shadow(0px 0px 2px rgb(0 0 0 / .8))' xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 30 30'%3E%3Cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='M4 16L11 23 27 7'/%3E%3C/svg%3E");
@@ -538,8 +509,8 @@ try {
             border-color: #76a713;
         }
     </style>
-    <link rel='stylesheet' id='bootstrap-css' href='wp-content/themes/orgio/assets/css/bootstrap.min.css?ver=4.0.0'
-        type='text/css' media='all'>
+    <link rel='stylesheet' id='bootstrap-css'
+        href='wp-content/themes/orgio/assets/css/bootstrap.min.css?ver=4.0.0' type='text/css' media='all'>
     <link rel='stylesheet' id='caseicon-css' href='wp-content/themes/orgio/assets/css/caseicon.min.css?ver=1.5.7'
         type='text/css' media='all'>
     <link rel='stylesheet' id='flaticon-css' href='wp-content/themes/orgio/assets/css/flaticon.min.css?ver=1.5.7'
@@ -574,11 +545,11 @@ try {
     <link rel='stylesheet' id='organio-style-css' href='wp-content/themes/orgio/organio-style.min.css?ver=6.7.1'
         type='text/css' media='all'>
     <link rel='stylesheet' id='organio-google-fonts-css'
-        href='css?family=Poppins%3A400%2C500%2C600%2C700%7CLora%3A400%2C500%2C600%2C700%7CBarlow%3A300%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%7CArchitects+Daughter%3A400%7CFira+Sans%3A400%2C500%2C700%7CRoboto%3A400%2C500%2C600%2C700%7CLexend%3A400%2C500%2C600%2C700%7CPlayfair+Display%3A400%2C400i%2C700%2C700i%2C800%2C900%7CAbril+Fatface%3A400%2C400i%2C700%2C700i%2C800%2C900%7CPT+Sans%3A400%2C400i%2C700%2C700i%7CNunito%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=6.7.1'
+        href='../css?family=Poppins%3A400%2C500%2C600%2C700%7CLora%3A400%2C500%2C600%2C700%7CBarlow%3A300%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%7CArchitects+Daughter%3A400%7CFira+Sans%3A400%2C500%2C700%7CRoboto%3A400%2C500%2C600%2C700%7CLexend%3A400%2C500%2C600%2C700%7CPlayfair+Display%3A400%2C400i%2C700%2C700i%2C800%2C900%7CAbril+Fatface%3A400%2C400i%2C700%2C700i%2C800%2C900%7CPT+Sans%3A400%2C400i%2C700%2C700i%7CNunito%3A400%2C700&#038;subset=latin%2Clatin-ext&#038;ver=6.7.1'
         type='text/css' media='all'>
     <link rel='stylesheet' id='elementor-icons-css'
-        href='wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.31.0' type='text/css'
-        media='all'>
+        href='wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.31.0'
+        type='text/css' media='all'>
     <link rel='stylesheet' id='elementor-frontend-css'
         href='wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.25.4' type='text/css' media='all'>
     <link rel='stylesheet' id='swiper-css'
@@ -594,7 +565,7 @@ try {
     <link rel='stylesheet' id='elementor-post-30-css'
         href='wp-content/uploads/elementor/css/post-30.css?ver=1731037321' type='text/css' media='all'>
     <link rel='stylesheet' id='google-fonts-1-css'
-        href='css-1?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.7.1'
+        href='../css-1?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CPoppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.7.1'
         type='text/css' media='all'>
     <link rel='stylesheet' id='elementor-icons-shared-0-css'
         href='wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3'
@@ -610,10 +581,12 @@ try {
         id="tmpl-variation-template"><div class="woocommerce-variation-description">{{{ data.variation.variation_description }}}</div><div class="woocommerce-variation-price">{{{ data.variation.price_html }}}</div><div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div> </script>
     <script type="text/template"
         id="tmpl-unavailable-variation-template"><p role="alert">Sorry, this product is unavailable. Please choose a different combination.</p> </script>
-    <script type="text/javascript" src="wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+    <script type="text/javascript" src="wp-includes/js/jquery/jquery.min.js?ver=3.7.1"
+        id="jquery-core-js"></script>
     <script type="text/javascript" src="wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"
         id="jquery-migrate-js"></script>
-    <script type="text/javascript" src="wp-content/plugins/case-theme-core/assets/js/lib/waypoints.min.js?ver=2.0.5"
+    <script type="text/javascript"
+        src="wp-content/plugins/case-theme-core/assets/js/lib/waypoints.min.js?ver=2.0.5"
         id="waypoints-js"></script>
     <script type="text/javascript"
         src="wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.9.3.3"
@@ -622,8 +595,26 @@ try {
         var wc_add_to_cart_params = { "ajax_url": "\/organio\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/organio\/?wc-ajax=%%endpoint%%", "i18n_view_cart": "View cart", "cart_url": "https:\/\/demo.casethemes.net\/organio\/cart\/", "is_cart": "", "cart_redirect_after_add": "no" };
         /* ]]> */ </script>
     <script type="text/javascript"
-        src="wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=9.3.3" id="wc-add-to-cart-js"
+        src="wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=9.3.3"
+        id="wc-add-to-cart-js" defer="defer" data-wp-strategy="defer"></script>
+    <script type="text/javascript"
+        src="wp-content/plugins/woocommerce/assets/js/zoom/jquery.zoom.min.js?ver=1.7.21-wc.9.3.3" id="zoom-js"
         defer="defer" data-wp-strategy="defer"></script>
+    <script type="text/javascript"
+        src="wp-content/plugins/woocommerce/assets/js/flexslider/jquery.flexslider.min.js?ver=2.7.2-wc.9.3.3"
+        id="flexslider-js" defer="defer" data-wp-strategy="defer"></script>
+    <script type="text/javascript"
+        src="wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe.min.js?ver=4.1.1-wc.9.3.3"
+        id="photoswipe-js" defer="defer" data-wp-strategy="defer"></script>
+    <script type="text/javascript"
+        src="wp-content/plugins/woocommerce/assets/js/photoswipe/photoswipe-ui-default.min.js?ver=4.1.1-wc.9.3.3"
+        id="photoswipe-ui-default-js" defer="defer" data-wp-strategy="defer"></script>
+    <script type="text/javascript" id="wc-single-product-js-extra"> /* <![CDATA[ */
+        var wc_single_product_params = { "i18n_required_rating_text": "Please select a rating", "review_rating_required": "yes", "flexslider": { "rtl": false, "animation": "slide", "smoothHeight": true, "directionNav": false, "controlNav": "thumbnails", "slideshow": false, "animationSpeed": 500, "animationLoop": false, "allowOneSlide": false }, "zoom_enabled": "1", "zoom_options": [], "photoswipe_enabled": "1", "photoswipe_options": { "shareEl": false, "closeOnScroll": false, "history": false, "hideAnimationDuration": 0, "showAnimationDuration": 0 }, "flexslider_enabled": "1" };
+        /* ]]> */ </script>
+    <script type="text/javascript"
+        src="wp-content/plugins/woocommerce/assets/js/frontend/single-product.min.js?ver=9.3.3"
+        id="wc-single-product-js" defer="defer" data-wp-strategy="defer"></script>
     <script type="text/javascript"
         src="wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.9.3.3"
         id="js-cookie-js" data-wp-strategy="defer"></script>
@@ -642,10 +633,17 @@ try {
         src="wp-content/uploads/siteground-optimizer-assets/ct-inline-css-js.min.js?ver=1.5.7"
         id="ct-inline-css-js-js"></script>
     <link rel="https://api.w.org/" href="wp-json/index.htm">
+    <link rel="alternate" title="JSON" type="application/json" href="wp-json/wp/v2/product/5671">
     <link rel="EditURI" type="application/rsd+xml" title="RSD"
         href="https://demo.casethemes.net/organio/xmlrpc.php?rsd">
     <meta name="generator" content="WordPress 6.7.1">
     <meta name="generator" content="WooCommerce 9.3.3">
+    <link rel="canonical" href="index.htm">
+    <link rel='shortlink' href='index.htm?p=5671'>
+    <link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed"
+        href="wp-json/oembed/1.0/embed-50?url=https%3A%2F%2Fdemo.casethemes.net%2Forganio%2Fproduct%2Findigi-teas%2F">
+    <link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed"
+        href="wp-json/oembed/1.0/embed-51?url=https%3A%2F%2Fdemo.casethemes.net%2Forganio%2Fproduct%2Findigi-teas%2F&#038;format=xml">
     <meta name="generator" content="Redux 4.5.0">
     <link rel="icon" type="image/png" href="wp-content/uploads/2021/03/favicon.png"> <noscript>
         <style>
@@ -766,7 +764,7 @@ try {
 </head>
 
 <body
-    class="archive post-type-archive post-type-archive-product theme-orgio woocommerce-shop woocommerce woocommerce-page woocommerce-no-js woo-variation-swatches wvs-behavior-blur wvs-theme-orgio wvs-show-label wvs-tooltip hfeed redux-page  site-h2 body-default-font heading-default-font header-sticky  site-404-default elementor-default elementor-kit-12">
+    class="product-template-default single single-product postid-5671 theme-orgio woocommerce woocommerce-page woocommerce-no-js woo-variation-swatches wvs-behavior-blur wvs-theme-orgio wvs-mobile wvs-show-label wvs-tooltip redux-page  site-h2 body-default-font heading-default-font header-sticky  site-404-default elementor-default elementor-kit-12">
     <div id="page" class="site">
         <div id="ct-loadding" class="ct-loader style5">
             <div class="ct-spinner5">
@@ -775,7 +773,7 @@ try {
                 <div class="bounce3"></div>
             </div>
         </div>
-<?php include 'header.php'?>
+<?php include 'header.php' ?>
         <div id="pagetitle" class="page-title bg-image ">
             <div class="container">
                 <div class="page-title-inner">
@@ -783,8 +781,9 @@ try {
                         <h1 class="page-title">Shop</h1>
                     </div>
                     <ul class="ct-breadcrumb">
-                        <li><a class="breadcrumb-entry" href="index.htm">Home</a></li>
-                        <li><span class="breadcrumb-entry">Products</span></li>
+                        <li><a class="breadcrumb-entry" href="index.php">Home</a></li>
+                        <li><a class="breadcrumb-entry" href="my-account.php">My Account</a></li>
+                        <li><span class="breadcrumb-entry"><?php echo $product['name'] ?></span></li>
                     </ul>
                 </div>
             </div>
@@ -793,166 +792,137 @@ try {
             <div class="content-inner">
                 <div class="container content-container">
                     <div class="row content-row">
-                        <div id="primary"
-                            class="content-area content-has-sidebar float-right col-xl-9 col-lg-9 col-md-12 col-sm-12">
+                        <div id="primary" class="content-area content-full-width col-12">
                             <main id="main" class="site-main" role="main">
-                                <div class="woocommerce-topbar">
-                                    <div class="woocommerce-result-count">
-                                        <p class="woocommerce-result-count"> Showing <?php echo count($items)?> results</p>
-                                    </div>
-                                    <div class="woocommerce-archive-layout"> <span
-                                            class="archive-layout layout-grid active"></span> <span
-                                            class="archive-layout layout-list"></span></div>
-                                    <div class="woocommerce-topbar-ordering">
-                                        <form class="woocommerce-ordering" method="get"> <select name="orderby"
-                                                class="orderby" aria-label="Shop order">
-                                                <option value="popularity">Sort by popularity</option>
-                                                <option value="rating">Sort by average rating</option>
-                                                <option value="date" selected='selected'>Sort by latest</option>
-                                                <option value="price">Sort by price: low to high</option>
-                                                <option value="price-desc">Sort by price: high to low</option>
-                                            </select> <input type="hidden" name="paged" value="1"> <input type="hidden"
-                                                name="sidebar-shop" value="left"></form>
-                                    </div>
-                                </div>
                                 <div class="woocommerce-notices-wrapper"></div>
-                                <ul class="products columns-4">
-
-                                <?php
-
-if (count($items) > 0) {
-
-    
-    foreach ($items as $item) 
-    
-    {?>
-
-                                    <li
-                                        class="product type-product post-998 status-publish last instock product_cat-bread-bakery product_tag-coffee product_tag-fish product_tag-grape has-post-thumbnail shipping-taxable purchasable product-type-simple">
-                                        <a href="product.php?id=<?php echo$item['id'] ?>"
-                                            class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
-                                        <div class="woocommerce-product-inner style-1"
-                                            style="border-color: rgba(167,73,48,0.32)">
-                                            <div class="woocommerce-product-header"> <a
-                                                    class="woocommerce-product-details"
-                                                    href="product.php?id=<?php echo$item['id'] ?>"> <img loading="lazy"
-                                                        width="600" height="500"
-                                                        src="Classes/image/<?php echo$item['image'];?>"
-                                                        class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
-                                                        alt="" decoding="async"
-                                                        srcset="Classes/image/<?php echo$item['image'];?>, Classes/image/<?php echo$item['image'];?>, Classes/image/<?php echo$item['image'];?>, Classes/image/<?php echo$item['image'];?>"
-                                                        sizes="(max-width: 600px) 100vw, 600px"> </a>                                            
+                                <div id="product-5671"
+                                    class="product type-product post-5671 status-publish first instock product_cat-millk-cream product_tag-apple product_tag-bread product_tag-cheese has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+                                    <div class="woocommerce-summary-wrap row">
+                                        <div class="woocommerce-gallery col-xl-6 col-lg-6 col-md-6"> <span
+                                                class="onsale">Sale!</span>
+                                            <div class="woocommerce-product-gallery woocommerce-product-gallery--with-images woocommerce-product-gallery--columns-4 images"
+                                                data-columns="4"
+                                                style="opacity: 0; transition: opacity .25s ease-in-out;">
+                                                <div class="woocommerce-product-gallery__wrapper">
+                                                    <div data-thumb="Classes/image/<?php echo$product['image'];?>"
+                                                        data-thumb-alt="" data-thumb-srcset=""
+                                                        class="woocommerce-product-gallery__image"><a
+                                                            href="Classes/image/<?php echo$product['image'];?>"><img
+                                                                loading="lazy" width="600" height="500"
+                                                                src="Classes/image/<?php echo$product['image'];?>"
+                                                                class="wp-post-image" alt="" title="h6-product3"
+                                                                data-caption=""
+                                                                data-large_image="Classes/image/<?php echo$product['image'];?>"
+                                                                data-large_image_width="792"
+                                                                data-large_image_height="660" decoding="async"
+                                                                srcset="Classes/image/<?php echo$product['image'];?>, Classes/image/<?php echo$product['image'];?>, Classes/image/<?php echo$product['image'];?>"
+                                                                sizes="(max-width: 600px) 100vw, 600px"></a></div>
+ 
+                                              
+                                                </div>
                                             </div>
-                                            <div class="woocommerce-product-content">
-                                                <h4 class="woocommerce-product--title"> <a
-                                                        href="product.php?id=<?php echo$item['id'] ?>"><?php echo  $item['name']; ?></a></h4> <span
-                                                    class="price"><span
-                                                        class="woocommerce-Price-amount amount"><bdi><span
-                                                                class="woocommerce-Price-currencySymbol">&#36;</span><?php echo number_format((float)$item['price'], 2, '.', ''); ?></bdi></span></span>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-6">
+                                            <div class="summary entry-summary">
+                                                <div class="woocommerce-sg-product-title">
+                                                    <h1 class="product_title entry-title"><?php echo $product['name'] ?></h1>
+                                                </div>
+                                                <div class="woocommerce-sg-product-rating">
+                                                    <div class="woocommerce-product-rating">
 
-                                                <div class="woocommerce-add-to-cart"> <a
-                                                        href="index-14.htm?add-to-cart=998"
-                                                        aria-describedby="woocommerce_loop_add_to_cart_link_describedby_998"
-                                                        data-quantity="1"
-                                                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                        data-product_id="998" data-product_sku="005"
-                                                        aria-label="Add to cart: &ldquo;<?php echo $item['name']; ?>&rdquo;" rel="nofollow"
-                                                        data-success_message="&ldquo;<?php echo $item['name']; ?>&rdquo; has been added to your cart">Add
-                                                        to cart</a> <span
-                                                        id="woocommerce_loop_add_to_cart_link_describedby_998"
-                                                        class="screen-reader-text"> </span></div>
-                                            </div>
-                                        </div> 
-                                    </li>
-
-<?php }}?>
-                                </ul>
-
-                            </main><!-- #main -->
-                        </div><!-- #primary -->
-                        <aside id="secondary"
-                            class="sidebar-fixed widget-area widget-has-sidebar sidebar-fixed col-xl-3 col-lg-3 col-md-12 col-sm-12">
-                            <div class="sidebar-sticky">
-                                <section id="woocommerce_product_search-2"
-                                    class="widget woocommerce widget_product_search">
-                                    <div class="widget-content">
-                                        <form role="search" method="post" class="woocommerce-product-search"
-                                            action=""> <label
-                                                class="screen-reader-text"
-                                                for="woocommerce-product-search-field-0">Search for:</label> <input
-                                                type="search" name="seach_input" id="woocommerce-product-search-field-0"
-                                                class="search-field" placeholder="Search products&hellip;" value=""
-                                                name="s"> <button type="submit" name="search_btn" value="Search" class="">Search</button>
-                                            <input type="hidden" name="post_type" value="product"></form>
-                                    </div>
-                                </section>
-                                <section id="woocommerce_product_categories-2"
-                                    class="widget woocommerce widget_product_categories">
-                                    <div class="widget-content">
-                                        <h2 class="widget-title"><span>Categories</span></h2>
-                                        <ul class="product-categories">
-                                            <li class="cat-item cat-item-69"><a
-                                                    href="shop.php?cat=chicken">Chicken
-                                                    </a></li>
-                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=beef">Beef</a></li>
-                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=eggs">Eggs</a></li>
-                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=milk">Milk</a></li>
-                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=cheese">Cheese</a></li>
-                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=butter">Butter</a></li>
-                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=yorgurt">Yorgurt</a></li>
-                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=vegitable">Vegitable</a></li>
-                                                    <li class="cat-item cat-item-69"><a href="shop.php?cat=fruits">Fruits</a></li>
-                                        </ul>
-                                    </div>
-                                </section>
-
-                                <section id="woocommerce_products-2" class="widget woocommerce widget_products">
-                                    <div class="widget-content">
-                                        <h2 class="widget-title"><span>Most Availability</span></h2>
-                                        <ul class="product_list_widget">
-
-                                        <?php
-
-if (count($items_most_available) > 0) {
-
-    
-    foreach ($items_most_available as $item) 
-    
-    {?>
-                                            <li>
-                                                <div class="wg-product-inner">
-                                                    <div class="wg-product-image"> <a
-                                                            href="product.php?id=<?php echo$item['id'] ?>"> <img
-                                                                loading="lazy" width="300" height="300"
-                                                                src="Classes/image/<?php echo$item['image'];?>"
-                                                                class="attachment-300x300 size-300x300" alt=""
-                                                                decoding="async"
-                                                                srcset="Classes/image/<?php echo$item['image'];?>, Classes/image/<?php echo$item['image'];?>, Classes/image/<?php echo$item['image'];?>, Classes/image/<?php echo$item['image'];?>"
-                                                                sizes="(max-width: 300px) 100vw, 300px"> </a></div>
-                                                    <div class="wg-product-holder">
-                                                        <h3 class="product-title"> <a
-                                                                href="product.php?id=<?php echo$item['id'] ?>"><?php echo $item['name']; ?></a></h3>
-
-                                                        <span class="woocommerce-Price-amount amount"><bdi><span
-                                                                    class="woocommerce-Price-currencySymbol">&#36;</span><?php echo number_format((float)$item['price'], 2, '.', ''); ?></bdi></span>
+                                                        <a href="#reviews" class="woocommerce-review-link"
+                                                            rel="nofollow">(<span class="count"><?php echo $product['qty'] ?></span> Items In Stock)</a>
                                                     </div>
                                                 </div>
+                                                <div class="woocommerce-sg-product-price">
+                                                    <p class="price">
+                                                      <!--   <del aria-hidden="true"><span
+                                                                class="woocommerce-Price-amount amount"><bdi><span
+                                                                        class="woocommerce-Price-currencySymbol">&#36;</span>24.00</bdi></span></del>
+                                                        <span class="screen-reader-text">Original price was:
+                                                            &#036;24.00.</span> -->
+                                                            
+                                                            
+                                                            <ins aria-hidden="true"><span
+                                                                class="woocommerce-Price-amount amount"><bdi><span
+                                                                        class="woocommerce-Price-currencySymbol">&#36;</span><?php echo number_format((float)$product['price'], 2, '.', ''); ?></bdi></span></ins><span
+                                                            class="screen-reader-text">Current price is:
+                                                            &#036;<?php echo number_format((float)$product['price'], 2, '.', ''); ?></span></p>
+                                                </div>
+
+                                                <form class="cart"
+                                                    action=""
+                                                    method="post" enctype='multipart/form-data'>
+                                                    <div class="quantity"> <label class="screen-reader-text"
+                                                            for="quantity_67465c1839722">Quantity</label>
+                                                        <input type="number" id="quantity_67465c1839722"
+                                                            class="input-text qty text" name="quantity" value="1"
+                                                            aria-label="Product quantity" size="<?php $product['qty'] ?>" min="1" max=""
+                                                            step="1" placeholder="" inputmode="numeric"
+                                                            autocomplete="off"></div> <button type="submit"
+                                                        name="add-to-cart" value="5671"
+                                                        class="single_add_to_cart_button button alt">Add to
+                                                        cart</button>
+                                                </form>
+
+                                                <div class="product_meta"> <span class="sku_wrapper">SKU: <span
+                                                            class="sku"><?php echo $product['id']?></span></span> <span
+                                                        class="posted_in">Category: <a
+                                                            href="shop.php?cat=<?php echo $product['cat'] ?>"
+                                                            rel="tag"><?php echo $product['cat']?></a></span> </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <section class="related products">
+                                        <h2>Related products</h2>
+                                        <ul class="products columns-4">
+                                            <?php
+                                        if (count($items_same_cat) > 0) {
+
+    
+foreach ($items_same_cat as $item) 
+
+{?>
+
+                                            <li
+                                                class="product type-product post-3133 status-publish first instock product_cat-organic product_cat-soya-dairy-free product_tag-apple product_tag-bread product_tag-cheese has-post-thumbnail shipping-taxable purchasable product-type-simple">
+                                                <a href="product.php?id=<?php echo$item['id'] ?>"
+                                                    class="woocommerce-LoopProduct-link woocommerce-loop-product__link"></a>
+                                                <div class="woocommerce-product-inner style-1"
+                                                    style="border-color: rgba(221,150,44,0.33)">
+                                                    <div class="woocommerce-product-header"> <a
+                                                            class="woocommerce-product-details"
+                                                            href="product.php?id=<?php echo$item['id'] ?>"> <img width="600"
+                                                                height="500"
+                                                                src="Classes/image/<?php echo $item['image'];?>"
+                                                                class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                                alt="" decoding="async"
+                                                                srcset="Classes/image/<?php echo $item['image'];?>, Classes/image/<?php echo $item['image'];?>, Classes/image/<?php echo $item['image'];?>"
+                                                                sizes="(max-width: 600px) 100vw, 600px"> </a>
+
+                                                    </div>
+                                                    <div class="woocommerce-product-content">
+                                                        <h4 class="woocommerce-product--title"> <a
+                                                                href="product.php?id=<?php echo$item['id'] ?>"><?php echo $item['name']?></a></h4> <span class="price"><span
+                                                                class="woocommerce-Price-amount amount"><bdi><span
+                                                                        class="woocommerce-Price-currencySymbol">&#36;</span><?php echo number_format((float)$item['price'], 2, '.', ''); ?></bdi></span></span>
+
+<?php }}?>
+
                                             </li>
 
-                                            <?php }}?>
-
-
                                         </ul>
-                                    </div>
-                                </section>
-
-                            </div>
-                        </aside>
+                                    </section>
+                                </div>
+                            </main><!-- #main -->
+                        </div><!-- #primary -->
                     </div>
                 </div>
             </div><!-- #content inner -->
         </div><!-- #content -->
-        <?php include 'footer.php'?>
+        <?php include 'footer.php' ?>
         
         <a href="#" class="scroll-top"><i class="caseicon-long-arrow-right-three"></i></a>
     </div><!-- #page -->
@@ -978,7 +948,7 @@ if (count($items_most_available) > 0) {
                 <div class="widget_shopping_cart_content">
                     <ul class="cart_list product_list_widget">
                         <li class="empty"> <i class="caseicon-shopping-cart-alt"></i> <span>Your cart is empty</span> <a
-                                class="btn btn-animate" href="index.htm">Browse Shop</a></li>
+                                class="btn btn-animate" href="shop/index.htm">Browse Shop</a></li>
                     </ul><!-- end product list -->
                 </div>
             </div>
@@ -1005,31 +975,6 @@ if (count($items_most_available) > 0) {
                 urlFields[j].addEventListener('blur', maybePrefixUrlField)
             }
         })();</script><!-- Instagram Feed JS -->
-    <script
-        type="text/javascript"> var sbiajaxurl = "https://demo.casethemes.net/organio/wp-admin/admin-ajax.php"; </script>
-    <div class="woosc-popup woosc-search">
-        <div class="woosc-popup-inner">
-            <div class="woosc-popup-content">
-                <div class="woosc-popup-content-inner">
-                    <div class="woosc-popup-close"></div>
-                    <div class="woosc-search-input"> <label for="woosc_search_input"></label><input type="search"
-                            id="woosc_search_input" placeholder="Type any keyword to search..."></div>
-                    <div class="woosc-search-result"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="woosc-popup woosc-share">
-        <div class="woosc-popup-inner">
-            <div class="woosc-popup-content">
-                <div class="woosc-popup-content-inner">
-                    <div class="woosc-popup-close"></div>
-                    <div class="woosc-share-content"></div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div id="woosw_wishlist" class="woosw-popup woosw-popup-center"></div>
     <script type="text/javascript"> jQuery(function ($) {
@@ -1050,8 +995,8 @@ if (count($items_most_available) > 0) {
                 });
             });
         }); </script>
-
-        
+    <script
+        type="application/ld+json">{"@context":"https:\/\/schema.org\/","@type":"Product","@id":"https:\/\/demo.casethemes.net\/organio\/product\/indigi-teas\/#product","name":"Indigi Teas","url":"https:\/\/demo.casethemes.net\/organio\/product\/indigi-teas\/","description":"Sumptuous, filling, and temptingly healthy, our Biona Organic Granola with Wild Berries is just the thing to get you out of bed. The goodness of rolled wholegrain oats are combined with a variety of tangy organic berries, and baked into crispy clusters that are as nutritious.","image":"https:\/\/demo.casethemes.net\/organio\/wp-content\/uploads\/2021\/07\/h6-product3.png","sku":"0032-1","offers":[{"@type":"Offer","price":"18.00","priceValidUntil":"2025-12-31","priceSpecification":{"price":"18.00","priceCurrency":"USD","valueAddedTaxIncluded":"false"},"priceCurrency":"USD","availability":"http:\/\/schema.org\/InStock","url":"https:\/\/demo.casethemes.net\/organio\/product\/indigi-teas\/","seller":{"@type":"Organization","name":"Organio","url":"https:\/\/demo.casethemes.net\/organio"}}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.00","reviewCount":1},"review":[{"@type":"Review","reviewRating":{"@type":"Rating","bestRating":"5","ratingValue":"5","worstRating":"1"},"author":{"@type":"Person","name":"Mike Dooley"},"reviewBody":"The goodness of rolled wholegrain oats are combined with a variety of tangy organic berries, and baked into crispy clusters that are as nutritious.","datePublished":"2021-07-20T03:54:27+00:00"}]}</script>
     <script type='text/javascript'> const lazyloadRunObserver = () => {
             const lazyloadBackgrounds = document.querySelectorAll(`.e-con.e-parent:not(.e-lazyloaded)`);
             const lazyloadBackgroundObserver = new IntersectionObserver((entries) => {
@@ -1076,6 +1021,40 @@ if (count($items_most_available) > 0) {
         events.forEach((event) => {
             document.addEventListener(event, lazyloadRunObserver);
         }); </script>
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div> <button class="pswp__button pswp__button--close"
+                        aria-label="Close (Esc)"></button> <button class="pswp__button pswp__button--share"
+                        aria-label="Share"></button> <button class="pswp__button pswp__button--fs"
+                        aria-label="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom"
+                        aria-label="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div> <button class="pswp__button pswp__button--arrow--left"
+                    aria-label="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right"
+                    aria-label="Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script type='text/javascript'> (function () {
             var c = document.body.className;
             c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
@@ -1093,9 +1072,10 @@ if (count($items_most_available) > 0) {
     <link rel='stylesheet' id='elementor-post-4527-css'
         href='wp-content/uploads/elementor/css/post-4527.css?ver=1731037036' type='text/css' media='all'>
     <link rel='stylesheet' id='widget-divider-css'
-        href='wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.25.4' type='text/css' media='all'>
+        href='wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.25.4' type='text/css'
+        media='all'>
     <link rel='stylesheet' id='google-fonts-2-css'
-        href='css-3?family=Fira+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.7.1'
+        href='../css-3?family=Fira+Sans%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=auto&#038;ver=6.7.1'
         type='text/css' media='all'>
     <link rel='stylesheet' id='elementor-icons-fa-regular-css'
         href='wp-content/plugins/elementor/assets/lib/font-awesome/css/regular.min.css?ver=5.15.3' type='text/css'
@@ -1105,16 +1085,18 @@ if (count($items_most_available) > 0) {
     <style id='rs-plugin-settings-inline-css' type='text/css'>
         #rs-demo-id {}
     </style>
-    <script type="text/javascript" src="wp-content/uploads/siteground-optimizer-assets/ct-core-main.min.js?ver=1.0.0"
+    <script type="text/javascript"
+        src="wp-content/uploads/siteground-optimizer-assets/ct-core-main.min.js?ver=1.0.0"
         id="ct-core-main-js"></script>
     <script type="text/javascript" src="wp-content/plugins/case-theme-user/acess/js/notify.min.js?ver=1.0.0"
         id="notify-js"></script>
     <script type="text/javascript" src="wp-content/plugins/case-theme-user/acess/js/remodal.min.js?ver=1.0.0"
         id="remodal-js"></script>
     <script type="text/javascript" id="ct-user-form-js-extra"> /* <![CDATA[ */
-        var userpress = { "ajax": "https:\/\/demo.casethemes.net\/organio\/wp-admin\/admin-ajax.php", "nonce": "cd3b3a353b" };
+        var userpress = { "ajax": "https:\/\/demo.casethemes.net\/organio\/wp-admin\/admin-ajax.php", "nonce": "515137bd17" };
         /* ]]> */ </script>
-    <script type="text/javascript" src="wp-content/uploads/siteground-optimizer-assets/ct-user-form.min.js?ver=1.0.0"
+    <script type="text/javascript"
+        src="wp-content/uploads/siteground-optimizer-assets/ct-user-form.min.js?ver=1.0.0"
         id="ct-user-form-js"></script>
     <script type="text/javascript" src="wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6"
         id="wp-hooks-js"></script>
@@ -1133,16 +1115,18 @@ if (count($items_most_available) > 0) {
             }
         };
         /* ]]> */ </script>
-    <script type="text/javascript" src="wp-content/uploads/siteground-optimizer-assets/contact-form-7.min.js?ver=6.0"
+    <script type="text/javascript"
+        src="wp-content/uploads/siteground-optimizer-assets/contact-form-7.min.js?ver=6.0"
         id="contact-form-7-js"></script>
     <script type="text/javascript" src="wp-content/plugins/revslider/sr6/assets/js/rbtools.min.js?ver=6.7.20"
         defer="" async="" id="tp-tools-js"></script>
     <script type="text/javascript" src="wp-content/plugins/revslider/sr6/assets/js/rs6.min.js?ver=6.7.20" defer=""
         async="" id="revmin-js"></script>
     <script type="text/javascript" id="wp-api-request-js-extra"> /* <![CDATA[ */
-        var wpApiSettings = { "root": "https:\/\/demo.casethemes.net\/organio\/wp-json\/", "nonce": "7a7befeb17", "versionString": "wp\/v2\/" };
+        var wpApiSettings = { "root": "https:\/\/demo.casethemes.net\/organio\/wp-json\/", "nonce": "dd47963f03", "versionString": "wp\/v2\/" };
         /* ]]> */ </script>
-    <script type="text/javascript" src="wp-includes/js/api-request.min.js?ver=6.7.1" id="wp-api-request-js"></script>
+    <script type="text/javascript" src="wp-includes/js/api-request.min.js?ver=6.7.1"
+        id="wp-api-request-js"></script>
     <script type="text/javascript" src="wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0"
         id="wp-polyfill-js"></script>
     <script type="text/javascript" src="wp-includes/js/dist/url.min.js?ver=e87eb76272a3a08402d2"
@@ -1151,13 +1135,13 @@ if (count($items_most_available) > 0) {
         id="wp-api-fetch-js"></script>
     <script type="text/javascript" id="wp-api-fetch-js-after"> /* <![CDATA[ */
         wp.apiFetch.use(wp.apiFetch.createRootURLMiddleware("https://demo.casethemes.net/organio/wp-json/"));
-        wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware("7a7befeb17");
+        wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware("dd47963f03");
         wp.apiFetch.use(wp.apiFetch.nonceMiddleware);
         wp.apiFetch.use(wp.apiFetch.mediaUploadMiddleware);
         wp.apiFetch.nonceEndpoint = "https://demo.casethemes.net/organio/wp-admin/admin-ajax.php?action=rest-nonce";
         /* ]]> */ </script>
     <script type="text/javascript" id="woo-variation-swatches-js-extra"> /* <![CDATA[ */
-        var woo_variation_swatches_options = { "show_variation_label": "1", "clear_on_reselect": "", "variation_label_separator": ":", "is_mobile": "", "show_variation_stock": "", "stock_label_threshold": "5", "cart_redirect_after_add": "no", "enable_ajax_add_to_cart": "yes", "cart_url": "https:\/\/demo.casethemes.net\/organio\/cart\/", "is_cart": "" };
+        var woo_variation_swatches_options = { "show_variation_label": "1", "clear_on_reselect": "", "variation_label_separator": ":", "is_mobile": "1", "show_variation_stock": "", "stock_label_threshold": "5", "cart_redirect_after_add": "no", "enable_ajax_add_to_cart": "yes", "cart_url": "https:\/\/demo.casethemes.net\/organio\/cart\/", "is_cart": "" };
         /* ]]> */ </script>
     <script type="text/javascript"
         src="wp-content/plugins/woo-variation-swatches/assets/js/frontend.min.js?ver=1729744251"
@@ -1177,13 +1161,13 @@ if (count($items_most_available) > 0) {
     <script type="text/javascript" src="wp-includes/js/jquery/ui/sortable.min.js?ver=1.13.3"
         id="jquery-ui-sortable-js"></script>
     <script type="text/javascript" id="woosc-frontend-js-extra"> /* <![CDATA[ */
-        var woosc_vars = { "wc_ajax_url": "\/organio\/?wc-ajax=%%endpoint%%", "nonce": "c5cdb0e59d", "hash": "6", "user_id": "0cdb64fab32a05bd393b20c8c351de9f", "page_url": "#", "open_button": "", "hide_empty_row": "yes", "reload_count": "no", "variations": "yes", "open_button_action": "open_popup", "menu_action": "open_popup", "button_action": "show_table", "sidebar_position": "right", "message_position": "right-top", "message_added": "{name} has been added to Compare list.", "message_removed": "{name} has been removed from the Compare list.", "message_exists": "{name} is already in the Compare list.", "open_bar": "no", "bar_bubble": "no", "adding": "prepend", "click_again": "no", "hide_empty": "no", "click_outside": "yes", "freeze_column": "yes", "freeze_row": "yes", "scrollbar": "yes", "limit": "100", "remove_all": "Do you want to remove all products from the compare?", "limit_notice": "You can add a maximum of {limit} products to the comparison table.", "copied_text": "Share link %s was copied to clipboard!", "button_text": "Compare", "button_text_added": "Compare", "button_normal_icon": "woosc-icon-1", "button_added_icon": "woosc-icon-74" };
+        var woosc_vars = { "wc_ajax_url": "\/organio\/?wc-ajax=%%endpoint%%", "nonce": "5d7c3c1113", "hash": "6", "user_id": "0cdb64fab32a05bd393b20c8c351de9f", "page_url": "#", "open_button": "", "hide_empty_row": "yes", "reload_count": "no", "variations": "yes", "open_button_action": "open_popup", "menu_action": "open_popup", "button_action": "show_table", "sidebar_position": "right", "message_position": "right-top", "message_added": "{name} has been added to Compare list.", "message_removed": "{name} has been removed from the Compare list.", "message_exists": "{name} is already in the Compare list.", "open_bar": "no", "bar_bubble": "no", "adding": "prepend", "click_again": "no", "hide_empty": "no", "click_outside": "yes", "freeze_column": "yes", "freeze_row": "yes", "scrollbar": "yes", "limit": "100", "remove_all": "Do you want to remove all products from the compare?", "limit_notice": "You can add a maximum of {limit} products to the comparison table.", "copied_text": "Share link %s was copied to clipboard!", "button_text": "Compare", "button_text_added": "Compare", "button_normal_icon": "woosc-icon-1", "button_added_icon": "woosc-icon-74" };
         /* ]]> */ </script>
     <script type="text/javascript"
         src="wp-content/uploads/siteground-optimizer-assets/woosc-frontend.min.js?ver=6.3.0"
         id="woosc-frontend-js"></script>
     <script type="text/javascript" id="wc-add-to-cart-variation-js-extra"> /* <![CDATA[ */
-        var wc_add_to_cart_variation_params = { "wc_ajax_url": "\/organio\/?wc-ajax=%%endpoint%%", "i18n_no_matching_variations_text": "Sorry, no products matched your selection. Please choose a different combination.", "i18n_make_a_selection_text": "Please select some product options before adding this product to your cart.", "i18n_unavailable_text": "Sorry, this product is unavailable. Please choose a different combination." };
+        var wc_add_to_cart_variation_params = { "wc_ajax_url": "\/organio\/?wc-ajax=%%endpoint%%", "i18n_no_matching_variations_text": "Sorry, no products matched your selection. Please choose a different combination.", "i18n_make_a_selection_text": "Please select some product options before adding this product to your cart.", "i18n_unavailable_text": "Sorry, this product is unavailable. Please choose a different combination.", "woo_variation_swatches_ajax_variation_threshold_min": "30", "woo_variation_swatches_ajax_variation_threshold_max": "100", "woo_variation_swatches_total_children": {} };
         /* ]]> */ </script>
     <script type="text/javascript"
         src="wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart-variation.min.js?ver=9.3.3"
@@ -1195,13 +1179,13 @@ if (count($items_most_available) > 0) {
         src="wp-content/plugins/woo-smart-quick-view/assets/libs/magnific-popup/jquery.magnific-popup.min.js?ver=4.1.3"
         id="magnific-popup-js"></script>
     <script type="text/javascript" id="woosq-frontend-js-extra"> /* <![CDATA[ */
-        var woosq_vars = { "wc_ajax_url": "\/organio\/?wc-ajax=%%endpoint%%", "nonce": "88339caaac", "view": "popup", "effect": "mfp-3d-unfold", "scrollbar": "yes", "auto_close": "yes", "hashchange": "no", "cart_redirect": "no", "cart_url": "https:\/\/demo.casethemes.net\/organio\/cart\/", "close": "Close (Esc)", "next_prev": "yes", "next": "Next (Right arrow key)", "prev": "Previous (Left arrow key)", "thumbnails_effect": "no", "related_slick_params": "{\"slidesToShow\":2,\"slidesToScroll\":2,\"dots\":true,\"arrows\":false,\"adaptiveHeight\":true,\"rtl\":false}", "thumbnails_slick_params": "{\"slidesToShow\":1,\"slidesToScroll\":1,\"dots\":true,\"arrows\":true,\"adaptiveHeight\":false,\"rtl\":false}", "thumbnails_zoom_params": "{\"duration\":120,\"magnify\":1}", "quick_view": "0" };
+        var woosq_vars = { "wc_ajax_url": "\/organio\/?wc-ajax=%%endpoint%%", "nonce": "f24d557003", "view": "popup", "effect": "mfp-3d-unfold", "scrollbar": "yes", "auto_close": "yes", "hashchange": "no", "cart_redirect": "no", "cart_url": "https:\/\/demo.casethemes.net\/organio\/cart\/", "close": "Close (Esc)", "next_prev": "yes", "next": "Next (Right arrow key)", "prev": "Previous (Left arrow key)", "thumbnails_effect": "no", "related_slick_params": "{\"slidesToShow\":2,\"slidesToScroll\":2,\"dots\":true,\"arrows\":false,\"adaptiveHeight\":true,\"rtl\":false}", "thumbnails_slick_params": "{\"slidesToShow\":1,\"slidesToScroll\":1,\"dots\":true,\"arrows\":true,\"adaptiveHeight\":false,\"rtl\":false}", "thumbnails_zoom_params": "{\"duration\":120,\"magnify\":1}", "quick_view": "0" };
         /* ]]> */ </script>
     <script type="text/javascript"
         src="wp-content/uploads/siteground-optimizer-assets/woosq-frontend.min.js?ver=4.1.3"
         id="woosq-frontend-js"></script>
     <script type="text/javascript" id="woosw-frontend-js-extra"> /* <![CDATA[ */
-        var woosw_vars = { "wc_ajax_url": "\/organio\/?wc-ajax=%%endpoint%%", "nonce": "e18dae9370", "page_myaccount": "yes", "menu_action": "open_popup", "reload_count": "no", "perfect_scrollbar": "yes", "wishlist_url": "https:\/\/demo.casethemes.net\/organio\/wishlist\/", "button_action": "list", "message_position": "right-top", "button_action_added": "popup", "empty_confirm": "This action cannot be undone. Are you sure?", "delete_confirm": "This action cannot be undone. Are you sure?", "copied_text": "Copied the wishlist link:", "menu_text": "Wishlist", "button_text": "Add to wishlist", "button_text_added": "Browse wishlist", "button_normal_icon": "woosw-icon-5", "button_added_icon": "woosw-icon-8", "button_loading_icon": "woosw-icon-4" };
+        var woosw_vars = { "wc_ajax_url": "\/organio\/?wc-ajax=%%endpoint%%", "nonce": "bfa230d0a2", "page_myaccount": "yes", "menu_action": "open_popup", "reload_count": "no", "perfect_scrollbar": "yes", "wishlist_url": "https:\/\/demo.casethemes.net\/organio\/wishlist\/", "button_action": "list", "message_position": "right-top", "button_action_added": "popup", "empty_confirm": "This action cannot be undone. Are you sure?", "delete_confirm": "This action cannot be undone. Are you sure?", "copied_text": "Copied the wishlist link:", "menu_text": "Wishlist", "button_text": "Add to wishlist", "button_text_added": "Browse wishlist", "button_normal_icon": "woosw-icon-5", "button_added_icon": "woosw-icon-8", "button_loading_icon": "woosw-icon-4" };
         /* ]]> */ </script>
     <script type="text/javascript"
         src="wp-content/uploads/siteground-optimizer-assets/woosw-frontend.min.js?ver=4.9.4"
@@ -1210,12 +1194,17 @@ if (count($items_most_available) > 0) {
         id="bootstrap-js"></script>
     <script type="text/javascript" src="wp-content/themes/orgio/assets/js/nice-select.min.js?ver=all"
         id="nice-select-js"></script>
-    <script type="text/javascript" src="wp-content/uploads/siteground-optimizer-assets/match-height.min.js?ver=1.0.0"
+    <script type="text/javascript"
+        src="wp-content/uploads/siteground-optimizer-assets/match-height.min.js?ver=1.0.0"
         id="match-height-js"></script>
     <script type="text/javascript" src="wp-content/themes/orgio/assets/js/progressbar.min.js?ver=1.0.0"
         id="progressbar-js"></script>
-    <script type="text/javascript" src="wp-content/themes/orgio/assets/js/wow.min.js?ver=1.0.0" id="wow-js"></script>
-    <script type="text/javascript" src="wp-content/uploads/siteground-optimizer-assets/organio-main.min.js?ver=1.5.7"
+    <script type="text/javascript" src="wp-content/themes/orgio/assets/js/wow.min.js?ver=1.0.0"
+        id="wow-js"></script>
+    <script type="text/javascript" src="wp-includes/js/comment-reply.min.js?ver=6.7.1" id="comment-reply-js"
+        async="async" data-wp-strategy="async"></script>
+    <script type="text/javascript"
+        src="wp-content/uploads/siteground-optimizer-assets/organio-main.min.js?ver=1.5.7"
         id="organio-main-js"></script>
     <script type="text/javascript"
         src="wp-content/uploads/siteground-optimizer-assets/organio-woocommerce.min.js?ver=1.5.7"
@@ -1229,20 +1218,6 @@ if (count($items_most_available) > 0) {
     <script type="text/javascript"
         src="wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=9.3.3"
         id="wc-order-attribution-js"></script>
-    <script type="text/javascript" src="wp-includes/js/jquery/ui/slider.min.js?ver=1.13.3"
-        id="jquery-ui-slider-js"></script>
-    <script type="text/javascript"
-        src="wp-content/plugins/woocommerce/assets/js/jquery-ui-touch-punch/jquery-ui-touch-punch.min.js?ver=9.3.3"
-        id="wc-jquery-ui-touchpunch-js"></script>
-    <script type="text/javascript"
-        src="wp-content/plugins/woocommerce/assets/js/accounting/accounting.min.js?ver=0.4.2"
-        id="accounting-js"></script>
-    <script type="text/javascript" id="wc-price-slider-js-extra"> /* <![CDATA[ */
-        var woocommerce_price_slider_params = { "currency_format_num_decimals": "0", "currency_format_symbol": "$", "currency_format_decimal_sep": ".", "currency_format_thousand_sep": ",", "currency_format": "%s%v" };
-        /* ]]> */ </script>
-    <script type="text/javascript"
-        src="wp-content/plugins/woocommerce/assets/js/frontend/price-slider.min.js?ver=9.3.3"
-        id="wc-price-slider-js"></script>
     <script type="text/javascript" id="sbi_scripts-js-extra"> /* <![CDATA[ */
         var sb_instagram_js_options = { "font_method": "svg", "resized_url": "https:\/\/demo.casethemes.net\/organio\/wp-content\/uploads\/sb-instagram-feed-images\/", "placeholder": "https:\/\/demo.casethemes.net\/organio\/wp-content\/plugins\/instagram-feed\/img\/placeholder.png", "ajax_url": "https:\/\/demo.casethemes.net\/organio\/wp-admin\/admin-ajax.php" };
         /* ]]> */ </script>
@@ -1250,8 +1225,8 @@ if (count($items_most_available) > 0) {
         id="sbi_scripts-js"></script>
     <script type="text/javascript" src="wp-content/themes/orgio/assets/js/cursor.js?ver=1.0.0"
         id="organio-cursor-js"></script>
-    <script type="text/javascript" defer="" src="wp-content/plugins/mailchimp-for-wp/assets/js/forms.js?ver=4.9.18"
-        id="mc4wp-forms-api-js"></script>
+    <script type="text/javascript" defer=""
+        src="wp-content/plugins/mailchimp-for-wp/assets/js/forms.js?ver=4.9.18" id="mc4wp-forms-api-js"></script>
     <script type="text/javascript" src="wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.25.4"
         id="elementor-webpack-runtime-js"></script>
     <script type="text/javascript" src="wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.25.4"
@@ -1261,7 +1236,7 @@ if (count($items_most_available) > 0) {
             "environmentMode": { "edit": false, "wpPreview": false, "isScriptDebug": false }, "i18n": { "shareOnFacebook": "Share on Facebook", "shareOnTwitter": "Share on Twitter", "pinIt": "Pin it", "download": "Download", "downloadImage": "Download image", "fullscreen": "Fullscreen", "zoom": "Zoom", "share": "Share", "playVideo": "Play Video", "previous": "Previous", "next": "Next", "close": "Close", "a11yCarouselWrapperAriaLabel": "Carousel | Horizontal scrolling: Arrow Left & Right", "a11yCarouselPrevSlideMessage": "Previous slide", "a11yCarouselNextSlideMessage": "Next slide", "a11yCarouselFirstSlideMessage": "This is the first slide", "a11yCarouselLastSlideMessage": "This is the last slide", "a11yCarouselPaginationBulletMessage": "Go to slide" }, "is_rtl": false, "breakpoints": { "xs": 0, "sm": 480, "md": 768, "lg": 1025, "xl": 1440, "xxl": 1600 }, "responsive": {
                 "breakpoints": { "mobile": { "label": "Mobile Portrait", "value": 767, "default_value": 767, "direction": "max", "is_enabled": true }, "mobile_extra": { "label": "Mobile Landscape", "value": 880, "default_value": 880, "direction": "max", "is_enabled": false }, "tablet": { "label": "Tablet Portrait", "value": 1024, "default_value": 1024, "direction": "max", "is_enabled": true }, "tablet_extra": { "label": "Tablet Landscape", "value": 1200, "default_value": 1200, "direction": "max", "is_enabled": false }, "laptop": { "label": "Laptop", "value": 1366, "default_value": 1366, "direction": "max", "is_enabled": false }, "widescreen": { "label": "Widescreen", "value": 2400, "default_value": 2400, "direction": "min", "is_enabled": false } },
                 "hasCustomBreakpoints": false
-            }, "version": "3.25.4", "is_static": false, "experimentalFeatures": { "additional_custom_breakpoints": true, "e_swiper_latest": true, "e_nested_atomic_repeaters": true, "e_onboarding": true, "e_css_smooth_scroll": true, "home_screen": true, "landing-pages": true, "nested-elements": true, "editor_v2": true, "link-in-bio": true, "floating-buttons": true }, "urls": { "assets": "https:\/\/demo.casethemes.net\/organio\/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "https:\/\/demo.casethemes.net\/organio\/wp-admin\/admin-ajax.php", "uploadUrl": "https:\/\/demo.casethemes.net\/organio\/wp-content\/uploads" }, "nonces": { "floatingButtonsClickTracking": "90a1169fa1" }, "swiperClass": "swiper", "settings": { "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 0, "title": "Shop &#8211; Organio", "excerpt": "<p>This is where you can browse products in this store.<\/p>\n" }
+            }, "version": "3.25.4", "is_static": false, "experimentalFeatures": { "additional_custom_breakpoints": true, "e_swiper_latest": true, "e_nested_atomic_repeaters": true, "e_onboarding": true, "e_css_smooth_scroll": true, "home_screen": true, "landing-pages": true, "nested-elements": true, "editor_v2": true, "link-in-bio": true, "floating-buttons": true }, "urls": { "assets": "https:\/\/demo.casethemes.net\/organio\/wp-content\/plugins\/elementor\/assets\/", "ajaxurl": "https:\/\/demo.casethemes.net\/organio\/wp-admin\/admin-ajax.php", "uploadUrl": "https:\/\/demo.casethemes.net\/organio\/wp-content\/uploads" }, "nonces": { "floatingButtonsClickTracking": "8ea5bc93fb" }, "swiperClass": "swiper", "settings": { "page": [], "editorPreferences": [] }, "kit": { "active_breakpoints": ["viewport_mobile", "viewport_tablet"], "global_image_lightbox": "yes", "lightbox_enable_counter": "yes", "lightbox_enable_fullscreen": "yes", "lightbox_enable_zoom": "yes", "lightbox_enable_share": "yes", "lightbox_title_src": "title", "lightbox_description_src": "description" }, "post": { "id": 30, "title": "Indigi%20Teas%20%E2%80%93%20Organio", "excerpt": "", "featuredImage": false }
         };
         /* ]]> */ </script>
     <script type="text/javascript" src="wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.25.4"
