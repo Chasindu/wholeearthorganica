@@ -10,7 +10,7 @@ if (session_status() !== PHP_SESSION_ACTIVE)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="//gmpg.org/xfn/11">
-    <title>Contact us &#8211; Organio</title>
+    <title>Add Products &#8211; Organio</title>
     <meta name='robots' content='max-image-preview:large'>
     <style>
         img:is([sizes="auto" i], [sizes^="auto," i]) {
