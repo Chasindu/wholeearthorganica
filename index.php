@@ -1854,7 +1854,7 @@ $_SESSION['user_name']="";
                                                                                                 Our organic vegetables bring unmatched freshness to your meals.</div>
                                                                                             <div class="item--readmore">
                                                                                                 <a class="btn-icon-animate"
-                                                                                                    href="product-category/organic/index.htm">
+                                                                                                    href="shop.php">
                                                                                                     <i
                                                                                                         class="ct-icon-frist flaticon-next"></i>
                                                                                                     Shop now <i
@@ -1898,7 +1898,7 @@ $_SESSION['user_name']="";
                                                                                                 taste buds.</div>
                                                                                             <div class="item--readmore">
                                                                                                 <a class="btn-icon-animate"
-                                                                                                    href="product-category/organic/index.htm">
+                                                                                                    href="shop.php">
                                                                                                     <i
                                                                                                         class="ct-icon-frist flaticon-next"></i>
                                                                                                     Shop now <i
@@ -1943,7 +1943,7 @@ $_SESSION['user_name']="";
                                                                                                 </div>
                                                                                             <div class="item--readmore">
                                                                                                 <a class="btn-icon-animate"
-                                                                                                    href="product-category/organic/index.htm">
+                                                                                                    href="shop.php">
                                                                                                     <i
                                                                                                         class="ct-icon-frist flaticon-next"></i>
                                                                                                     Shop now <i
@@ -1987,7 +1987,7 @@ $_SESSION['user_name']="";
                                                                                                 </div>
                                                                                             <div class="item--readmore">
                                                                                                 <a class="btn-icon-animate"
-                                                                                                    href="product-category/organic/index.htm">
+                                                                                                    href="shop.php">
                                                                                                     <i
                                                                                                         class="ct-icon-frist flaticon-next"></i>
                                                                                                     Shop now <i
@@ -2510,9 +2510,8 @@ $_SESSION['user_name']="";
                                                                                             </div>
                                                                                             <div
                                                                                                 class="item--description">
-                                                                                                Elif contributed by researching organic farm data and taking the lead on UI/UX improvements,
-                                                                                                ensuring a user-friendly and visually appealing design.
-                                                                                                She also collaborated closely with the team on implementing key frontend features.</div>
+                                                                                                Elif collaborated closely with the team on implementing key frontend features and assisted with data integration.
+                                                                                                She also  played a role in debugging and troubleshooting code issues to ensure the smooth functioning of the application.</div>
                                                                                            
                                                                                         </div>
                                                                                     </div>
