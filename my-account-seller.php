@@ -779,19 +779,19 @@ $username = $_SESSION['user_name'];
                                                                                                 loading="lazy"
                                                                                                 decoding="async"
                                                                                                 class="no-lazyload "
-                                                                                                src="wp-content/uploads/2021/03/organic13-370x370.jpg"
+                                                                                                src="img/inv.png"
                                                                                                 width="370" height="370"
                                                                                                 alt="organic13"
                                                                                                 title="organic13"></a>
                                                                                     </div>                                                                                    
                                                                                     <div class="item--holder">
                                                                                         <h3 class="item--title">
-                                                                                            View Inventry</h3>
+                                                                                            View Inventory</h3>
                                                                                     </div>
                                                                                     <div class="item--holder-hover">
                                                                                         <div class="item--holder-inner">
                                                                                             <h3 class="item--title"><a
-                                                                                                    href="inventry.php">View Inventry</a></h3>
+                                                                                                    href="inventry.php">View Inventory</a></h3>
                                                                                             
                                                                                         </div>
                                                                                     </div>
@@ -809,7 +809,7 @@ $username = $_SESSION['user_name'];
                                                                                                 loading="lazy"
                                                                                                 decoding="async"
                                                                                                 class="no-lazyload "
-                                                                                                src="wp-content/uploads/2021/03/organic13-370x370.jpg"
+                                                                                                src="img/order6.png"
                                                                                                 width="370" height="370"
                                                                                                 alt="organic13"
                                                                                                 title="organic13"></a>
@@ -836,7 +836,7 @@ $username = $_SESSION['user_name'];
                                                                                                 loading="lazy"
                                                                                                 decoding="async"
                                                                                                 class="no-lazyload "
-                                                                                                src="wp-content/uploads/2021/03/organic14-370x370.jpg"
+                                                                                                src="img/publish.png"
                                                                                                 width="370" height="370"
                                                                                                 alt="organic14"
                                                                                                 title="organic14"></a>
