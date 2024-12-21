@@ -3,6 +3,7 @@
 <?php
 if (session_status() !== PHP_SESSION_ACTIVE)
     session_start();
+
 ?>
 
 <head>
@@ -796,129 +797,144 @@ if (session_status() !== PHP_SESSION_ACTIVE)
                                                                             <div class="wpcf7 no-js"
                                                                                 id="wpcf7-f341-p18-o1" lang="en-US"
                                                                                 dir="ltr" data-wpcf7-id="341">
-                                                                                <div class="screen-reader-response">
-                                                                                    <p role="status" aria-live="polite"
-                                                                                        aria-atomic="true"></p>
-                                                                                    <ul></ul>
-                                                                                </div>
-                                                                                <form
-                                                                                    action="/organio/contact-us/#wpcf7-f341-p18-o1"
+
+
+
+
+                                                                                <form action="Classes/DB_RUN.php"
                                                                                     method="post"
-                                                                                    class="wpcf7-form init"
-                                                                                    aria-label="Contact form"
-                                                                                    novalidate="novalidate"
-                                                                                    data-status="init">
-                                                                                    <div style="display: none;"> <input
-                                                                                            type="hidden" name="_wpcf7"
-                                                                                            value="341"> <input
-                                                                                            type="hidden"
-                                                                                            name="_wpcf7_version"
-                                                                                            value="6.0"> <input
-                                                                                            type="hidden"
-                                                                                            name="_wpcf7_locale"
-                                                                                            value="en_US"> <input
-                                                                                            type="hidden"
-                                                                                            name="_wpcf7_unit_tag"
-                                                                                            value="wpcf7-f341-p18-o1">
-                                                                                        <input type="hidden"
-                                                                                            name="_wpcf7_container_post"
-                                                                                            value="18"> <input
-                                                                                            type="hidden"
-                                                                                            name="_wpcf7_posted_data_hash"
-                                                                                            value="">
+                                                                                    enctype="multipart/form-data">
+                                                                                    <div class="col-lg-12 col-md-12">
+                                                                                        <p><label>Product
+                                                                                                Name*</label><span
+                                                                                                class="wpcf7-form-control-wrap">
+                                                                                                <input size="40"
+                                                                                                    maxlength="400"
+                                                                                                    class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                                    aria-required="true"
+                                                                                                    aria-invalid="false"
+                                                                                                    placeholder="Product Name"
+                                                                                                    value="" name="name"
+                                                                                                    type="text"
+                                                                                                    required>
+                                                                                            </span>
+                                                                                        </p>
                                                                                     </div>
-                                                                                    <div class="row">
-                                                                                        <div
-                                                                                            class="input-filled col-lg-12 col-md-12">
-                                                                                            <p><label>Product
-                                                                                                    Name*</label><span
-                                                                                                    class="wpcf7-form-control-wrap">
-                                                                                                    <input size="40"
-                                                                                                        maxlength="400"
-                                                                                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                                                                        aria-required="true"
-                                                                                                        aria-invalid="false"
-                                                                                                        placeholder="Product Name"
-                                                                                                        value=""
-                                                                                                        name="name"
-                                                                                                        type="text"                                                                                                                                                                                                                required>
-                                                                                                </span>
-                                                                                            </p>
-                                                                                        </div>
 
-                                                                                        <div
-                                                                                            class="input-filled col-lg-6 col-md-6">
-                                                                                            <p><label>Price*</label><span
-                                                                                                    class="wpcf7-form-control-wrap"
-                                                                                                    data-name="your-name">
-                                                                                                    <input size="40"
-                                                                                                        maxlength="400"
-                                                                                                        class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                                                                        aria-required="true"
-                                                                                                        aria-invalid="false"
-                                                                                                        placeholder="Jhon Doe"
-                                                                                                        value=""
-                                                                                                        name="name"
-                                                                                                        type="number"                                                                                                        
-                                                                                                        required>
-                                                                                                </span>
-                                                                                            </p>
+                                                                                    <div class="col-lg-12 col-md-12">
+                                                                                        <p><label>Product
+                                                                                                Category*</label><span
+                                                                                                class="wpcf7-form-control-wrap">
+
+                                                                                                <select id="cars" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
+                                                                                                    name='cat'>
+                                                                                                    <option
+                                                                                                        value="Chicken">
+                                                                                                        Chicken</option>
+                                                                                                    <option
+                                                                                                        value="Beef">
+                                                                                                        Beef</option>
+                                                                                                    <option
+                                                                                                        value="Eggs">
+                                                                                                        Eggs</option>
+                                                                                                    <option
+                                                                                                        value="Cheese">
+                                                                                                        Cheese</option>
+
+                                                                                                    <option
+                                                                                                        value="Butter">
+                                                                                                        Butter</option>
+
+                                                                                                    <option
+                                                                                                        value="Yorgurt">
+                                                                                                        Yorgurt</option>
+                                                                                                    <option
+                                                                                                        value="Vegitable">
+                                                                                                        Vegitable
+                                                                                                    </option>
+                                                                                                    <option
+                                                                                                        value="Fruits">
+                                                                                                        Fruits</option>
+
+                                                                                                </select>
+
+                                                                                            </span>
+                                                                                        </p>
                                                                                     </div>
-                                                                                    <div
-                                                                                        class="input-filled col-lg-6 col-md-6">
-                                                                                   
-                                                                                    <p><label>QTY*</label><span
-                                                                                            class="wpcf7-form-control-wrap"
-                                                                                            data-name="your-name">
-                                                                                            <input size="40"
-                                                                                                maxlength="400"
-                                                                                                class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required"
-                                                                                                name="qty"
-                                                                                                type="number" 
-                                                                                                min="1"                                                                                               
-                                                                                                required>
-                                                                                        </span>
-                                                                                    </p>
-                                                                            </div>
 
-                                                                        </div>
-                                                                        <div class="row">
+                                                                                    <div class="col-lg-6 col-md-6">
+                                                                                        <p><label>Price* (CAD
+                                                                                                $)</label>
+                                                                                            <span
+                                                                                                class="wpcf7-form-control-wrap">
+                                                                                                <input size="40"
+                                                                                                    maxlength="400"
+                                                                                                    class="wpcf7-form-control"
+                                                                                                    placeholder="Price"
+                                                                                                    value=""
+                                                                                                    name="price" min="1"
+                                                                                                    type="number"
+                                                                                                    required>
+                                                                                            </span>
+                                                                                        </p>
+                                                                                    </div>
+                                                                                    <div class="col-lg-6 col-md-6">
+                                                                                        <p><label>QTY*</label><span
+                                                                                                class="wpcf7-form-control-wrap">
+                                                                                                <input size="40"
+                                                                                                    maxlength="400"
+                                                                                                    class="wpcf7-form-control "
+                                                                                                    name="qty"
+                                                                                                    type="number"
+                                                                                                    min="1" required>
+                                                                                            </span>
+                                                                                        </p>
+                                                                                    </div>
 
-                                                                            <div
-                                                                                class="input-filled col-12 text-center">
-                                                                                <p><button type="submit"
-                                                                                        class="wpcf7-submit btn btn-third btn-animate">Send
-                                                                                        your
-                                                                                        message</button></p>
+                                                                                    <div class="col-lg-6 col-md-6">
+
+                                                                                        <p><label>Image</label><span
+                                                                                                class="wpcf7-form-control-wrap">
+                                                                                                <input size="40"
+                                                                                                    maxlength="400"
+                                                                                                    class="wpcf7-form-control"
+                                                                                                    name="uploadfile"
+                                                                                                    type="file" min="1"
+                                                                                                    required>
+                                                                                            </span>
+                                                                                        </p>
+                                                                                    </div>
+
+                                                                                    <button type="submit"
+                                                                                        name="add_product" class="">Add
+                                                                                        Item</button>
+                                                                                </form>
+                                                                                <div class="wpcf7-response-output"
+                                                                                    aria-hidden="true"></div>
                                                                             </div>
                                                                         </div>
-                                                                        <div class="wpcf7-response-output"
-                                                                            aria-hidden="true"></div>
-                                                                        </form>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-519eb78"
+                                                        data-id="519eb78" data-element_type="column">
+                                                        <div class="elementor-widget-wrap"></div>
+                                                    </div>
                                                 </div>
+                                            </section>
                                         </div>
-                                        <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-519eb78"
-                                            data-id="519eb78" data-element_type="column">
-                                            <div class="elementor-widget-wrap"></div>
-                                        </div>
-                                    </div>
-                                    </section>
-                        </div>
-                    </div><!-- .entry-content -->
-                    </article><!-- #post-18 -->
-                    </main><!-- #main -->
-                </div><!-- #primary -->
-            </div>
-        </div>
-    </div><!-- #content inner -->
-    </div><!-- #content -->
-    <?php include 'footer.php' ?>
-    <a href="#" class="scroll-top"><i class="caseicon-long-arrow-right-three"></i></a>
+                                    </div><!-- .entry-content -->
+                                </article><!-- #post-18 -->
+                            </main><!-- #main -->
+                        </div><!-- #primary -->
+                    </div>
+                </div>
+            </div><!-- #content inner -->
+        </div><!-- #content -->
+        <?php include 'footer.php' ?>
+        <a href="#" class="scroll-top"><i class="caseicon-long-arrow-right-three"></i></a>
     </div><!-- #page -->
     <div class="ct-modal ct-modal-search">
         <div class="ct-modal-close"><i class="ct-icon-close"></i></div>
