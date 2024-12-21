@@ -4,7 +4,6 @@
 if(session_status() !== PHP_SESSION_ACTIVE) session_start();
 $username = $_SESSION['user_name'];
 ?>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">

@@ -2,8 +2,6 @@
 include 'DB_CONN.php';
 if (session_status() !== PHP_SESSION_ACTIVE)
     session_start();
-
-
 // Generate CSRF token if not already set
 if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
@@ -35,30 +33,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt = $pdo->prepare("SELECT * FROM users WHERE email = :email LIMIT 1");
             $stmt->bindParam(':email', $email);
             $stmt->execute();
-
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
-
             if ($user && ($password = $user['psw'])) {
                 // Successful login
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['user_name'] = $user['name'];
                 $_SESSION['auth'] = $user['auth'];
-                if ($_SESSION['auth'] == 'u') {
+                if($_SESSION['auth'] == 'u'){
                     header("Location:../my-account.php");
-                } else if ($_SESSION['auth'] == 's') {
+                } else if($_SESSION['auth']=='s'){
                     header("Location:../my-account-seller.php");
                 }
-
-
             } else {
                 // Invalid credentials
                 echo "Invalid email or password.";
                 echo $password;
                 echo $user;
-
             }
-
 
 
         } catch (PDOException $e) {
