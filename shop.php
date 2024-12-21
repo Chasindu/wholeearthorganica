@@ -37,6 +37,39 @@ try {
         $items_most_available = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     }
+
+    else if (isset($_GET['orderby'])) {
+
+        $searchCondition = $_GET['orderby'];
+
+        if ($searchCondition=="price-desc")
+        {
+            $stmt = $pdo->prepare("SELECT * FROM items ORDER BY price DESC");
+        }
+        else if($searchCondition=="price")
+        {
+            $stmt = $pdo->prepare("SELECT * FROM items ORDER BY price ASC");
+        }
+        else if($searchCondition=="popularity")
+        {
+            $stmt = $pdo->prepare("SELECT * FROM items ORDER BY qty ASC");
+        }
+        else
+        {
+            $stmt = $pdo->prepare("SELECT * FROM items");
+        }
+
+
+        $stmt->execute();
+        $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+        $stmt = $pdo->prepare("SELECT * FROM items WHERE cat= :cat ORDER BY qty DESC LIMIT 3");
+        $stmt->bindParam(':cat', $searchTerm);
+        $stmt->execute();
+        $items_most_available = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    }
+
     else {
 
         $stmt = $pdo->prepare("SELECT * FROM items");
@@ -806,13 +839,11 @@ try {
                                     <div class="woocommerce-topbar-ordering">
                                         <form class="woocommerce-ordering" method="get"> <select name="orderby"
                                                 class="orderby" aria-label="Shop order">
-                                                <option value="popularity">Sort by popularity</option>
-                                                <option value="rating">Sort by average rating</option>
-                                                <option value="date" selected='selected'>Sort by latest</option>
+                                                <option value="popularity">Sort by Most Availability</option>
                                                 <option value="price">Sort by price: low to high</option>
                                                 <option value="price-desc">Sort by price: high to low</option>
-                                            </select> <input type="hidden" name="paged" value="1"> <input type="hidden"
-                                                name="sidebar-shop" value="left"></form>
+                                            </select>
+                                            </form>
                                     </div>
                                 </div>
                                 <div class="woocommerce-notices-wrapper"></div>
@@ -850,17 +881,6 @@ if (count($items) > 0) {
                                                         class="woocommerce-Price-amount amount"><bdi><span
                                                                 class="woocommerce-Price-currencySymbol">&#36;</span><?php echo number_format((float)$item['price'], 2, '.', ''); ?></bdi></span></span>
 
-                                                <div class="woocommerce-add-to-cart"> <a
-                                                        href="index-14.htm?add-to-cart=998"
-                                                        aria-describedby="woocommerce_loop_add_to_cart_link_describedby_998"
-                                                        data-quantity="1"
-                                                        class="button product_type_simple add_to_cart_button ajax_add_to_cart"
-                                                        data-product_id="998" data-product_sku="005"
-                                                        aria-label="Add to cart: &ldquo;<?php echo $item['name']; ?>&rdquo;" rel="nofollow"
-                                                        data-success_message="&ldquo;<?php echo $item['name']; ?>&rdquo; has been added to your cart">Add
-                                                        to cart</a> <span
-                                                        id="woocommerce_loop_add_to_cart_link_describedby_998"
-                                                        class="screen-reader-text"> </span></div>
                                             </div>
                                         </div> 
                                     </li>
