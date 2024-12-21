@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->bindParam(':email', $email);
             $stmt->execute();
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
-            if ($user && ($password = $user['psw'])) {
+            if ($user && ($password == $user['psw'])) {
                 // Successful login
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['user_name'] = $user['name'];
@@ -47,8 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             } else {
                 // Invalid credentials
                 echo "Invalid email or password.";
-                echo $password;
-                echo $user;
+
             }
 
 
